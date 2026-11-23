@@ -1,11 +1,11 @@
 /* Hallmark · shape: custom (editorial floors, ivory and graphite) · genre: editorial · theme: brand (by request) · brand: UMARBEKOV GROUP (brand book 2024, supplied by the client, the prompt pins palette and faces)
- * paper: oklch(96.2% 0.006 85) ivory · accent: oklch(73.6% 0.110 85) royal gold · display: Cormorant Garamond · body: Manrope · hero: poster, the building tilts back into a plan as the sprinkler grid lifts off it · nav: graphite bar, monogram left, links, language, phone, gold action · footer: graphite, emblem over four columns · signature: the engineering layer, a sprinkler grid that separates from the facade in 3D on scroll
+ * paper: oklch(96.2% 0.006 85) ivory · accent: oklch(73.6% 0.110 85) royal gold · display: Cormorant Garamond · body: Manrope · hero: poster, the camera flies into the client's building and a section drawing of the systems draws itself · nav: graphite bar, monogram left, links, language, phone, gold action · footer: graphite, emblem over four columns · signature: entering the building on scroll; inside, the section plan marks every system the company installs, each linked to its service
  * axes: light/roman-serif/warm · posture: committed (graphite floors carry 40 to 50% of the page, gold stays a signal) · contrast: pass · fold: pass · v2.0.0
  * idea: "the building and the systems inside it, shown as layers that come apart on scroll" · imagery: photographs, Wikimedia Commons 14 (credited on credits.html), mono-warm grade · copy: brief headings verbatim */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R3 V4 · weakest: R, the brief fixes 18 blocks on the home page; each block is held to one head and one composition, words per screen kept under 80 */
 /* Hallmark · waive 65 · paper Ivory F4F2EE, display Cormorant Garamond, accent Royal Gold C9A452 · the UMARBEKOV GROUP brand book 2024 fixes this palette and these faces */
 /* Hallmark · waive 83 · photographs of sprinklers, gas modules, panels and turnstiles in the service blocks · the UMARBEKOV design brief asks for large equipment photography in every service section */
-/* Hallmark · waive 82 · svg.scheme is a sprinkler pipe diagram, heads on a branch grid · the hero shows the engineering layer of the building, a real system layout, not a count */
+/* Hallmark · waive 82 · svg.plan is a section drawing of a building, sprinkler heads on supply lines and detectors on ceilings · the plan shows where each system the company installs sits inside the building, not a count */
 /* Hallmark · dismissed 11 · the UMARBEKOV design brief asks for a soft image zoom on hover in service, project and news cards */
 /* Hallmark · dismissed 41 · no text is ever set in accent-ink on a gold fill; gold buttons carry graphite ink */
 /* Hallmark · answered F15 · one primary style (gold); the quiet style is an outline on graphite and an underline link on ivory */
@@ -111,26 +111,80 @@ body.menu-open .hdr { z-index: calc(var(--z-modal) + 1); background: var(--color
 [data-slot] > img { filter: saturate(0.55) contrast(1.06) brightness(0.94) sepia(0.12); outline: 1px solid color-mix(in oklab, var(--color-ink) 8%, transparent); outline-offset: -1px; }
 figure { margin: 0; }
 
-/* ---------- hero ---------- */
-.hero { min-height: 100svh; display: grid; align-items: end; overflow: clip; background: var(--color-night); isolation: isolate; }
-.hero__stage { position: absolute; inset: 0; z-index: 0; perspective: 1400px; perspective-origin: 50% 30%; }
-.hero__media { position: absolute; inset: 0; }
-.hero__media > img { filter: saturate(0.5) contrast(1.08) brightness(0.8) sepia(0.18); }
-.hero__scheme { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
-.scheme { width: 100%; height: 100%; }
-.scheme__main, .scheme__riser { fill: none; stroke: var(--color-accent); stroke-width: 2.5; opacity: 0.9; }
-.scheme__branch { fill: none; stroke: var(--color-accent); stroke-width: 1; opacity: 0.55; }
-.scheme__head { fill: var(--color-night); stroke: var(--color-accent); stroke-width: 1.5; opacity: 0.85; }
-.scheme__valve { fill: var(--color-accent); }
-.hero__scheme { opacity: 0.22; }
-.hero__scrim { position: absolute; inset: 0; z-index: 3; background: linear-gradient(90deg, color-mix(in oklab, var(--color-night) 88%, transparent) 0%, color-mix(in oklab, var(--color-night) 55%, transparent) 48%, transparent 78%), linear-gradient(0deg, color-mix(in oklab, var(--color-night) 70%, transparent) 0%, transparent 45%); }
+/* ---------- hero: снаружи здания ---------- */
+.intro { position: relative; }
+.hero { position: relative; min-height: 100svh; display: grid; align-items: end; overflow: clip; background: var(--color-night); isolation: isolate; }
+.hero__stage { position: absolute; inset: 0; z-index: 0; overflow: clip; }
+.hero__media { position: absolute; inset: 0; transform-origin: 56% 52%; }
+.hero__media > img { filter: saturate(0.85) contrast(1.04) brightness(0.92); }
+.hero__scrim { position: absolute; inset: 0; z-index: 2; background: linear-gradient(90deg, color-mix(in oklab, var(--color-night) 82%, transparent) 0%, color-mix(in oklab, var(--color-night) 40%, transparent) 42%, transparent 66%), linear-gradient(0deg, color-mix(in oklab, var(--color-night) 70%, transparent) 0%, transparent 40%); }
+.hero__veil { position: absolute; inset: 0; z-index: 3; background: var(--color-night); opacity: 0; pointer-events: none; }
 .hero__copy { position: relative; z-index: 4; padding-top: calc(var(--hdr-h) + var(--space-3xl)); padding-bottom: var(--space-3xl); display: grid; gap: var(--space-lg); justify-items: start; }
 .hero__lead { max-width: 40ch; color: var(--color-on-night-2); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-xs); }
 .hero__fact { display: inline-flex; align-items: center; gap: var(--space-sm); margin-top: var(--space-lg); padding-top: var(--space-md); border-top: 1px solid var(--color-rule-night); color: var(--color-on-night-2); font-size: var(--text-sm); }
 .hero__fact .i { color: var(--gold-text); }
-.hero__emblem { position: absolute; z-index: 4; right: max(var(--gutter), calc((100% - var(--container)) / 2 + var(--gutter))); bottom: var(--space-3xl); width: clamp(140px, 14vw, 220px); height: auto; opacity: 0.92; }
-@media (max-width: 48rem) { .hero__emblem { display: none; } .hero__scrim { background: linear-gradient(0deg, color-mix(in oklab, var(--color-night) 92%, transparent) 10%, color-mix(in oklab, var(--color-night) 50%, transparent) 70%, color-mix(in oklab, var(--color-night) 30%, transparent)); } }
+@media (max-width: 48rem) { .hero__media > img { object-position: 30% 50% !important; } .hero__scrim { background: linear-gradient(0deg, color-mix(in oklab, var(--color-night) 92%, transparent) 15%, color-mix(in oklab, var(--color-night) 45%, transparent) 70%, color-mix(in oklab, var(--color-night) 25%, transparent)); } }
+
+/* ---------- внутри здания: схема ---------- */
+.inside { padding-block: var(--section-gap-s); background: var(--color-night); }
+.inside__in { display: grid; gap: var(--space-xl); }
+.inside__head { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: var(--gap-columns); align-items: end; }
+.inside__head p { color: var(--color-on-night-2); justify-self: end; }
+.inside__body { display: grid; grid-template-columns: minmax(0, 9fr) minmax(0, 3fr); gap: var(--space-2xl); align-items: center; }
+.inside__plan { position: relative; width: 100%; max-width: calc((100svh - var(--hdr-h) - 200px) * 1400 / 625); justify-self: center; aspect-ratio: 1400 / 625; }
+.plan { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.plan .d, .plan__head, .plan__det, .plan__spk, .plan__exit, .plan__cam, .plan__turn, .plan__reader, .plan__lamp, .plan__cyl, .plan__valve, .plan__nozzle { vector-effect: non-scaling-stroke; }
+.plan__ground { stroke: var(--color-on-night-2); stroke-width: 1.5; fill: none; }
+.plan__wall { stroke: var(--color-on-night); stroke-width: 2; fill: none; }
+.plan__slab { stroke: var(--color-on-night); stroke-width: 1.5; fill: none; opacity: 0.8; }
+.plan__thin { stroke: var(--color-on-night-2); stroke-width: 1; fill: none; opacity: 0.6; }
+.plan__rack { stroke: var(--color-on-night-2); stroke-width: 1; fill: none; }
+.plan__pipe { stroke: var(--color-accent); stroke-width: 2; fill: none; }
+.plan__valve, .plan__cyl { fill: var(--color-accent); }
+.plan__head { fill: var(--color-night); stroke: var(--color-accent); stroke-width: 1.5; }
+.plan__nozzle { stroke: var(--color-accent); stroke-width: 2; }
+.plan__det { fill: var(--color-on-night); }
+.plan__spk { fill: none; stroke: var(--color-accent-2); stroke-width: 1.5; }
+.plan__exit { fill: none; stroke: var(--color-on-night); stroke-width: 1.2; }
+.plan__cam { fill: var(--color-on-night-2); }
+.plan__turn, .plan__reader { fill: var(--color-on-night-2); }
+.plan__panel { stroke: var(--color-accent-2); stroke-width: 1.2; fill: none; }
+.plan__cable { stroke: var(--color-accent-2); stroke-width: 1.2; stroke-dasharray: 6 5; fill: none; }
+.plan__lamp { stroke: var(--color-accent-2); stroke-width: 2; }
+.plan__sys { transition: opacity var(--dur-short) var(--ease-out); }
+.inside__plan[data-active] .plan__sys { opacity: 0.22; }
+.inside__plan[data-active="apt"] .plan__sys[data-sys="apt"], .inside__plan[data-active="ps"] .plan__sys[data-sys="ps"], .inside__plan[data-active="soue"] .plan__sys[data-sys="soue"], .inside__plan[data-active="os"] .plan__sys[data-sys="os"], .inside__plan[data-active="skud"] .plan__sys[data-sys="skud"], .inside__plan[data-active="eo"] .plan__sys[data-sys="eo"] { opacity: 1; }
+.pins { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; pointer-events: none; }
+.pin { position: absolute; left: var(--x); top: var(--y); pointer-events: auto; }
+.pin a { position: absolute; display: flex; align-items: center; gap: var(--space-xs); transform: translate(-14px, -50%); color: var(--color-on-night); text-decoration: none; white-space: nowrap; min-height: 44px; }
+.pin--l a { flex-direction: row-reverse; transform: translate(calc(-100% + 14px), -50%); }
+.pin__dot { display: grid; place-items: center; width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%; border: 1.5px solid var(--color-accent); background: var(--color-night); color: var(--color-accent); font-size: var(--text-xs); font-weight: 600; transition: background-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out); }
+.pin a:hover .pin__dot, .pin a:focus-visible .pin__dot, [data-active] .pin.is-on .pin__dot { background: var(--color-accent); color: var(--color-ink); }
+.js .pin__lab { opacity: 0; transform: translateX(-4px); transition: opacity var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out); }
+.js .pin--l .pin__lab { transform: translateX(4px); }
+.js .pin a:hover .pin__lab, .js .pin a:focus-visible .pin__lab, .js .pin.is-on .pin__lab { opacity: 1; transform: none; }
+.pin__lab { display: inline-flex; align-items: center; gap: var(--space-xs); padding: var(--space-2xs) var(--space-sm); background: color-mix(in oklab, var(--color-night) 88%, transparent); border: 1px solid var(--color-rule-night); font-size: var(--text-sm); transition: border-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out); }
+.pin__n { color: var(--color-accent); font-weight: 600; }
+.pin a:hover .pin__lab, .pin a:focus-visible .pin__lab { border-color: var(--color-accent); color: var(--color-accent); }
+.pin a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
+@media (max-width: 60rem) {
+  .inside__head { grid-template-columns: minmax(0, 1fr); }
+  .inside__head p { justify-self: start; }
+  .pin__lab { display: none; }
+  .pin__dot { width: 22px; height: 22px; font-size: 10px; }
+}
+
+.inside__list { list-style: none; margin: 0; padding: 0; }
+.inside__list li:last-child a { border-bottom: 1px solid var(--color-rule-night); }
+.inside__list a { transition: color var(--dur-short) var(--ease-out); }
+.inside__list li.is-on a, .inside__list a:hover { color: var(--color-accent); }
+.inside__list a { display: flex; gap: var(--space-sm); align-items: baseline; min-height: 44px; padding-block: var(--space-sm); border-top: 1px solid var(--color-rule-night); color: var(--color-on-night); text-decoration: none; }
+.inside__list span { color: var(--color-accent); font-weight: 600; font-size: var(--text-sm); }
+@media (max-width: 60rem) { .inside__body { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); } .inside__plan { max-width: none; } }
+
+/* 3D-режим: слой «внутри» лежит поверх героя и проявляется по скроллу */
+.intro.is-3d .inside { position: absolute; inset: 0; z-index: 5; display: grid; align-content: center; padding-top: var(--hdr-h); padding-bottom: var(--space-xl); visibility: hidden; }
 
 /* ---------- about ---------- */
 .about__grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-3xl); align-items: center; perspective: 1600px; }

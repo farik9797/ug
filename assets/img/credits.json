@@ -124,5 +124,15 @@
    1920,
    1440
   ]
+ },
+ "ug-building": {
+  "author": "UMARBEKOV GROUP",
+  "license": "материал заказчика",
+  "page": "",
+  "size": [
+   2000,
+   1116
+  ],
+  "own": true
  }
 }

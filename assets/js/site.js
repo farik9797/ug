@@ -73,6 +73,19 @@
     });
   });
 
+  /* ---------- схема: подсветка системы по наведению на метку или пункт списка ---------- */
+  d.querySelectorAll('[data-plan-scope]').forEach((scope) => {
+    const plan = scope.querySelector('[data-plan]');
+    const items = scope.querySelectorAll('.pin, [data-legend] li');
+    const set = (sys) => {
+      if (sys) plan.dataset.active = sys; else delete plan.dataset.active;
+      items.forEach((it) => it.classList.toggle('is-on', !!sys && it.dataset.sys === sys));
+    };
+    const on = (e) => { const it = e.target.closest('[data-sys]'); set(it && it.dataset.sys); };
+    scope.addEventListener('pointerover', on); scope.addEventListener('focusin', on);
+    scope.addEventListener('pointerleave', () => set(null)); scope.addEventListener('focusout', () => set(null));
+  });
+
   /* ---------- 3D-прокрутка ---------- */
   const start = () => {
     const { gsap, ScrollTrigger } = window;
@@ -88,21 +101,36 @@
       root.classList.add('has-3d');
       const $ = (s, el = d) => Array.from(el.querySelectorAll(s));
 
-      /* Герой: здание «ложится» назад, сеть спринклеров отделяется слоем */
+      /* Герой: камера влетает в здание, внутри прорисовывается схема систем */
+      const intro = d.querySelector('[data-intro]');
       const hero = d.querySelector('[data-hero]');
-      if (hero) {
-        gsap.from($('[data-hero-copy] > *', hero), { y: 24, opacity: 0, duration: 0.7, stagger: 0.07, ease: 'power3.out', delay: 0.1 });
-        const lines = $('.scheme path', hero);
-        lines.forEach((p) => { const l = p.getTotalLength(); p.style.strokeDasharray = l; p.style.strokeDashoffset = l; });
-        gsap.to(lines, { strokeDashoffset: 0, duration: 1.6, stagger: 0.03, ease: 'power2.inOut', delay: 0.2 });
-        gsap.from($('.scheme circle, .scheme rect', hero), { opacity: 0, scale: 0, transformOrigin: '50% 50%', duration: 0.35, stagger: 0.006, delay: 0.9 });
+      const plan = d.querySelector('[data-plan]');
+      if (hero) gsap.from($('[data-hero-copy] > *', hero), { y: 24, opacity: 0, duration: 0.7, stagger: 0.07, ease: 'power3.out', delay: 0.1 });
+      const prep = (lines) => lines.forEach((p) => { const l = p.getTotalLength(); p.style.strokeDasharray = l; p.style.strokeDashoffset = l; });
+      if (intro && plan) {
+        const lines = $('.plan .d', plan).filter((el) => !el.classList.contains('plan__cable'));
+        const marks = $('.plan__sys > :not(.d)', plan);
+        const pins = $('.pin, [data-legend] li', intro);
         if (desk) {
-          gsap.timeline({ scrollTrigger: { trigger: hero, start: 'top top', end: '+=100%', scrub: 0.6, pin: true, anticipatePin: 1 } })
-            .to('[data-hero-media]', { rotateX: 42, scale: 0.74, yPercent: -6, transformOrigin: '50% 100%', ease: 'none' }, 0)
-            .to('[data-hero-scheme]', { opacity: 1, rotateX: 42, scale: 0.74, yPercent: -16, z: 260, transformOrigin: '50% 100%', ease: 'none' }, 0)
-            .to('.hero__scrim', { opacity: 0.25, ease: 'none' }, 0)
-            .to('[data-hero-copy]', { yPercent: -18, opacity: 0, ease: 'none' }, 0)
-            .to('[data-hero-emblem]', { rotateY: 160, z: 200, opacity: 0, ease: 'none' }, 0);
+          intro.classList.add('is-3d');
+          prep(lines);
+          const inside = intro.querySelector('[data-inside]');
+          gsap.timeline({ scrollTrigger: { trigger: intro, start: 'top top', end: '+=280%', scrub: 0.7, pin: true, anticipatePin: 1 } })
+            .to('[data-hero-copy]', { opacity: 0, y: -80, duration: 0.14, ease: 'power1.in' }, 0)
+            .to('[data-hero-scrim]', { opacity: 0, duration: 0.2 }, 0)
+            .fromTo('[data-hero-media]', { scale: 1, rotateY: 0 }, { scale: 5.2, duration: 0.46, ease: 'power2.in' }, 0)
+            .to('[data-hero-veil]', { opacity: 1, duration: 0.1, ease: 'none' }, 0.36)
+            .set(inside, { visibility: 'visible' }, 0.42)
+            .fromTo(inside, { opacity: 0, scale: 1.35, z: 0 }, { opacity: 1, scale: 1, duration: 0.14, ease: 'power2.out' }, 0.42)
+            .to(lines, { strokeDashoffset: 0, duration: 0.22, stagger: 0.0015, ease: 'none' }, 0.5)
+            .from(marks, { opacity: 0, scale: 0, transformOrigin: '50% 50%', duration: 0.06, stagger: 0.0012, ease: 'back.out(2)' }, 0.66)
+            .from(pins, { opacity: 0, y: 14, duration: 0.06, stagger: 0.02 }, 0.8)
+            .to({}, { duration: 0.08 });
+          ctx.add(() => () => { intro.classList.remove('is-3d'); lines.forEach((p) => { p.style.strokeDasharray = ''; p.style.strokeDashoffset = ''; }); });
+        } else {
+          prep(lines);
+          gsap.to(lines, { strokeDashoffset: 0, duration: 1.4, stagger: 0.006, ease: 'power1.inOut', scrollTrigger: { trigger: plan, start: 'top 80%' } });
+          gsap.from(marks, { opacity: 0, scale: 0, transformOrigin: '50% 50%', duration: 0.3, stagger: 0.005, delay: 0.6, scrollTrigger: { trigger: plan, start: 'top 80%' } });
         }
       }
 
