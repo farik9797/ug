@@ -46,7 +46,7 @@ def render(text, meta):
     if "{{credits_list}}" in text:
         items = "".join(
             f'<li><a href="{v["page"]}">{html.escape(k)}</a>: {html.escape(v["author"])}, {html.escape(v["license"])}, Wikimedia Commons</li>'
-            for k, v in sorted(CREDITS.items()))
+            for k, v in sorted(CREDITS.items()) if not v.get('own'))
         text = text.replace("{{credits_list}}", items)
     nav = meta.get("nav", "")
     text = re.sub(r"\{\{a:(\w+)\}\}",

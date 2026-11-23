@@ -1,11 +1,12 @@
 <!--meta {"title":"Системы пожаротушения и сигнализации в Ташкенте | UMARBEKOV GROUP","desc":"Проектирование, поставка, монтаж и пусконаладка систем автоматического пожаротушения, пожарной сигнализации, СОУЭ, СКУД и инженерных сетей в Ташкенте и по Узбекистану.","nav":"home","hdr":"over"}-->
+<div class="intro" data-intro>
 <section class="hero dark" data-hero aria-labelledby="hero-h">
-  <div class="hero__stage" data-hero-stage>
-    <div class="hero__media" data-slot="hero" data-alt="Фасад здания на объекте компании в вечернем свете" data-hero-media>
-      {{img:hero-building|Стеклянное офисное здание вечером, в окнах горит свет|100vw|38% 50%|eager}}
+  <div class="hero__stage">
+    <div class="hero__media" data-slot="hero" data-alt="Здание UMARBEKOV GROUP вечером" data-hero-media>
+      {{img:ug-building|Здание с вывеской UMARBEKOV GROUP вечером, фасад с золотой подсветкой|100vw|50% 50%|eager}}
     </div>
-    <div class="hero__scheme" data-hero-scheme>{{include:scheme}}</div>
-    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="hero__scrim" aria-hidden="true" data-hero-scrim></div>
+    <div class="hero__veil" aria-hidden="true" data-hero-veil></div>
   </div>
   <div class="hero__copy container" data-hero-copy>
     <h1 id="hero-h">Инженерные решения.<br>Безопасность. Надёжность.</h1>
@@ -16,8 +17,38 @@
     </div>
     <p class="hero__fact">{{icon:shield-check}}<span>Полный цикл: от обследования объекта до сдачи системы</span></p>
   </div>
-  <img class="hero__emblem" src="assets/logo/ug-04_minimal_eastern-gold.png" width="420" height="300" alt="" data-hero-emblem>
 </section>
+<section class="inside dark" aria-labelledby="inside-h" data-inside>
+  <div class="container inside__in">
+    <div class="inside__head">
+      <h2 id="inside-h">Что мы ставим внутри здания</h2>
+      <p>Наведите на систему в списке или на метку на схеме.</p>
+    </div>
+    <div class="inside__body" data-plan-scope>
+    <div class="inside__plan" data-plan>
+      {{include:plan}}
+      <ol class="pins">
+          <li class="pin pin--r" style="--x: 20.0%; --y: 44.64%" data-sys="apt"><a href="service-apt.html" aria-label="Спринклерное пожаротушение"><span class="pin__dot" aria-hidden="true">01</span><span class="pin__lab" aria-hidden="true">Спринклерное пожаротушение</span></a></li>
+          <li class="pin pin--l" style="--x: 79.14%; --y: 23.52%" data-sys="apt"><a href="service-apt.html" aria-label="Газовое пожаротушение в серверной"><span class="pin__dot" aria-hidden="true">01</span><span class="pin__lab" aria-hidden="true">Газовое пожаротушение в серверной</span></a></li>
+          <li class="pin pin--r" style="--x: 37.14%; --y: 19.36%" data-sys="ps"><a href="services.html#ps" aria-label="Пожарная сигнализация"><span class="pin__dot" aria-hidden="true">02</span><span class="pin__lab" aria-hidden="true">Пожарная сигнализация</span></a></li>
+          <li class="pin pin--r" style="--x: 45.86%; --y: 52.32%" data-sys="soue"><a href="services.html#soue" aria-label="Оповещение и эвакуация"><span class="pin__dot" aria-hidden="true">03</span><span class="pin__lab" aria-hidden="true">Оповещение и эвакуация</span></a></li>
+          <li class="pin pin--r" style="--x: 4.5%; --y: 72.16%" data-sys="os"><a href="services.html#os" aria-label="Охранная сигнализация"><span class="pin__dot" aria-hidden="true">04</span><span class="pin__lab" aria-hidden="true">Охранная сигнализация</span></a></li>
+          <li class="pin pin--r" style="--x: 33.93%; --y: 85.92%" data-sys="skud"><a href="services.html#skud" aria-label="Контроль доступа"><span class="pin__dot" aria-hidden="true">05</span><span class="pin__lab" aria-hidden="true">Контроль доступа</span></a></li>
+          <li class="pin pin--l" style="--x: 83.57%; --y: 74.4%" data-sys="eo"><a href="services.html#eo" aria-label="Электроосвещение и щитовые"><span class="pin__dot" aria-hidden="true">06</span><span class="pin__lab" aria-hidden="true">Электроосвещение и щитовые</span></a></li>
+      </ol>
+    </div>
+    <ul class="inside__list" data-legend>
+      <li data-sys="apt"><a href="service-apt.html"><span>01</span>Пожаротушение: спринклерное и газовое</a></li>
+      <li data-sys="ps"><a href="services.html#ps"><span>02</span>Пожарная сигнализация</a></li>
+      <li data-sys="soue"><a href="services.html#soue"><span>03</span>Оповещение и эвакуация</a></li>
+      <li data-sys="os"><a href="services.html#os"><span>04</span>Охранная сигнализация</a></li>
+      <li data-sys="skud"><a href="services.html#skud"><span>05</span>Контроль доступа</a></li>
+      <li data-sys="eo"><a href="services.html#eo"><span>06</span>Электроосвещение и щитовые</a></li>
+    </ul>
+    </div>
+  </div>
+</section>
+</div>
 
 <section class="about" aria-labelledby="about-h">
   <div class="container about__grid">

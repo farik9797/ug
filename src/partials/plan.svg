@@ -1,0 +1,124 @@
+<svg class="plan" viewBox="100 225 1400 625" role="img" aria-label="Схема разреза здания: где стоят системы пожаротушения, сигнализации, оповещения, охраны, СКУД и электроосвещения" xmlns="http://www.w3.org/2000/svg">
+<g class="plan__struct">
+<path class="d plan__ground" d="M 100 820 H 1500"/>
+<path class="d plan__wall" d="M 140 820 V 250 H 1460 V 820"/>
+<path class="d plan__slab" d="M 140 650 H 1460"/>
+<path class="d plan__slab" d="M 140 480 H 1460"/>
+<path class="d plan__slab" d="M 140 310 H 1460"/>
+<path class="d plan__wall" d="M 110 250 H 1490"/>
+<path class="d plan__thin" d="M 760 820 V 250 M 900 820 V 250"/>
+<path class="d plan__thin" d="M 770 820 L 890 650"/>
+<path class="d plan__thin" d="M 770 650 L 890 480"/>
+<path class="d plan__thin" d="M 770 480 L 890 310"/>
+<path class="d plan__thin" d="M 470 650 V 310"/>
+<path class="d plan__thin" d="M 1150 820 V 650"/>
+<path class="d plan__thin" d="M 1150 480 V 310"/>
+<path class="d plan__thin" d="M 1150 650 V 480"/>
+<path class="d plan__thin" d="M 140 730 H 200 M 140 820 V 730"/>
+</g>
+<g class="plan__sys" data-sys="apt">
+<path class="d plan__pipe" d="M 930 820 V 324"/>
+<rect class="plan__valve" x="918" y="770" width="24" height="24"/>
+<path class="d plan__pipe" d="M 160 664 H 1130"/>
+<circle class="plan__head" cx="200" cy="672" r="5"/>
+<circle class="plan__head" cx="290" cy="672" r="5"/>
+<circle class="plan__head" cx="380" cy="672" r="5"/>
+<circle class="plan__head" cx="470" cy="672" r="5"/>
+<circle class="plan__head" cx="560" cy="672" r="5"/>
+<circle class="plan__head" cx="650" cy="672" r="5"/>
+<circle class="plan__head" cx="740" cy="672" r="5"/>
+<circle class="plan__head" cx="920" cy="672" r="5"/>
+<circle class="plan__head" cx="1010" cy="672" r="5"/>
+<circle class="plan__head" cx="1100" cy="672" r="5"/>
+<path class="d plan__pipe" d="M 160 494 H 1130"/>
+<circle class="plan__head" cx="200" cy="502" r="5"/>
+<circle class="plan__head" cx="290" cy="502" r="5"/>
+<circle class="plan__head" cx="380" cy="502" r="5"/>
+<circle class="plan__head" cx="470" cy="502" r="5"/>
+<circle class="plan__head" cx="560" cy="502" r="5"/>
+<circle class="plan__head" cx="650" cy="502" r="5"/>
+<circle class="plan__head" cx="740" cy="502" r="5"/>
+<circle class="plan__head" cx="920" cy="502" r="5"/>
+<circle class="plan__head" cx="1010" cy="502" r="5"/>
+<circle class="plan__head" cx="1100" cy="502" r="5"/>
+<path class="d plan__pipe" d="M 160 324 H 1130"/>
+<circle class="plan__head" cx="200" cy="332" r="5"/>
+<circle class="plan__head" cx="290" cy="332" r="5"/>
+<circle class="plan__head" cx="380" cy="332" r="5"/>
+<circle class="plan__head" cx="470" cy="332" r="5"/>
+<circle class="plan__head" cx="560" cy="332" r="5"/>
+<circle class="plan__head" cx="650" cy="332" r="5"/>
+<circle class="plan__head" cx="740" cy="332" r="5"/>
+<circle class="plan__head" cx="920" cy="332" r="5"/>
+<circle class="plan__head" cx="1010" cy="332" r="5"/>
+<circle class="plan__head" cx="1100" cy="332" r="5"/>
+<rect class="plan__cyl" x="1180" y="380" width="28" height="92" rx="12"/>
+<rect class="plan__cyl" x="1220" y="380" width="28" height="92" rx="12"/>
+<path class="d plan__pipe" d="M 1194 380 V 330 H 1440 M 1234 380 V 330"/>
+<path class="plan__nozzle" d="M 1290 330 v 10"/>
+<path class="plan__nozzle" d="M 1370 330 v 10"/>
+</g>
+<g class="plan__struct">
+<rect class="d plan__rack" x="1290" y="380" width="36" height="100"/>
+<rect class="d plan__rack" x="1340" y="380" width="36" height="100"/>
+<rect class="d plan__rack" x="1390" y="380" width="36" height="100"/>
+</g>
+<g class="plan__sys" data-sys="ps">
+<path class="plan__det" d="M 288 346 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 608 346 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 1038 346 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 288 516 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 608 516 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 1038 516 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 1288 516 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 288 686 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 608 686 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 1038 686 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 1288 686 h 24 l -4 8 h -16 z"/>
+</g>
+<g class="plan__sys" data-sys="soue">
+<rect class="plan__spk" x="734" y="370" width="16" height="24"/>
+<rect class="plan__exit" x="910" y="366" width="44" height="18"/>
+<rect class="plan__spk" x="734" y="540" width="16" height="24"/>
+<rect class="plan__exit" x="910" y="536" width="44" height="18"/>
+<rect class="plan__spk" x="734" y="710" width="16" height="24"/>
+<rect class="plan__exit" x="910" y="706" width="44" height="18"/>
+</g>
+<g class="plan__sys" data-sys="os">
+<path class="plan__cam" d="M 152 664 l 22 8 l 0 10 l -22 -6 z"/>
+<path class="plan__cam" d="M 1448 494 l -22 8 l 0 10 l 22 -6 z"/>
+<path class="plan__cam" d="M 152 324 l 22 8 l 0 10 l -22 -6 z"/>
+<path class="plan__cam" d="M 748 664 l -22 8 l 0 10 l 22 -6 z"/>
+</g>
+<g class="plan__sys" data-sys="skud">
+<rect class="plan__turn" x="520" y="770" width="10" height="50"/>
+<path class="d plan__thin" d="M 530 790 h 30"/>
+<rect class="plan__turn" x="570" y="770" width="10" height="50"/>
+<path class="d plan__thin" d="M 580 790 h 30"/>
+<rect class="plan__turn" x="620" y="770" width="10" height="50"/>
+<path class="d plan__thin" d="M 630 790 h 30"/>
+<rect class="plan__reader" x="500" y="740" width="10" height="16"/>
+</g>
+<g class="plan__sys" data-sys="eo">
+<rect class="d plan__panel" x="1200" y="700" width="40" height="120"/>
+<rect class="d plan__panel" x="1250" y="700" width="40" height="120"/>
+<rect class="d plan__panel" x="1300" y="700" width="40" height="120"/>
+<rect class="d plan__panel" x="1350" y="700" width="40" height="120"/>
+<path class="d plan__cable" d="M 1220 700 V 670 H 950"/>
+<path class="plan__lamp" d="M 250 678 h 40"/>
+<path class="plan__lamp" d="M 380 678 h 40"/>
+<path class="plan__lamp" d="M 560 678 h 40"/>
+<path class="plan__lamp" d="M 1000 678 h 40"/>
+<path class="plan__lamp" d="M 1080 678 h 40"/>
+<path class="plan__lamp" d="M 250 508 h 40"/>
+<path class="plan__lamp" d="M 380 508 h 40"/>
+<path class="plan__lamp" d="M 560 508 h 40"/>
+<path class="plan__lamp" d="M 1000 508 h 40"/>
+<path class="plan__lamp" d="M 1080 508 h 40"/>
+<path class="plan__lamp" d="M 250 338 h 40"/>
+<path class="plan__lamp" d="M 380 338 h 40"/>
+<path class="plan__lamp" d="M 560 338 h 40"/>
+<path class="plan__lamp" d="M 1000 338 h 40"/>
+<path class="plan__lamp" d="M 1080 338 h 40"/>
+</g>
+</svg>
