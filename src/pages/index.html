@@ -2,7 +2,7 @@
 <div class="intro" data-intro>
 <section class="hero dark" data-hero aria-labelledby="hero-h">
   <div class="hero__stage">
-    <div class="hero__media" data-slot="hero" data-alt="Здание UMARBEKOV GROUP вечером" data-hero-media>
+    <div class="hero__media" data-slot="hero" data-alt="Здание UMARBEKOV GROUP вечером" data-hero-media{{seq}}>
       {{img:ug-building|Здание с вывеской UMARBEKOV GROUP вечером, фасад с золотой подсветкой|100vw|50% 50%|eager}}
     </div>
     <div class="hero__scrim" aria-hidden="true" data-hero-scrim></div>
@@ -51,140 +51,191 @@
 </div>
 
 <section class="about" aria-labelledby="about-h">
-  <div class="container about__grid">
-    <figure class="about__photo tilt" data-slot="about" data-alt="Объект компании: фасад или интерьер" data-tilt="left">
-      {{img:facade-curve|Изогнутый стеклянный фасад из ромбовидных панелей|(min-width: 60rem) 55vw, 100vw|60% 50%}}
-    </figure>
-    <div class="about__text">
+  <div class="about__grid">
+    <div class="about__text container-l">
       <h2 id="about-h">Создаём инженерную основу современных объектов</h2>
-      <p class="lead">UMARBEKOV GROUP строит системы противопожарной защиты, безопасности и инженерную инфраструктуру зданий.</p>
-      <p>Работаем с коммерческими, промышленными и социальными объектами. Заказчик получает все системы от одного подрядчика.</p>
+      <p>UMARBEKOV GROUP проектирует и монтирует системы противопожарной защиты, безопасности и инженерную инфраструктуру зданий.</p>
+      <p>Работаем с коммерческими, промышленными и социальными объектами.</p>
       <a class="link" href="about.html">Подробнее о компании{{icon:arrow-up-right}}</a>
     </div>
+    <div class="about__visual">
+      <figure class="about__photo" data-slot="about" data-alt="Объект компании: фасад здания" data-parallax>
+        {{img:facade-curve|Изогнутый стеклянный фасад из ромбовидных панелей|(min-width: 60rem) 60vw, 100vw|60% 50%}}
+      </figure>
+      <div class="about__plate" data-pop>
+        <span class="about__plate-n">01</span>
+        <p>Один подрядчик на все системы объекта</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="dirs dark" id="dirs" aria-labelledby="dirs-h">
+<section class="dirs" id="dirs" aria-labelledby="dirs-h">
   <div class="container">
-    <div class="sec-head">
-      <h2 id="dirs-h">Шесть систем, которые мы проектируем и монтируем</h2>
-      <p class="sec-head__side">Главное направление: пожаротушение и пожарная сигнализация. Остальное ставим на тех же объектах, чтобы заказчик работал с одной командой.</p>
+    <div class="sec-head sec-head--row">
+      <h2 id="dirs-h">Комплексные инженерные решения</h2>
+      <a class="link" href="services.html">Все услуги{{icon:arrow-up-right}}</a>
     </div>
-    <ol class="dirs__grid" data-deck>
-      <li class="dcard dcard--xl">
-        <a class="dcard__link" href="service-apt.html">
-          <figure class="dcard__media" data-slot="dir-apt" data-alt="Узел управления спринклерной системы на объекте">{{img:sprinkler-pipes|Красные стояки и узлы управления спринклерной системы|(min-width: 60rem) 50vw, 100vw|50% 40%}}</figure>
-          <span class="dcard__n">01</span>
-          <h3 class="dcard__t">Автоматическое пожаротушение</h3>
-          <p class="dcard__d">Спринклерные, газовые и порошковые установки под ключ.</p>
-          <span class="dcard__go">Об услуге{{icon:arrow-up-right}}</span>
+    <ol class="tiles" data-deck>
+      <li class="tile">
+        <a class="tile__link" href="service-apt.html">
+          <figure class="tile__media" data-slot="dir-01" data-alt="Фото направления: Автоматическое пожаротушение">{{img:sprinkler-pipes|Красные стояки и узлы управления спринклерной системы|(min-width: 60rem) 33vw, 100vw|50% 40%}}</figure>
+          <span class="tile__n">01</span>
+          <h3 class="tile__t">Автоматическое пожаротушение <span class="tile__abbr">(АПТ)</span></h3>
+          <span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span>
         </a>
       </li>
-      <li class="dcard dcard--l">
-        <a class="dcard__link" href="services.html#ps">
-          <figure class="dcard__media" data-slot="dir-ps" data-alt="Извещатель на потолке в помещении">{{img:smoke-detector|Дымовой извещатель на натяжном потолке|(min-width: 60rem) 30vw, 100vw|50% 30%}}</figure>
-          <span class="dcard__n">02</span>
-          <h3 class="dcard__t">Пожарная сигнализация</h3>
-          <p class="dcard__d">Проект, извещатели, приборы и пусконаладка.</p>
-          <span class="dcard__go">Об услуге{{icon:arrow-up-right}}</span>
+      <li class="tile">
+        <a class="tile__link" href="services.html#ps">
+          <figure class="tile__media" data-slot="dir-02" data-alt="Фото направления: Пожарная сигнализация">{{img:smoke-detector|Дымовой извещатель на потолке|(min-width: 60rem) 33vw, 100vw|50% 30%}}</figure>
+          <span class="tile__n">02</span>
+          <h3 class="tile__t">Пожарная сигнализация <span class="tile__abbr">(ПС)</span></h3>
+          <span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span>
         </a>
       </li>
-      <li class="dcard">
-        <a class="dcard__link" href="services.html#soue">
-          <figure class="dcard__media" data-slot="dir-soue" data-alt="Прибор системы оповещения">{{img:alarm-panel-2|Приёмно-контрольный прибор и выносная панель на стене|(min-width: 60rem) 25vw, 100vw|50% 35%}}</figure>
-          <span class="dcard__n">03</span>
-          <h3 class="dcard__t">Оповещение и эвакуация</h3>
-          <p class="dcard__d">СОУЭ: звук, табло и управление эвакуацией.</p>
-          <span class="dcard__go">Об услуге{{icon:arrow-up-right}}</span>
+      <li class="tile">
+        <a class="tile__link" href="services.html#soue">
+          <figure class="tile__media" data-slot="dir-03" data-alt="Фото направления: Оповещение и управление эвакуацией">{{img:alarm-panel-2|Прибор системы оповещения на стене|(min-width: 60rem) 33vw, 100vw|50% 35%}}</figure>
+          <span class="tile__n">03</span>
+          <h3 class="tile__t">Оповещение и управление эвакуацией <span class="tile__abbr">(СОУЭ)</span></h3>
+          <span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span>
         </a>
       </li>
-      <li class="dcard">
-        <a class="dcard__link" href="services.html#os">
-          <figure class="dcard__media" data-slot="dir-os" data-alt="Прибор охранной сигнализации">{{img:alarm-panel|Прибор охранно-пожарной сигнализации на стене|(min-width: 60rem) 25vw, 100vw|50% 50%}}</figure>
-          <span class="dcard__n">04</span>
-          <h3 class="dcard__t">Охранная сигнализация</h3>
-          <p class="dcard__d">Охрана помещений и периметра объекта.</p>
-          <span class="dcard__go">Об услуге{{icon:arrow-up-right}}</span>
+      <li class="tile">
+        <a class="tile__link" href="services.html#os">
+          <figure class="tile__media" data-slot="dir-04" data-alt="Фото направления: Охранная сигнализация">{{img:alarm-panel|Прибор охранной сигнализации|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure>
+          <span class="tile__n">04</span>
+          <h3 class="tile__t">Охранная сигнализация <span class="tile__abbr">(ОС)</span></h3>
+          <span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span>
         </a>
       </li>
-      <li class="dcard">
-        <a class="dcard__link" href="services.html#skud">
-          <figure class="dcard__media" data-slot="dir-skud" data-alt="Турникеты СКУД на проходной">{{img:turnstile|Стеклянные турникеты на проходной офиса|(min-width: 60rem) 25vw, 100vw|50% 50%}}</figure>
-          <span class="dcard__n">05</span>
-          <h3 class="dcard__t">Контроль доступа</h3>
-          <p class="dcard__d">СКУД: турникеты, считыватели, учёт прохода.</p>
-          <span class="dcard__go">Об услуге{{icon:arrow-up-right}}</span>
+      <li class="tile">
+        <a class="tile__link" href="services.html#skud">
+          <figure class="tile__media" data-slot="dir-05" data-alt="Фото направления: Контроль и управление доступом">{{img:turnstile|Турникеты на проходной|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure>
+          <span class="tile__n">05</span>
+          <h3 class="tile__t">Контроль и управление доступом <span class="tile__abbr">(СКУД)</span></h3>
+          <span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span>
         </a>
       </li>
-      <li class="dcard">
-        <a class="dcard__link" href="services.html#eo">
-          <figure class="dcard__media" data-slot="dir-eo" data-alt="Электрощитовая на объекте">{{img:electrical|Ряд электрических шкафов в щитовой|(min-width: 60rem) 25vw, 100vw|50% 50%}}</figure>
-          <span class="dcard__n">06</span>
-          <h3 class="dcard__t">Электроосвещение и сети</h3>
-          <p class="dcard__d">Освещение, щитовое оборудование, инженерные сети.</p>
-          <span class="dcard__go">Об услуге{{icon:arrow-up-right}}</span>
+      <li class="tile">
+        <a class="tile__link" href="services.html#eo">
+          <figure class="tile__media" data-slot="dir-06" data-alt="Фото направления: Электроосвещение и инженерные сети">{{img:electrical|Шкафы электрощитовой|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure>
+          <span class="tile__n">06</span>
+          <h3 class="tile__t">Электроосвещение и инженерные сети <span class="tile__abbr">(ЭО)</span></h3>
+          <span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span>
         </a>
       </li>
     </ol>
   </div>
 </section>
 
-<section class="apt" aria-labelledby="apt-h">
-  <div class="container apt__grid">
-    <div class="apt__pin">
-      <h2 id="apt-h">Системы автоматического пожаротушения</h2>
-      <dl class="apt__types">
-        <div><dt>Спринклерное</dt><dd>Вода через оросители. Офисы, торговые центры, склады.</dd></div>
-        <div><dt>Газовое</dt><dd>Гасит без воды, техника остаётся сухой. Серверные, архивы, щитовые.</dd></div>
-        <div><dt>Порошковое</dt><dd>Для складов, гаражей и технических помещений.</dd></div>
-      </dl>
-      <ul class="apt__works" aria-label="Что входит в работу">
-        <li>Проектирование</li><li>Поставка оборудования</li><li>Монтаж</li><li>Пусконаладка</li>
+<section class="sys" aria-label="Пожаротушение и пожарная сигнализация">
+  <div class="sys__grid">
+    <figure class="sys__photo sys__photo--l" data-slot="sys-apt" data-alt="Узлы управления спринклерной системы на объекте" data-parallax>
+      {{img:sprinkler-pipes|Красные трубопроводы и узлы управления спринклерной системы|(min-width: 60rem) 25vw, 100vw|50% 40%}}
+    </figure>
+    <div class="sys__col">
+      <h2>Системы автоматического пожаротушения</h2>
+      <ul class="checks">
+        <li>{{icon:check}}Спринклерное пожаротушение</li>
+        <li>{{icon:check}}Газовое пожаротушение</li>
+        <li>{{icon:check}}Порошковое пожаротушение</li>
       </ul>
-      <a class="btn btn--gold" href="#request">Заказать расчёт</a>
+      <p class="sys__works">Проектирование, поставка оборудования, монтаж, пусконаладка.</p>
+      <a class="btn btn--gold btn--sm" href="#request">Заказать расчёт{{icon:arrow-up-right}}</a>
     </div>
-    <div class="apt__media">
-      <figure class="apt__fig tilt" data-slot="apt-1" data-alt="Модули газового пожаротушения на объекте компании" data-tilt="right">
-        {{img:gas-fm200|Баллоны газового пожаротушения в серверной|(min-width: 60rem) 50vw, 100vw|50% 50%}}
-      </figure>
-      <figure class="apt__fig apt__fig--tall tilt" data-slot="apt-2" data-alt="Пульт управления установкой пожаротушения" data-tilt="left">
-        {{img:gas-controls|Пульт и щиты управления установкой газового пожаротушения|(min-width: 60rem) 34vw, 100vw|50% 30%}}
-      </figure>
+    <div class="sys__col">
+      <h2>Раннее обнаружение. Своевременное реагирование.</h2>
+      <ul class="checks">
+        <li>{{icon:check}}Проектирование систем пожарной сигнализации</li>
+        <li>{{icon:check}}Монтаж оборудования</li>
+        <li>{{icon:check}}Установка извещателей</li>
+        <li>{{icon:check}}Системы оповещения</li>
+        <li>{{icon:check}}Пусконаладочные работы</li>
+      </ul>
+      <a class="btn btn--line-dark btn--sm" href="services.html#ps">Узнать больше{{icon:arrow-up-right}}</a>
     </div>
+    <figure class="sys__photo sys__photo--r" data-slot="sys-ps" data-alt="Извещатель пожарной сигнализации на объекте" data-parallax>
+      {{img:smoke-detector|Дымовой извещатель на потолке|(min-width: 60rem) 25vw, 100vw|50% 30%}}
+    </figure>
   </div>
 </section>
 
-<section class="ps dark" aria-labelledby="ps-h">
-  <div class="container ps__grid">
-    <h2 id="ps-h">Раннее обнаружение. Своевременное реагирование.</h2>
-    <ol class="ps__list">
-      <li><span>Проектирование систем пожарной сигнализации</span></li>
-      <li><span>Монтаж оборудования</span></li>
-      <li><span>Установка извещателей</span></li>
-      <li><span>Системы оповещения и эвакуации</span></li>
-      <li><span>Пусконаладочные работы</span></li>
-    </ol>
-    <a class="link ps__more" href="services.html#ps">Пожарная сигнализация и СОУЭ{{icon:arrow-up-right}}</a>
-  </div>
-</section>
-
-<section class="process" aria-labelledby="process-h" data-process>
-  <div class="process__pin">
-    <div class="container process__head">
-      <h2 id="process-h">Все инженерные системы от одного подрядчика</h2>
-      <p>Шесть шагов, одна команда и один договор.</p>
+<section class="steps dark" aria-labelledby="steps-h" data-steps>
+  <div class="steps__bg" aria-hidden="true">{{include:plan}}</div>
+  <div class="container steps__grid">
+    <div class="steps__text">
+      <h2 id="steps-h">Все инженерные системы от одного подрядчика</h2>
+      <p>Полный цикл работ: от обследования объекта до передачи готовой системы.</p>
+      <a class="btn btn--gold btn--sm" href="services.html">Узнать больше{{icon:arrow-up-right}}</a>
     </div>
-    <div class="process__rail">
-      <div class="process__line" aria-hidden="true"><span data-process-line></span></div>
-      <ol class="process__track container" data-process-track>
-        <li class="step"><span class="step__n">01</span><h3>Обследование объекта</h3><p>Выезжаем, смотрим помещения и существующие сети.</p></li>
-        <li class="step"><span class="step__n">02</span><h3>Проектирование</h3><p>Готовим проект, смету и ресурсную ведомость.</p></li>
-        <li class="step"><span class="step__n">03</span><h3>Подбор и поставка</h3><p>Подбираем оборудование под проект и привозим.</p></li>
-        <li class="step"><span class="step__n">04</span><h3>Монтаж</h3><p>Прокладываем трубы и кабели, ставим приборы.</p></li>
-        <li class="step"><span class="step__n">05</span><h3>Пусконаладка</h3><p>Настраиваем и проверяем систему в работе.</p></li>
-        <li class="step"><span class="step__n">06</span><h3>Передача системы</h3><p>Сдаём готовую систему с документацией.</p></li>
+    <div class="steps__rail">
+      <div class="steps__line" aria-hidden="true"><span data-steps-line></span></div>
+      <ol class="steps__list">
+        <li><span class="steps__dot">01</span><span class="steps__t">Обследование объекта</span></li>
+        <li><span class="steps__dot">02</span><span class="steps__t">Проектирование</span></li>
+        <li><span class="steps__dot">03</span><span class="steps__t">Подбор и поставка</span></li>
+        <li><span class="steps__dot">04</span><span class="steps__t">Монтаж</span></li>
+        <li><span class="steps__dot">05</span><span class="steps__t">Пусконаладка</span></li>
+        <li><span class="steps__dot">06</span><span class="steps__t">Передача системы</span></li>
       </ol>
     </div>
+  </div>
+</section>
+
+<section class="works" aria-labelledby="works-h">
+  <div class="container">
+    <div class="sec-head sec-head--row">
+      <div>
+        <h2 id="works-h">Реализованные объекты</h2>
+        <p class="sec-head__sub">Проекты, за которыми стоит результат.</p>
+      </div>
+      <a class="link" href="projects.html">Все проекты{{icon:arrow-up-right}}</a>
+    </div>
+    <ul class="strip" data-gallery>
+      <li class="strip__item">
+        <a href="project.html">
+          <figure class="strip__media" data-slot="work-1" data-alt="Фото объекта компании">{{img:datacenter-tech|Инженеры у стоек с кабелями в серверной|(min-width: 60rem) 20vw, 50vw|50% 40%}}</figure>
+          <span class="strip__cap"><span class="fill" data-fill="object">Название объекта</span></span>
+        </a>
+      </li>
+      <li class="strip__item">
+        <a href="project.html">
+          <figure class="strip__media" data-slot="work-2" data-alt="Фото объекта компании">{{img:atrium|Атриум офисного здания|(min-width: 60rem) 20vw, 50vw|50% 45%}}</figure>
+          <span class="strip__cap">Объект из портфолио</span>
+        </a>
+      </li>
+      <li class="strip__item">
+        <a href="project.html">
+          <figure class="strip__media" data-slot="work-3" data-alt="Фото объекта компании">{{img:gas-fm200|Баллоны газового пожаротушения|(min-width: 60rem) 20vw, 50vw|50% 50%}}</figure>
+          <span class="strip__cap">Объект из портфолио</span>
+        </a>
+      </li>
+      <li class="strip__item">
+        <a href="project.html">
+          <figure class="strip__media" data-slot="work-4" data-alt="Фото объекта компании">{{img:turnstile|Проходная с турникетами|(min-width: 60rem) 20vw, 50vw|50% 50%}}</figure>
+          <span class="strip__cap">Объект из портфолио</span>
+        </a>
+      </li>
+      <li class="strip__item">
+        <a href="project.html">
+          <figure class="strip__media" data-slot="work-5" data-alt="Фото объекта компании">{{img:electrical|Электрощитовая|(min-width: 60rem) 20vw, 50vw|50% 50%}}</figure>
+          <span class="strip__cap">Объект из портфолио</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="facts dark" aria-label="Коротко о работе">
+  <div class="facts__bg" data-slot="facts" data-alt="Инженерные коммуникации" aria-hidden="true">{{img:datacenter-aisle||100vw|50% 50%}}</div>
+  <div class="container">
+    <dl class="facts__list" data-rise>
+      <div><dt>6</dt><dd>инженерных систем</dd></div>
+      <div><dt>3</dt><dd>вида пожаротушения</dd></div>
+      <div><dt>4</dt><dd>этапа работ под ключ</dd></div>
+      <div><dt>1</dt><dd>подрядчик на весь объект</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -199,38 +250,6 @@
       <li>{{icon:landmark}}<span>Работаем с юрлицами и госзаказчиками</span></li>
       <li>{{icon:file-check-2}}<span>Полный пакет документов</span></li>
       <li>{{icon:scale}}<span>Плательщик НДС</span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="works" aria-labelledby="works-h">
-  <div class="container">
-    <div class="sec-head">
-      <h2 id="works-h">Проекты, за которыми стоит результат</h2>
-      <a class="link" href="projects.html">Все объекты{{icon:arrow-up-right}}</a>
-    </div>
-    <ul class="works__grid" data-gallery>
-      <li class="wcard wcard--xl">
-        <a href="project.html">
-          <figure class="wcard__media" data-slot="work-1" data-alt="Главное фото объекта компании">{{img:datacenter-tech|Инженеры у стоек с кабелями в серверной|(min-width: 60rem) 60vw, 100vw|50% 40%}}</figure>
-          <h3 class="wcard__t"><span class="fill" data-fill="object-1">Название объекта</span></h3>
-          <p class="wcard__m">Тип, город и выполненные работы</p>
-        </a>
-      </li>
-      <li class="wcard">
-        <a href="project.html">
-          <figure class="wcard__media" data-slot="work-2" data-alt="Фото объекта компании">{{img:atrium|Атриум офисного здания со стеклянной крышей|(min-width: 60rem) 30vw, 100vw|50% 45%}}</figure>
-          <h3 class="wcard__t"><span class="fill" data-fill="object-2">Название объекта</span></h3>
-          <p class="wcard__m">Тип, город и выполненные работы</p>
-        </a>
-      </li>
-      <li class="wcard">
-        <a href="project.html">
-          <figure class="wcard__media" data-slot="work-3" data-alt="Фото объекта компании">{{img:hydrant-cabinet|Пожарный шкаф с рукавом и огнетушителем|(min-width: 60rem) 30vw, 100vw|50% 50%}}</figure>
-          <h3 class="wcard__t">Объект из портфолио</h3>
-          <p class="wcard__m">Тип, город и выполненные работы</p>
-        </a>
-      </li>
     </ul>
   </div>
 </section>
@@ -309,7 +328,25 @@
   </div>
 </section>
 
-<section class="news dark" aria-labelledby="news-h">
+<section class="partner" aria-labelledby="partner-h">
+  <div class="partner__grid">
+    <figure class="partner__photo" data-slot="partner" data-alt="Команда компании на объекте" data-parallax>
+      {{img:datacenter-tech|Инженеры работают со шкафами оборудования|(min-width: 60rem) 45vw, 100vw|40% 40%}}
+    </figure>
+    <div class="partner__text">
+      <h2 id="partner-h">Ваш проект в надёжных руках</h2>
+      <p>Получите консультацию и расчёт стоимости от команды UMARBEKOV GROUP.</p>
+      <a class="btn btn--gold btn--sm" href="#request">Оставить заявку{{icon:arrow-up-right}}</a>
+    </div>
+    <div class="partner__brand dark">
+      <img src="assets/logo/ug-04_minimal_eastern-gold.png" width="420" height="300" alt="UMARBEKOV GROUP" loading="lazy">
+      <p class="partner__wordmark">Umarbekov Group</p>
+      <p class="partner__tag">Строим будущее</p>
+    </div>
+  </div>
+</section>
+
+<section class="news" aria-labelledby="news-h">
   <div class="container">
     <div class="sec-head">
       <h2 id="news-h">Новости и события</h2>
@@ -373,6 +410,17 @@
         <p>В Ташкенте и Ташкентской области в первую очередь, а также по всему Узбекистану.</p>
       </details>
     </div>
+  </div>
+</section>
+
+<section class="cta-band dark" aria-labelledby="cta-h">
+  <div class="cta-band__bg" data-slot="cta" data-alt="Ташкент вечером" aria-hidden="true">{{img:hero-building||100vw|50% 60%}}</div>
+  <div class="container cta-band__in">
+    <div>
+      <h2 id="cta-h">Готовы обсудить ваш проект?</h2>
+      <p>Оставьте заявку, и мы свяжемся с вами.</p>
+    </div>
+    <a class="btn btn--gold" href="#request">Оставить заявку{{icon:arrow-up-right}}</a>
   </div>
 </section>
 

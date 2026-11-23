@@ -115,17 +115,55 @@
           intro.classList.add('is-3d');
           prep(lines);
           const inside = intro.querySelector('[data-inside]');
-          gsap.timeline({ scrollTrigger: { trigger: intro, start: 'top top', end: '+=280%', scrub: 0.7, pin: true, anticipatePin: 1 } })
-            .to('[data-hero-copy]', { opacity: 0, y: -80, duration: 0.14, ease: 'power1.in' }, 0)
-            .to('[data-hero-scrim]', { opacity: 0, duration: 0.2 }, 0)
-            .fromTo('[data-hero-media]', { scale: 1, rotateY: 0 }, { scale: 5.2, duration: 0.46, ease: 'power2.in' }, 0)
-            .to('[data-hero-veil]', { opacity: 1, duration: 0.1, ease: 'none' }, 0.36)
-            .set(inside, { visibility: 'visible' }, 0.42)
-            .fromTo(inside, { opacity: 0, scale: 1.35, z: 0 }, { opacity: 1, scale: 1, duration: 0.14, ease: 'power2.out' }, 0.42)
-            .to(lines, { strokeDashoffset: 0, duration: 0.22, stagger: 0.0015, ease: 'none' }, 0.5)
-            .from(marks, { opacity: 0, scale: 0, transformOrigin: '50% 50%', duration: 0.06, stagger: 0.0012, ease: 'back.out(2)' }, 0.66)
-            .from(pins, { opacity: 0, y: 14, duration: 0.06, stagger: 0.02 }, 0.8)
-            .to({}, { duration: 0.08 });
+          const media = intro.querySelector('[data-hero-media]');
+          const build = (seq) => ctx.add(() => {
+            const tl = gsap.timeline({ scrollTrigger: { trigger: intro, start: 'top top', end: '+=300%', scrub: 0.6, pin: true, anticipatePin: 1 } });
+            tl.to('[data-hero-copy]', { opacity: 0, y: -80, duration: 0.12, ease: 'power1.in' }, 0)
+              .to('[data-hero-scrim]', { opacity: 0, duration: 0.18 }, 0);
+            if (seq) {
+              /* Видео пролёта: кадр за кадром по прогрессу скролла */
+              const f = { i: 0 };
+              tl.to(f, { i: seq.count - 1, duration: 0.5, ease: 'none', onUpdate: () => seq.draw(Math.round(f.i)) }, 0);
+            } else {
+              /* Без видео: наезд на фото, увеличение ограничено, чтобы не терять резкость */
+              tl.fromTo(media, { scale: 1 }, { scale: 2.4, duration: 0.5, ease: 'power2.in' }, 0);
+            }
+            tl.to('[data-hero-veil]', { opacity: 1, duration: 0.1, ease: 'none' }, 0.42)
+              .set(inside, { visibility: 'visible' }, 0.48)
+              .fromTo(inside, { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.12, ease: 'power2.out' }, 0.48)
+              .to(lines, { strokeDashoffset: 0, duration: 0.2, stagger: 0.0013, ease: 'none' }, 0.56)
+              .from(marks, { opacity: 0, scale: 0, transformOrigin: '50% 50%', duration: 0.05, stagger: 0.001, ease: 'back.out(2)' }, 0.72)
+              .from(pins, { opacity: 0, y: 14, duration: 0.05, stagger: 0.015 }, 0.84)
+              .to({}, { duration: 0.06 });
+            ScrollTrigger.refresh();
+          });
+          (media.dataset.seq ? fetch(media.dataset.seq).then((r) => (r.ok ? r.json() : null)).catch(() => null) : Promise.resolve(null)).then((m) => {
+            if (!m || !m.count) return build(null);
+            const canvas = d.createElement('canvas');
+            canvas.className = 'hero__canvas';
+            media.appendChild(canvas);
+            const g = canvas.getContext('2d');
+            const frames = [];
+            const src = (i) => m.pattern.replace('%04d', String(i + 1).padStart(4, '0'));
+            let last = 0;
+            const fit = () => {
+              const dpr = Math.min(window.devicePixelRatio || 1, 2);
+              canvas.width = Math.round(media.clientWidth * dpr); canvas.height = Math.round(media.clientHeight * dpr);
+              draw(last);
+            };
+            const draw = (i) => {
+              let k = i; while (k > 0 && !(frames[k] && frames[k].complete && frames[k].naturalWidth)) k--;
+              const im = frames[k]; if (!im || !im.naturalWidth) return;
+              last = i;
+              const cw = canvas.width, ch = canvas.height, s = Math.max(cw / im.naturalWidth, ch / im.naturalHeight);
+              const w = im.naturalWidth * s, h = im.naturalHeight * s;
+              g.drawImage(im, (cw - w) / 2, (ch - h) / 2, w, h);
+            };
+            for (let i = 0; i < m.count; i++) { const im = new Image(); im.decoding = 'async'; im.src = src(i); frames[i] = im; }
+            frames[0].onload = () => { media.classList.add('has-seq'); fit(); };
+            window.addEventListener('resize', fit);
+            build({ count: m.count, draw });
+          });
           ctx.add(() => () => { intro.classList.remove('is-3d'); lines.forEach((p) => { p.style.strokeDasharray = ''; p.style.strokeDashoffset = ''; }); });
         } else {
           prep(lines);
@@ -215,9 +253,29 @@
       });
 
       /* Списки и карточки новостей: спокойное появление */
-      $('[data-rise] > li, .ncard, .doc, .ps__list li, .apt__types div, .rows > *').forEach((el) => {
+      $('[data-rise] > li, [data-rise] > div, .ncard, .doc, .ps__list li, .apt__types div, .rows > *').forEach((el) => {
         gsap.from(el, { y: 28, opacity: 0, duration: 0.6, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 90%' } });
       });
+
+      /* Этапы: золотая линия тянется, точки зажигаются по очереди */
+      const steps = d.querySelector('[data-steps]');
+      if (steps) {
+        const dots = $('.steps__list li', steps);
+        const stl = gsap.timeline({ scrollTrigger: { trigger: steps, start: 'top 75%', end: 'center 45%', scrub: 0.6 } });
+        stl.fromTo('[data-steps-line]', { scaleX: 0 }, { scaleX: 1, ease: 'none', duration: 1 }, 0);
+        dots.forEach((li, i) => stl.from(li, desk ? { opacity: 0, rotateY: -70, z: -80, y: 10, duration: 0.18 } : { opacity: 0, y: 16, duration: 0.18 }, i * 0.16));
+        gsap.fromTo($('.steps__bg .plan', steps), { xPercent: 8, rotateY: -18 }, { xPercent: -4, rotateY: 0, ease: 'none',
+          scrollTrigger: { trigger: steps, start: 'top bottom', end: 'bottom top', scrub: true } });
+      }
+
+      /* Параллакс фото с косым срезом */
+      $('[data-parallax]').forEach((fig) => {
+        const img = fig.querySelector('img'); if (!img) return;
+        gsap.fromTo(img, { yPercent: -8, scale: 1.16 }, { yPercent: 8, scale: 1.16, ease: 'none',
+          scrollTrigger: { trigger: fig, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+      $('[data-pop]').forEach((el) => gsap.from(el, { y: 60, rotateX: desk ? -40 : 0, opacity: 0, duration: 0.8, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 92%' } }));
 
       /* Обложки внутренних страниц */
       const ph = d.querySelector('[data-phero]');

@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;600&subset=cyrillic&display=swap">
-<link rel="stylesheet" href="assets/css/site.css?v=1795438242">
+<link rel="stylesheet" href="assets/css/site.css?v=1795439011">
 <script>document.documentElement.classList.replace('no-js','js')</script>
 </head>
 <body data-page="index">
@@ -239,140 +239,314 @@
 </div>
 
 <section class="about" aria-labelledby="about-h">
-  <div class="container about__grid">
-    <figure class="about__photo tilt" data-slot="about" data-alt="Объект компании: фасад или интерьер" data-tilt="left">
-      <img src="assets/img/facade-curve-1600.jpg" srcset="assets/img/facade-curve-960.jpg 960w, assets/img/facade-curve-1600.jpg 1600w, assets/img/facade-curve-2400.jpg 2400w" sizes="(min-width: 60rem) 55vw, 100vw" width="3840" height="2560" alt="Изогнутый стеклянный фасад из ромбовидных панелей" style="object-position: 60% 50%" loading="lazy" decoding="async" data-photo="facade-curve">
-    </figure>
-    <div class="about__text">
+  <div class="about__grid">
+    <div class="about__text container-l">
       <h2 id="about-h">Создаём инженерную основу современных объектов</h2>
-      <p class="lead">UMARBEKOV GROUP строит системы противопожарной защиты, безопасности и инженерную инфраструктуру зданий.</p>
-      <p>Работаем с коммерческими, промышленными и социальными объектами. Заказчик получает все системы от одного подрядчика.</p>
+      <p>UMARBEKOV GROUP проектирует и монтирует системы противопожарной защиты, безопасности и инженерную инфраструктуру зданий.</p>
+      <p>Работаем с коммерческими, промышленными и социальными объектами.</p>
       <a class="link" href="about.html">Подробнее о компании<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
     </div>
+    <div class="about__visual">
+      <figure class="about__photo" data-slot="about" data-alt="Объект компании: фасад здания" data-parallax>
+        <img src="assets/img/facade-curve-1600.jpg" srcset="assets/img/facade-curve-960.jpg 960w, assets/img/facade-curve-1600.jpg 1600w, assets/img/facade-curve-2400.jpg 2400w" sizes="(min-width: 60rem) 60vw, 100vw" width="3840" height="2560" alt="Изогнутый стеклянный фасад из ромбовидных панелей" style="object-position: 60% 50%" loading="lazy" decoding="async" data-photo="facade-curve">
+      </figure>
+      <div class="about__plate" data-pop>
+        <span class="about__plate-n">01</span>
+        <p>Один подрядчик на все системы объекта</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="dirs dark" id="dirs" aria-labelledby="dirs-h">
+<section class="dirs" id="dirs" aria-labelledby="dirs-h">
   <div class="container">
-    <div class="sec-head">
-      <h2 id="dirs-h">Шесть систем, которые мы проектируем и монтируем</h2>
-      <p class="sec-head__side">Главное направление: пожаротушение и пожарная сигнализация. Остальное ставим на тех же объектах, чтобы заказчик работал с одной командой.</p>
+    <div class="sec-head sec-head--row">
+      <h2 id="dirs-h">Комплексные инженерные решения</h2>
+      <a class="link" href="services.html">Все услуги<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
     </div>
-    <ol class="dirs__grid" data-deck>
-      <li class="dcard dcard--xl">
-        <a class="dcard__link" href="service-apt.html">
-          <figure class="dcard__media" data-slot="dir-apt" data-alt="Узел управления спринклерной системы на объекте"><img src="assets/img/sprinkler-pipes-1600.jpg" srcset="assets/img/sprinkler-pipes-960.jpg 960w, assets/img/sprinkler-pipes-1600.jpg 1600w" sizes="(min-width: 60rem) 50vw, 100vw" width="1920" height="1440" alt="Красные стояки и узлы управления спринклерной системы" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="sprinkler-pipes"></figure>
-          <span class="dcard__n">01</span>
-          <h3 class="dcard__t">Автоматическое пожаротушение</h3>
-          <p class="dcard__d">Спринклерные, газовые и порошковые установки под ключ.</p>
-          <span class="dcard__go">Об услуге<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
+    <ol class="tiles" data-deck>
+      <li class="tile">
+        <a class="tile__link" href="service-apt.html">
+          <figure class="tile__media" data-slot="dir-01" data-alt="Фото направления: Автоматическое пожаротушение"><img src="assets/img/sprinkler-pipes-1600.jpg" srcset="assets/img/sprinkler-pipes-960.jpg 960w, assets/img/sprinkler-pipes-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1440" alt="Красные стояки и узлы управления спринклерной системы" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="sprinkler-pipes"></figure>
+          <span class="tile__n">01</span>
+          <h3 class="tile__t">Автоматическое пожаротушение <span class="tile__abbr">(АПТ)</span></h3>
+          <span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
         </a>
       </li>
-      <li class="dcard dcard--l">
-        <a class="dcard__link" href="services.html#ps">
-          <figure class="dcard__media" data-slot="dir-ps" data-alt="Извещатель на потолке в помещении"><img src="assets/img/smoke-detector-1600.jpg" srcset="assets/img/smoke-detector-960.jpg 960w, assets/img/smoke-detector-1600.jpg 1600w" sizes="(min-width: 60rem) 30vw, 100vw" width="1920" height="1920" alt="Дымовой извещатель на натяжном потолке" style="object-position: 50% 30%" loading="lazy" decoding="async" data-photo="smoke-detector"></figure>
-          <span class="dcard__n">02</span>
-          <h3 class="dcard__t">Пожарная сигнализация</h3>
-          <p class="dcard__d">Проект, извещатели, приборы и пусконаладка.</p>
-          <span class="dcard__go">Об услуге<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
+      <li class="tile">
+        <a class="tile__link" href="services.html#ps">
+          <figure class="tile__media" data-slot="dir-02" data-alt="Фото направления: Пожарная сигнализация"><img src="assets/img/smoke-detector-1600.jpg" srcset="assets/img/smoke-detector-960.jpg 960w, assets/img/smoke-detector-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1920" alt="Дымовой извещатель на потолке" style="object-position: 50% 30%" loading="lazy" decoding="async" data-photo="smoke-detector"></figure>
+          <span class="tile__n">02</span>
+          <h3 class="tile__t">Пожарная сигнализация <span class="tile__abbr">(ПС)</span></h3>
+          <span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
         </a>
       </li>
-      <li class="dcard">
-        <a class="dcard__link" href="services.html#soue">
-          <figure class="dcard__media" data-slot="dir-soue" data-alt="Прибор системы оповещения"><img src="assets/img/alarm-panel-2-1600.jpg" srcset="assets/img/alarm-panel-2-960.jpg 960w, assets/img/alarm-panel-2-1600.jpg 1600w" sizes="(min-width: 60rem) 25vw, 100vw" width="1920" height="2560" alt="Приёмно-контрольный прибор и выносная панель на стене" style="object-position: 50% 35%" loading="lazy" decoding="async" data-photo="alarm-panel-2"></figure>
-          <span class="dcard__n">03</span>
-          <h3 class="dcard__t">Оповещение и эвакуация</h3>
-          <p class="dcard__d">СОУЭ: звук, табло и управление эвакуацией.</p>
-          <span class="dcard__go">Об услуге<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
+      <li class="tile">
+        <a class="tile__link" href="services.html#soue">
+          <figure class="tile__media" data-slot="dir-03" data-alt="Фото направления: Оповещение и управление эвакуацией"><img src="assets/img/alarm-panel-2-1600.jpg" srcset="assets/img/alarm-panel-2-960.jpg 960w, assets/img/alarm-panel-2-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="2560" alt="Прибор системы оповещения на стене" style="object-position: 50% 35%" loading="lazy" decoding="async" data-photo="alarm-panel-2"></figure>
+          <span class="tile__n">03</span>
+          <h3 class="tile__t">Оповещение и управление эвакуацией <span class="tile__abbr">(СОУЭ)</span></h3>
+          <span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
         </a>
       </li>
-      <li class="dcard">
-        <a class="dcard__link" href="services.html#os">
-          <figure class="dcard__media" data-slot="dir-os" data-alt="Прибор охранной сигнализации"><img src="assets/img/alarm-panel-1600.jpg" srcset="assets/img/alarm-panel-960.jpg 960w, assets/img/alarm-panel-1600.jpg 1600w" sizes="(min-width: 60rem) 25vw, 100vw" width="1920" height="1080" alt="Прибор охранно-пожарной сигнализации на стене" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="alarm-panel"></figure>
-          <span class="dcard__n">04</span>
-          <h3 class="dcard__t">Охранная сигнализация</h3>
-          <p class="dcard__d">Охрана помещений и периметра объекта.</p>
-          <span class="dcard__go">Об услуге<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
+      <li class="tile">
+        <a class="tile__link" href="services.html#os">
+          <figure class="tile__media" data-slot="dir-04" data-alt="Фото направления: Охранная сигнализация"><img src="assets/img/alarm-panel-1600.jpg" srcset="assets/img/alarm-panel-960.jpg 960w, assets/img/alarm-panel-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1080" alt="Прибор охранной сигнализации" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="alarm-panel"></figure>
+          <span class="tile__n">04</span>
+          <h3 class="tile__t">Охранная сигнализация <span class="tile__abbr">(ОС)</span></h3>
+          <span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
         </a>
       </li>
-      <li class="dcard">
-        <a class="dcard__link" href="services.html#skud">
-          <figure class="dcard__media" data-slot="dir-skud" data-alt="Турникеты СКУД на проходной"><img src="assets/img/turnstile-1600.jpg" srcset="assets/img/turnstile-960.jpg 960w, assets/img/turnstile-1600.jpg 1600w" sizes="(min-width: 60rem) 25vw, 100vw" width="1920" height="1041" alt="Стеклянные турникеты на проходной офиса" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="turnstile"></figure>
-          <span class="dcard__n">05</span>
-          <h3 class="dcard__t">Контроль доступа</h3>
-          <p class="dcard__d">СКУД: турникеты, считыватели, учёт прохода.</p>
-          <span class="dcard__go">Об услуге<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
+      <li class="tile">
+        <a class="tile__link" href="services.html#skud">
+          <figure class="tile__media" data-slot="dir-05" data-alt="Фото направления: Контроль и управление доступом"><img src="assets/img/turnstile-1600.jpg" srcset="assets/img/turnstile-960.jpg 960w, assets/img/turnstile-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1041" alt="Турникеты на проходной" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="turnstile"></figure>
+          <span class="tile__n">05</span>
+          <h3 class="tile__t">Контроль и управление доступом <span class="tile__abbr">(СКУД)</span></h3>
+          <span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
         </a>
       </li>
-      <li class="dcard">
-        <a class="dcard__link" href="services.html#eo">
-          <figure class="dcard__media" data-slot="dir-eo" data-alt="Электрощитовая на объекте"><img src="assets/img/electrical-1600.jpg" srcset="assets/img/electrical-960.jpg 960w, assets/img/electrical-1600.jpg 1600w" sizes="(min-width: 60rem) 25vw, 100vw" width="1920" height="1280" alt="Ряд электрических шкафов в щитовой" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="electrical"></figure>
-          <span class="dcard__n">06</span>
-          <h3 class="dcard__t">Электроосвещение и сети</h3>
-          <p class="dcard__d">Освещение, щитовое оборудование, инженерные сети.</p>
-          <span class="dcard__go">Об услуге<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
+      <li class="tile">
+        <a class="tile__link" href="services.html#eo">
+          <figure class="tile__media" data-slot="dir-06" data-alt="Фото направления: Электроосвещение и инженерные сети"><img src="assets/img/electrical-1600.jpg" srcset="assets/img/electrical-960.jpg 960w, assets/img/electrical-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1280" alt="Шкафы электрощитовой" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="electrical"></figure>
+          <span class="tile__n">06</span>
+          <h3 class="tile__t">Электроосвещение и инженерные сети <span class="tile__abbr">(ЭО)</span></h3>
+          <span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
         </a>
       </li>
     </ol>
   </div>
 </section>
 
-<section class="apt" aria-labelledby="apt-h">
-  <div class="container apt__grid">
-    <div class="apt__pin">
-      <h2 id="apt-h">Системы автоматического пожаротушения</h2>
-      <dl class="apt__types">
-        <div><dt>Спринклерное</dt><dd>Вода через оросители. Офисы, торговые центры, склады.</dd></div>
-        <div><dt>Газовое</dt><dd>Гасит без воды, техника остаётся сухой. Серверные, архивы, щитовые.</dd></div>
-        <div><dt>Порошковое</dt><dd>Для складов, гаражей и технических помещений.</dd></div>
-      </dl>
-      <ul class="apt__works" aria-label="Что входит в работу">
-        <li>Проектирование</li><li>Поставка оборудования</li><li>Монтаж</li><li>Пусконаладка</li>
+<section class="sys" aria-label="Пожаротушение и пожарная сигнализация">
+  <div class="sys__grid">
+    <figure class="sys__photo sys__photo--l" data-slot="sys-apt" data-alt="Узлы управления спринклерной системы на объекте" data-parallax>
+      <img src="assets/img/sprinkler-pipes-1600.jpg" srcset="assets/img/sprinkler-pipes-960.jpg 960w, assets/img/sprinkler-pipes-1600.jpg 1600w" sizes="(min-width: 60rem) 25vw, 100vw" width="1920" height="1440" alt="Красные трубопроводы и узлы управления спринклерной системы" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="sprinkler-pipes">
+    </figure>
+    <div class="sys__col">
+      <h2>Системы автоматического пожаротушения</h2>
+      <ul class="checks">
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Спринклерное пожаротушение</li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Газовое пожаротушение</li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Порошковое пожаротушение</li>
       </ul>
-      <a class="btn btn--gold" href="#request">Заказать расчёт</a>
+      <p class="sys__works">Проектирование, поставка оборудования, монтаж, пусконаладка.</p>
+      <a class="btn btn--gold btn--sm" href="#request">Заказать расчёт<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
     </div>
-    <div class="apt__media">
-      <figure class="apt__fig tilt" data-slot="apt-1" data-alt="Модули газового пожаротушения на объекте компании" data-tilt="right">
-        <img src="assets/img/gas-fm200-1600.jpg" srcset="assets/img/gas-fm200-960.jpg 960w, assets/img/gas-fm200-1600.jpg 1600w" sizes="(min-width: 60rem) 50vw, 100vw" width="1920" height="1275" alt="Баллоны газового пожаротушения в серверной" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="gas-fm200">
-      </figure>
-      <figure class="apt__fig apt__fig--tall tilt" data-slot="apt-2" data-alt="Пульт управления установкой пожаротушения" data-tilt="left">
-        <img src="assets/img/gas-controls-1600.jpg" srcset="assets/img/gas-controls-960.jpg 960w, assets/img/gas-controls-1600.jpg 1600w" sizes="(min-width: 60rem) 34vw, 100vw" width="1920" height="2323" alt="Пульт и щиты управления установкой газового пожаротушения" style="object-position: 50% 30%" loading="lazy" decoding="async" data-photo="gas-controls">
-      </figure>
+    <div class="sys__col">
+      <h2>Раннее обнаружение. Своевременное реагирование.</h2>
+      <ul class="checks">
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Проектирование систем пожарной сигнализации</li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Монтаж оборудования</li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Установка извещателей</li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Системы оповещения</li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Пусконаладочные работы</li>
+      </ul>
+      <a class="btn btn--line-dark btn--sm" href="services.html#ps">Узнать больше<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
     </div>
+    <figure class="sys__photo sys__photo--r" data-slot="sys-ps" data-alt="Извещатель пожарной сигнализации на объекте" data-parallax>
+      <img src="assets/img/smoke-detector-1600.jpg" srcset="assets/img/smoke-detector-960.jpg 960w, assets/img/smoke-detector-1600.jpg 1600w" sizes="(min-width: 60rem) 25vw, 100vw" width="1920" height="1920" alt="Дымовой извещатель на потолке" style="object-position: 50% 30%" loading="lazy" decoding="async" data-photo="smoke-detector">
+    </figure>
   </div>
 </section>
 
-<section class="ps dark" aria-labelledby="ps-h">
-  <div class="container ps__grid">
-    <h2 id="ps-h">Раннее обнаружение. Своевременное реагирование.</h2>
-    <ol class="ps__list">
-      <li><span>Проектирование систем пожарной сигнализации</span></li>
-      <li><span>Монтаж оборудования</span></li>
-      <li><span>Установка извещателей</span></li>
-      <li><span>Системы оповещения и эвакуации</span></li>
-      <li><span>Пусконаладочные работы</span></li>
-    </ol>
-    <a class="link ps__more" href="services.html#ps">Пожарная сигнализация и СОУЭ<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
-  </div>
-</section>
-
-<section class="process" aria-labelledby="process-h" data-process>
-  <div class="process__pin">
-    <div class="container process__head">
-      <h2 id="process-h">Все инженерные системы от одного подрядчика</h2>
-      <p>Шесть шагов, одна команда и один договор.</p>
+<section class="steps dark" aria-labelledby="steps-h" data-steps>
+  <div class="steps__bg" aria-hidden="true"><svg class="plan" viewBox="100 225 1400 625" role="img" aria-label="Схема разреза здания: где стоят системы пожаротушения, сигнализации, оповещения, охраны, СКУД и электроосвещения" xmlns="http://www.w3.org/2000/svg">
+<g class="plan__struct">
+<path class="d plan__ground" d="M 100 820 H 1500"/>
+<path class="d plan__wall" d="M 140 820 V 250 H 1460 V 820"/>
+<path class="d plan__slab" d="M 140 650 H 1460"/>
+<path class="d plan__slab" d="M 140 480 H 1460"/>
+<path class="d plan__slab" d="M 140 310 H 1460"/>
+<path class="d plan__wall" d="M 110 250 H 1490"/>
+<path class="d plan__thin" d="M 760 820 V 250 M 900 820 V 250"/>
+<path class="d plan__thin" d="M 770 820 L 890 650"/>
+<path class="d plan__thin" d="M 770 650 L 890 480"/>
+<path class="d plan__thin" d="M 770 480 L 890 310"/>
+<path class="d plan__thin" d="M 470 650 V 310"/>
+<path class="d plan__thin" d="M 1150 820 V 650"/>
+<path class="d plan__thin" d="M 1150 480 V 310"/>
+<path class="d plan__thin" d="M 1150 650 V 480"/>
+<path class="d plan__thin" d="M 140 730 H 200 M 140 820 V 730"/>
+</g>
+<g class="plan__sys" data-sys="apt">
+<path class="d plan__pipe" d="M 930 820 V 324"/>
+<rect class="plan__valve" x="918" y="770" width="24" height="24"/>
+<path class="d plan__pipe" d="M 160 664 H 1130"/>
+<circle class="plan__head" cx="200" cy="672" r="5"/>
+<circle class="plan__head" cx="290" cy="672" r="5"/>
+<circle class="plan__head" cx="380" cy="672" r="5"/>
+<circle class="plan__head" cx="470" cy="672" r="5"/>
+<circle class="plan__head" cx="560" cy="672" r="5"/>
+<circle class="plan__head" cx="650" cy="672" r="5"/>
+<circle class="plan__head" cx="740" cy="672" r="5"/>
+<circle class="plan__head" cx="920" cy="672" r="5"/>
+<circle class="plan__head" cx="1010" cy="672" r="5"/>
+<circle class="plan__head" cx="1100" cy="672" r="5"/>
+<path class="d plan__pipe" d="M 160 494 H 1130"/>
+<circle class="plan__head" cx="200" cy="502" r="5"/>
+<circle class="plan__head" cx="290" cy="502" r="5"/>
+<circle class="plan__head" cx="380" cy="502" r="5"/>
+<circle class="plan__head" cx="470" cy="502" r="5"/>
+<circle class="plan__head" cx="560" cy="502" r="5"/>
+<circle class="plan__head" cx="650" cy="502" r="5"/>
+<circle class="plan__head" cx="740" cy="502" r="5"/>
+<circle class="plan__head" cx="920" cy="502" r="5"/>
+<circle class="plan__head" cx="1010" cy="502" r="5"/>
+<circle class="plan__head" cx="1100" cy="502" r="5"/>
+<path class="d plan__pipe" d="M 160 324 H 1130"/>
+<circle class="plan__head" cx="200" cy="332" r="5"/>
+<circle class="plan__head" cx="290" cy="332" r="5"/>
+<circle class="plan__head" cx="380" cy="332" r="5"/>
+<circle class="plan__head" cx="470" cy="332" r="5"/>
+<circle class="plan__head" cx="560" cy="332" r="5"/>
+<circle class="plan__head" cx="650" cy="332" r="5"/>
+<circle class="plan__head" cx="740" cy="332" r="5"/>
+<circle class="plan__head" cx="920" cy="332" r="5"/>
+<circle class="plan__head" cx="1010" cy="332" r="5"/>
+<circle class="plan__head" cx="1100" cy="332" r="5"/>
+<rect class="plan__cyl" x="1180" y="380" width="28" height="92" rx="12"/>
+<rect class="plan__cyl" x="1220" y="380" width="28" height="92" rx="12"/>
+<path class="d plan__pipe" d="M 1194 380 V 330 H 1440 M 1234 380 V 330"/>
+<path class="plan__nozzle" d="M 1290 330 v 10"/>
+<path class="plan__nozzle" d="M 1370 330 v 10"/>
+</g>
+<g class="plan__struct">
+<rect class="d plan__rack" x="1290" y="380" width="36" height="100"/>
+<rect class="d plan__rack" x="1340" y="380" width="36" height="100"/>
+<rect class="d plan__rack" x="1390" y="380" width="36" height="100"/>
+</g>
+<g class="plan__sys" data-sys="ps">
+<path class="plan__det" d="M 288 346 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 608 346 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 1038 346 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 288 516 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 608 516 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 1038 516 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 1288 516 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 288 686 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 608 686 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 1038 686 h 24 l -4 8 h -16 z"/>
+<path class="plan__det" d="M 1288 686 h 24 l -4 8 h -16 z"/>
+</g>
+<g class="plan__sys" data-sys="soue">
+<rect class="plan__spk" x="734" y="370" width="16" height="24"/>
+<rect class="plan__exit" x="910" y="366" width="44" height="18"/>
+<rect class="plan__spk" x="734" y="540" width="16" height="24"/>
+<rect class="plan__exit" x="910" y="536" width="44" height="18"/>
+<rect class="plan__spk" x="734" y="710" width="16" height="24"/>
+<rect class="plan__exit" x="910" y="706" width="44" height="18"/>
+</g>
+<g class="plan__sys" data-sys="os">
+<path class="plan__cam" d="M 152 664 l 22 8 l 0 10 l -22 -6 z"/>
+<path class="plan__cam" d="M 1448 494 l -22 8 l 0 10 l 22 -6 z"/>
+<path class="plan__cam" d="M 152 324 l 22 8 l 0 10 l -22 -6 z"/>
+<path class="plan__cam" d="M 748 664 l -22 8 l 0 10 l 22 -6 z"/>
+</g>
+<g class="plan__sys" data-sys="skud">
+<rect class="plan__turn" x="520" y="770" width="10" height="50"/>
+<path class="d plan__thin" d="M 530 790 h 30"/>
+<rect class="plan__turn" x="570" y="770" width="10" height="50"/>
+<path class="d plan__thin" d="M 580 790 h 30"/>
+<rect class="plan__turn" x="620" y="770" width="10" height="50"/>
+<path class="d plan__thin" d="M 630 790 h 30"/>
+<rect class="plan__reader" x="500" y="740" width="10" height="16"/>
+</g>
+<g class="plan__sys" data-sys="eo">
+<rect class="d plan__panel" x="1200" y="700" width="40" height="120"/>
+<rect class="d plan__panel" x="1250" y="700" width="40" height="120"/>
+<rect class="d plan__panel" x="1300" y="700" width="40" height="120"/>
+<rect class="d plan__panel" x="1350" y="700" width="40" height="120"/>
+<path class="d plan__cable" d="M 1220 700 V 670 H 950"/>
+<path class="plan__lamp" d="M 250 678 h 40"/>
+<path class="plan__lamp" d="M 380 678 h 40"/>
+<path class="plan__lamp" d="M 560 678 h 40"/>
+<path class="plan__lamp" d="M 1000 678 h 40"/>
+<path class="plan__lamp" d="M 1080 678 h 40"/>
+<path class="plan__lamp" d="M 250 508 h 40"/>
+<path class="plan__lamp" d="M 380 508 h 40"/>
+<path class="plan__lamp" d="M 560 508 h 40"/>
+<path class="plan__lamp" d="M 1000 508 h 40"/>
+<path class="plan__lamp" d="M 1080 508 h 40"/>
+<path class="plan__lamp" d="M 250 338 h 40"/>
+<path class="plan__lamp" d="M 380 338 h 40"/>
+<path class="plan__lamp" d="M 560 338 h 40"/>
+<path class="plan__lamp" d="M 1000 338 h 40"/>
+<path class="plan__lamp" d="M 1080 338 h 40"/>
+</g>
+</svg></div>
+  <div class="container steps__grid">
+    <div class="steps__text">
+      <h2 id="steps-h">Все инженерные системы от одного подрядчика</h2>
+      <p>Полный цикл работ: от обследования объекта до передачи готовой системы.</p>
+      <a class="btn btn--gold btn--sm" href="services.html">Узнать больше<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
     </div>
-    <div class="process__rail">
-      <div class="process__line" aria-hidden="true"><span data-process-line></span></div>
-      <ol class="process__track container" data-process-track>
-        <li class="step"><span class="step__n">01</span><h3>Обследование объекта</h3><p>Выезжаем, смотрим помещения и существующие сети.</p></li>
-        <li class="step"><span class="step__n">02</span><h3>Проектирование</h3><p>Готовим проект, смету и ресурсную ведомость.</p></li>
-        <li class="step"><span class="step__n">03</span><h3>Подбор и поставка</h3><p>Подбираем оборудование под проект и привозим.</p></li>
-        <li class="step"><span class="step__n">04</span><h3>Монтаж</h3><p>Прокладываем трубы и кабели, ставим приборы.</p></li>
-        <li class="step"><span class="step__n">05</span><h3>Пусконаладка</h3><p>Настраиваем и проверяем систему в работе.</p></li>
-        <li class="step"><span class="step__n">06</span><h3>Передача системы</h3><p>Сдаём готовую систему с документацией.</p></li>
+    <div class="steps__rail">
+      <div class="steps__line" aria-hidden="true"><span data-steps-line></span></div>
+      <ol class="steps__list">
+        <li><span class="steps__dot">01</span><span class="steps__t">Обследование объекта</span></li>
+        <li><span class="steps__dot">02</span><span class="steps__t">Проектирование</span></li>
+        <li><span class="steps__dot">03</span><span class="steps__t">Подбор и поставка</span></li>
+        <li><span class="steps__dot">04</span><span class="steps__t">Монтаж</span></li>
+        <li><span class="steps__dot">05</span><span class="steps__t">Пусконаладка</span></li>
+        <li><span class="steps__dot">06</span><span class="steps__t">Передача системы</span></li>
       </ol>
     </div>
+  </div>
+</section>
+
+<section class="works" aria-labelledby="works-h">
+  <div class="container">
+    <div class="sec-head sec-head--row">
+      <div>
+        <h2 id="works-h">Реализованные объекты</h2>
+        <p class="sec-head__sub">Проекты, за которыми стоит результат.</p>
+      </div>
+      <a class="link" href="projects.html">Все проекты<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
+    </div>
+    <ul class="strip" data-gallery>
+      <li class="strip__item">
+        <a href="project.html">
+          <figure class="strip__media" data-slot="work-1" data-alt="Фото объекта компании"><img src="assets/img/datacenter-tech-1600.jpg" srcset="assets/img/datacenter-tech-960.jpg 960w, assets/img/datacenter-tech-1600.jpg 1600w, assets/img/datacenter-tech-2400.jpg 2400w" sizes="(min-width: 60rem) 20vw, 50vw" width="3840" height="2556" alt="Инженеры у стоек с кабелями в серверной" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="datacenter-tech"></figure>
+          <span class="strip__cap"><span class="fill" data-fill="object">Название объекта</span></span>
+        </a>
+      </li>
+      <li class="strip__item">
+        <a href="project.html">
+          <figure class="strip__media" data-slot="work-2" data-alt="Фото объекта компании"><img src="assets/img/atrium-1600.jpg" srcset="assets/img/atrium-960.jpg 960w, assets/img/atrium-1600.jpg 1600w" sizes="(min-width: 60rem) 20vw, 50vw" width="1920" height="3846" alt="Атриум офисного здания" style="object-position: 50% 45%" loading="lazy" decoding="async" data-photo="atrium"></figure>
+          <span class="strip__cap">Объект из портфолио</span>
+        </a>
+      </li>
+      <li class="strip__item">
+        <a href="project.html">
+          <figure class="strip__media" data-slot="work-3" data-alt="Фото объекта компании"><img src="assets/img/gas-fm200-1600.jpg" srcset="assets/img/gas-fm200-960.jpg 960w, assets/img/gas-fm200-1600.jpg 1600w" sizes="(min-width: 60rem) 20vw, 50vw" width="1920" height="1275" alt="Баллоны газового пожаротушения" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="gas-fm200"></figure>
+          <span class="strip__cap">Объект из портфолио</span>
+        </a>
+      </li>
+      <li class="strip__item">
+        <a href="project.html">
+          <figure class="strip__media" data-slot="work-4" data-alt="Фото объекта компании"><img src="assets/img/turnstile-1600.jpg" srcset="assets/img/turnstile-960.jpg 960w, assets/img/turnstile-1600.jpg 1600w" sizes="(min-width: 60rem) 20vw, 50vw" width="1920" height="1041" alt="Проходная с турникетами" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="turnstile"></figure>
+          <span class="strip__cap">Объект из портфолио</span>
+        </a>
+      </li>
+      <li class="strip__item">
+        <a href="project.html">
+          <figure class="strip__media" data-slot="work-5" data-alt="Фото объекта компании"><img src="assets/img/electrical-1600.jpg" srcset="assets/img/electrical-960.jpg 960w, assets/img/electrical-1600.jpg 1600w" sizes="(min-width: 60rem) 20vw, 50vw" width="1920" height="1280" alt="Электрощитовая" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="electrical"></figure>
+          <span class="strip__cap">Объект из портфолио</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="facts dark" aria-label="Коротко о работе">
+  <div class="facts__bg" data-slot="facts" data-alt="Инженерные коммуникации" aria-hidden="true"><img src="assets/img/datacenter-aisle-1600.jpg" srcset="assets/img/datacenter-aisle-960.jpg 960w, assets/img/datacenter-aisle-1600.jpg 1600w" sizes="100vw" width="1920" height="1440" alt="" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="datacenter-aisle"></div>
+  <div class="container">
+    <dl class="facts__list" data-rise>
+      <div><dt>6</dt><dd>инженерных систем</dd></div>
+      <div><dt>3</dt><dd>вида пожаротушения</dd></div>
+      <div><dt>4</dt><dd>этапа работ под ключ</dd></div>
+      <div><dt>1</dt><dd>подрядчик на весь объект</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -387,38 +561,6 @@
       <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <line x1="3" x2="21" y1="22" y2="22" /> <line x1="6" x2="6" y1="18" y2="11" /> <line x1="10" x2="10" y1="18" y2="11" /> <line x1="14" x2="14" y1="18" y2="11" /> <line x1="18" x2="18" y1="18" y2="11" /> <polygon points="12 2 20 7 4 7" /> </svg><span>Работаем с юрлицами и госзаказчиками</span></li>
       <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" /> <path d="M14 2v4a2 2 0 0 0 2 2h4" /> <path d="m3 15 2 2 4-4" /> </svg><span>Полный пакет документов</span></li>
       <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /> <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /> <path d="M7 21h10" /> <path d="M12 3v18" /> <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /> </svg><span>Плательщик НДС</span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="works" aria-labelledby="works-h">
-  <div class="container">
-    <div class="sec-head">
-      <h2 id="works-h">Проекты, за которыми стоит результат</h2>
-      <a class="link" href="projects.html">Все объекты<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
-    </div>
-    <ul class="works__grid" data-gallery>
-      <li class="wcard wcard--xl">
-        <a href="project.html">
-          <figure class="wcard__media" data-slot="work-1" data-alt="Главное фото объекта компании"><img src="assets/img/datacenter-tech-1600.jpg" srcset="assets/img/datacenter-tech-960.jpg 960w, assets/img/datacenter-tech-1600.jpg 1600w, assets/img/datacenter-tech-2400.jpg 2400w" sizes="(min-width: 60rem) 60vw, 100vw" width="3840" height="2556" alt="Инженеры у стоек с кабелями в серверной" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="datacenter-tech"></figure>
-          <h3 class="wcard__t"><span class="fill" data-fill="object-1">Название объекта</span></h3>
-          <p class="wcard__m">Тип, город и выполненные работы</p>
-        </a>
-      </li>
-      <li class="wcard">
-        <a href="project.html">
-          <figure class="wcard__media" data-slot="work-2" data-alt="Фото объекта компании"><img src="assets/img/atrium-1600.jpg" srcset="assets/img/atrium-960.jpg 960w, assets/img/atrium-1600.jpg 1600w" sizes="(min-width: 60rem) 30vw, 100vw" width="1920" height="3846" alt="Атриум офисного здания со стеклянной крышей" style="object-position: 50% 45%" loading="lazy" decoding="async" data-photo="atrium"></figure>
-          <h3 class="wcard__t"><span class="fill" data-fill="object-2">Название объекта</span></h3>
-          <p class="wcard__m">Тип, город и выполненные работы</p>
-        </a>
-      </li>
-      <li class="wcard">
-        <a href="project.html">
-          <figure class="wcard__media" data-slot="work-3" data-alt="Фото объекта компании"><img src="assets/img/hydrant-cabinet-1600.jpg" srcset="assets/img/hydrant-cabinet-960.jpg 960w, assets/img/hydrant-cabinet-1600.jpg 1600w" sizes="(min-width: 60rem) 30vw, 100vw" width="1920" height="1440" alt="Пожарный шкаф с рукавом и огнетушителем" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="hydrant-cabinet"></figure>
-          <h3 class="wcard__t">Объект из портфолио</h3>
-          <p class="wcard__m">Тип, город и выполненные работы</p>
-        </a>
-      </li>
     </ul>
   </div>
 </section>
@@ -513,7 +655,25 @@
   </div>
 </section>
 
-<section class="news dark" aria-labelledby="news-h">
+<section class="partner" aria-labelledby="partner-h">
+  <div class="partner__grid">
+    <figure class="partner__photo" data-slot="partner" data-alt="Команда компании на объекте" data-parallax>
+      <img src="assets/img/datacenter-tech-1600.jpg" srcset="assets/img/datacenter-tech-960.jpg 960w, assets/img/datacenter-tech-1600.jpg 1600w, assets/img/datacenter-tech-2400.jpg 2400w" sizes="(min-width: 60rem) 45vw, 100vw" width="3840" height="2556" alt="Инженеры работают со шкафами оборудования" style="object-position: 40% 40%" loading="lazy" decoding="async" data-photo="datacenter-tech">
+    </figure>
+    <div class="partner__text">
+      <h2 id="partner-h">Ваш проект в надёжных руках</h2>
+      <p>Получите консультацию и расчёт стоимости от команды UMARBEKOV GROUP.</p>
+      <a class="btn btn--gold btn--sm" href="#request">Оставить заявку<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
+    </div>
+    <div class="partner__brand dark">
+      <img src="assets/logo/ug-04_minimal_eastern-gold.png" width="420" height="300" alt="UMARBEKOV GROUP" loading="lazy">
+      <p class="partner__wordmark">Umarbekov Group</p>
+      <p class="partner__tag">Строим будущее</p>
+    </div>
+  </div>
+</section>
+
+<section class="news" aria-labelledby="news-h">
   <div class="container">
     <div class="sec-head">
       <h2 id="news-h">Новости и события</h2>
@@ -577,6 +737,17 @@
         <p>В Ташкенте и Ташкентской области в первую очередь, а также по всему Узбекистану.</p>
       </details>
     </div>
+  </div>
+</section>
+
+<section class="cta-band dark" aria-labelledby="cta-h">
+  <div class="cta-band__bg" data-slot="cta" data-alt="Ташкент вечером" aria-hidden="true"><img src="assets/img/hero-building-1600.jpg" srcset="assets/img/hero-building-960.jpg 960w, assets/img/hero-building-1600.jpg 1600w, assets/img/hero-building-2400.jpg 2400w" sizes="100vw" width="3840" height="2560" alt="" style="object-position: 50% 60%" loading="lazy" decoding="async" data-photo="hero-building"></div>
+  <div class="container cta-band__in">
+    <div>
+      <h2 id="cta-h">Готовы обсудить ваш проект?</h2>
+      <p>Оставьте заявку, и мы свяжемся с вами.</p>
+    </div>
+    <a class="btn btn--gold" href="#request">Оставить заявку<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
   </div>
 </section>
 
@@ -720,6 +891,6 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/site.js?v=1795438242" defer></script>
+<script src="assets/js/site.js?v=1795439011" defer></script>
 </body>
 </html>
