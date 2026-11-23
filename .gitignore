@@ -1,0 +1,5 @@
+password.md
+.DS_Store
+_src/
+_preview/
+.playwright-mcp/

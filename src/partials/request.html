@@ -1,0 +1,68 @@
+<section class="request dark" id="request" aria-labelledby="request-h">
+  <div class="container request__grid">
+    <div class="request__head">
+      <h2 id="request-h">Обсудим ваш проект?</h2>
+      <p class="lead">Расскажите о задаче. Подготовим предложение с учётом особенностей вашего объекта.</p>
+      <dl class="request__direct">
+        <div><dt>Телефон</dt><dd><a href="tel:+998888000056">+998 88 800-00-56</a></dd></div>
+        <div><dt>Почта</dt><dd><a href="mailto:umarbekov.group@mail.ru">umarbekov.group@mail.ru</a></dd></div>
+      </dl>
+    </div>
+    <form class="form" data-endpoint="" novalidate data-form>
+      <div class="field">
+        <label for="f-name">Имя</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+        <p class="field__msg" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label for="f-phone">Телефон</label>
+        <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+998" required>
+        <p class="field__msg" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label for="f-type">Тип объекта</label>
+        <select id="f-type" name="object_type">
+          <option value="">Выберите</option>
+          <option>Офис или бизнес-центр</option>
+          <option>Торговый объект</option>
+          <option>Склад или логистика</option>
+          <option>Производство</option>
+          <option>Социальный объект</option>
+          <option>Государственный объект</option>
+          <option>Другое</option>
+        </select>
+        <p class="field__msg"></p>
+      </div>
+      <div class="field">
+        <label for="f-service">Интересующая услуга</label>
+        <select id="f-service" name="service">
+          <option value="">Выберите</option>
+          <option>Автоматическое пожаротушение</option>
+          <option>Пожарная сигнализация</option>
+          <option>Оповещение и эвакуация (СОУЭ)</option>
+          <option>Охранная сигнализация</option>
+          <option>СКУД</option>
+          <option>Электроосвещение и инженерные сети</option>
+          <option>Общестроительные работы</option>
+          <option>Несколько систем</option>
+        </select>
+        <p class="field__msg"></p>
+      </div>
+      <div class="field field--wide">
+        <label for="f-comment">Комментарий</label>
+        <textarea id="f-comment" name="comment" rows="4" placeholder="Площадь, этажность, сроки, что уже есть на объекте"></textarea>
+        <p class="field__msg"></p>
+      </div>
+      <div class="field field--wide">
+        <label class="file" for="f-file">{{icon:paperclip}}<span data-file-label>Прикрепить техническое задание</span></label>
+        <input class="file__input" id="f-file" name="tz" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.zip,.jpg,.png">
+        <p class="field__msg">Файл в формате pdf, doc, xls, dwg или архив</p>
+      </div>
+      <div class="form__foot field--wide">
+        <button class="btn btn--gold" type="submit">Отправить запрос</button>
+        <p class="form__note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a>.</p>
+        <p class="form__status" role="status" data-status></p>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{desc}}">
+<meta name="theme-color" content="#0d0d0d">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo/ug-04_minimal_eastern-gold.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;600&subset=cyrillic&display=swap">
+<link rel="stylesheet" href="assets/css/site.css?v={{ver}}">
+<script>document.documentElement.classList.replace('no-js','js')</script>
+</head>
+<body data-page="{{page}}">
+<a class="skip" href="#main">Перейти к содержанию</a>
+{{include:header}}
+<main id="main">
+{{body}}
+</main>
+{{include:footer}}
+<div class="mbar" aria-label="Быстрая связь">
+  <a class="mbar__call" href="tel:+998888000056">{{icon:phone}}<span>Позвонить</span></a>
+  <a class="btn btn--gold mbar__cta" href="#request">Оставить заявку</a>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/site.js?v={{ver}}" defer></script>
+</body>
+</html>

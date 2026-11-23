@@ -1,0 +1,37 @@
+[
+ {
+  "shape": "custom editorial floors",
+  "theme": "brand",
+  "axes": "light/roman-serif/warm",
+  "hero": "poster, building tilts into plan",
+  "nav": "graphite bar",
+  "footer": "graphite four columns",
+  "imagery": "photographs, Commons 14",
+  "photos": [
+   "hero-building",
+   "facade-curve",
+   "sprinkler-pipes",
+   "gas-fm200",
+   "gas-controls",
+   "smoke-detector",
+   "alarm-panel",
+   "alarm-panel-2",
+   "turnstile",
+   "electrical",
+   "datacenter-tech",
+   "datacenter-aisle",
+   "atrium",
+   "hydrant-cabinet"
+  ],
+  "sections": 18,
+  "signature": "sprinkler grid lifts off facade in 3D",
+  "waived": [
+   "65",
+   "83",
+   "82"
+  ],
+  "prompt": "UMARBEKOV GROUP corporate site, fire protection, Tashkent, 3D scroll",
+  "date": "2026-11-23",
+  "mode": "build"
+ }
+]
