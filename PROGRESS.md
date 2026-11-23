@@ -38,7 +38,8 @@
 
 ## Следующие шаги
 1. Показать макет клиенту → правки.
-2. Публикация превью на GitHub Pages (`farik9797.github.io/ug`?) — по согласованию.
+2. Превью опубликовано 23.11.2026: https://farik9797.github.io/ug/ (репозиторий github.com/farik9797/ug, публичный; Pages из ветки gh-pages = содержимое site/).
+   Обновить превью: `python3 tools/build.py && git add -A && git commit -m ... && git push && git subtree split --prefix site -b gh-pages && git push -f origin gh-pages` (перед split удалить старую локальную ветку: `git branch -D gh-pages`).
 3. После «да»: WP-тема + ACF Pro по `~/.claude/playbooks/wordpress-acf.md`, Polylang/WPML для RU/UZ/EN, ЧПУ услуг под SEO-ключи из брифа.
 
 ## Команды
