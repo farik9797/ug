@@ -134,5 +134,25 @@
    1116
   ],
   "own": true
+ },
+ "ug-exterior": {
+  "author": "UMARBEKOV GROUP",
+  "license": "материал заказчика / Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "ug-atrium": {
+  "author": "UMARBEKOV GROUP",
+  "license": "материал заказчика / Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
  }
 }
