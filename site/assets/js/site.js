@@ -91,6 +91,7 @@
     const { gsap, ScrollTrigger } = window;
     if (!gsap || !ScrollTrigger) return;
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.config({ ignoreMobileResize: true });
     const mm = gsap.matchMedia();
 
     mm.add({
@@ -111,7 +112,7 @@
         const lines = $('.plan .d', plan).filter((el) => !el.classList.contains('plan__cable'));
         const marks = $('.plan__sys > :not(.d)', plan);
         const pins = $('.pin, [data-legend] li', intro);
-        if (desk) {
+        if (desk || ctx.conditions.mob) {
           intro.classList.add('is-3d');
           prep(lines);
           const inside = intro.querySelector('[data-inside]');
@@ -121,7 +122,7 @@
             .to('[data-hero-copy]', { opacity: 0, y: -80, duration: 0.12, ease: 'power1.in' }, 0)
             .to('[data-hero-scrim]', { opacity: 0, duration: 0.18 }, 0)
             /* Снаружи: камера едет к центральному входу */
-            .fromTo(media, { scale: 1 }, { scale: 2.1, duration: 0.4, ease: 'power2.in' }, 0)
+            .fromTo(media, { scale: 1 }, { scale: desk ? 2.1 : 1.7, duration: 0.4, ease: 'power2.in' }, 0)
             /* Проходим двери: атриум проявляется из света и продолжает движение вперёд */
             .fromTo(innerL, { opacity: 0, scale: 1.25, filter: 'blur(8px) brightness(1.6)' }, { opacity: 1, scale: 1.05, filter: 'blur(0px) brightness(1)', duration: 0.12, ease: 'power1.out' }, 0.32)
             .to(media, { opacity: 0, duration: 0.08 }, 0.38)
