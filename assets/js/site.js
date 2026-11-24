@@ -118,15 +118,40 @@
           const inside = intro.querySelector('[data-inside]');
           const media = intro.querySelector('[data-hero-media]');
           const innerL = intro.querySelector('[data-hero-inner]');
-          gsap.timeline({ scrollTrigger: { trigger: intro, start: 'top top', end: '+=300%', scrub: 0.6, pin: true, anticipatePin: 1 } })
+          const tl = gsap.timeline({ scrollTrigger: { trigger: intro, start: 'top top', end: '+=300%', scrub: 0.6, pin: true, anticipatePin: 1 } })
             .to('[data-hero-copy]', { opacity: 0, y: -80, duration: 0.12, ease: 'power1.in' }, 0)
-            .to('[data-hero-scrim]', { opacity: 0, duration: 0.18 }, 0)
-            /* Снаружи: камера едет к центральному входу */
-            .fromTo(media, { scale: 1 }, { scale: desk ? 2.1 : 1.7, duration: 0.4, ease: 'power2.in' }, 0)
-            /* Проходим двери: атриум проявляется из света и продолжает движение вперёд */
-            .fromTo(innerL, { opacity: 0, scale: 1.25, filter: 'blur(8px) brightness(1.6)' }, { opacity: 1, scale: 1.05, filter: 'blur(0px) brightness(1)', duration: 0.12, ease: 'power1.out' }, 0.32)
-            .to(media, { opacity: 0, duration: 0.08 }, 0.38)
-            .to(innerL, { scale: 1.32, duration: 0.18, ease: 'none' }, 0.44)
+            .to('[data-hero-scrim]', { opacity: 0, duration: 0.18 }, 0);
+          const spec = (desk ? media.dataset.seqD : media.dataset.seqM) || media.dataset.seqD;
+          if (spec) {
+            /* Видео 1920: кадры листаются по скроллу на canvas */
+            const [pattern, countS] = spec.split('|'); const count = +countS;
+            const stage = intro.querySelector('.hero__stage');
+            const canvas = d.createElement('canvas'); canvas.className = 'hero__canvas'; canvas.setAttribute('data-keep', '');
+            stage.insertBefore(canvas, intro.querySelector('[data-hero-scrim]'));
+            const g = canvas.getContext('2d', { alpha: false });
+            const frames = []; let want = 0;
+            const draw = (i) => {
+              let k = i; while (k > 0 && !(frames[k] && frames[k].complete && frames[k].naturalWidth)) k--;
+              const im = frames[k]; if (!im || !im.naturalWidth) return;
+              const cw = canvas.width, ch = canvas.height, sc = Math.max(cw / im.naturalWidth, ch / im.naturalHeight);
+              const w = im.naturalWidth * sc, h = im.naturalHeight * sc;
+              g.imageSmoothingEnabled = true; g.imageSmoothingQuality = 'high';
+              g.drawImage(im, (cw - w) / 2, (ch - h) / 2, w, h);
+            };
+            const fit = () => { const dpr = Math.min(window.devicePixelRatio || 1, 2); canvas.width = Math.round(stage.clientWidth * dpr); canvas.height = Math.round(stage.clientHeight * dpr); draw(want); };
+            for (let i = 0; i < count; i++) { const im = new Image(); im.decoding = 'async'; im.onload = () => { if (i === 0) fit(); else if (Math.abs(i - want) <= 2) draw(want); }; im.src = pattern.replace('%04d', String(i + 1).padStart(4, '0')); frames[i] = im; }
+            window.addEventListener('resize', fit);
+            const f = { i: 0 };
+            tl.fromTo(canvas, { opacity: 0 }, { opacity: 1, duration: 0.02, ease: 'none' }, 0)
+              .to(f, { i: count - 1, duration: 0.56, ease: 'none', onUpdate: () => { want = Math.round(f.i); draw(want); } }, 0);
+          } else {
+            /* Без кадров: наезд на фасад и переход в атриум */
+            tl.fromTo(media, { scale: 1 }, { scale: desk ? 2.1 : 1.7, duration: 0.4, ease: 'power2.in' }, 0)
+              .fromTo(innerL, { opacity: 0, scale: 1.25, filter: 'blur(8px) brightness(1.6)' }, { opacity: 1, scale: 1.05, filter: 'blur(0px) brightness(1)', duration: 0.12, ease: 'power1.out' }, 0.32)
+              .to(media, { opacity: 0, duration: 0.08 }, 0.38)
+              .to(innerL, { scale: 1.32, duration: 0.18, ease: 'none' }, 0.44);
+          }
+          tl
             .to('[data-hero-veil]', { opacity: 1, duration: 0.08, ease: 'none' }, 0.56)
             .set(inside, { visibility: 'visible' }, 0.6)
             .fromTo(inside, { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.1, ease: 'power2.out' }, 0.6)
