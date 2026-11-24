@@ -1,130 +1,4 @@
 {
- "hero-building": {
-  "author": "Dietmar Rabich",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:M%C3%BCnster,_LVM,_B%C3%BCrogeb%C3%A4ude_--_2013_--_5149-51.jpg",
-  "size": [
-   3840,
-   2560
-  ]
- },
- "facade-curve": {
-  "author": "Maksim Sokolov (maxergon.com)",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Fragment_of_160_Front_Street_West,_Toronto.jpg",
-  "size": [
-   3840,
-   2560
-  ]
- },
- "datacenter-tech": {
-  "author": "Daoducquan",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Data_Center_c%E1%BB%A7a_CMC_Telecom_(2).jpg",
-  "size": [
-   3840,
-   2556
-  ]
- },
- "datacenter-aisle": {
-  "author": "Christopher Bowns",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Virginia_Tech_-_data_center.jpg",
-  "size": [
-   1920,
-   1440
-  ]
- },
- "atrium": {
-  "author": "Trougnouf (Benoit Brummer)",
-  "license": "CC BY 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Interior_of_Entrep%C3%B4t_Royal_(DSCF1176).jpg",
-  "size": [
-   1920,
-   3846
-  ]
- },
- "sprinkler-pipes": {
-  "author": "Kgbo",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Automatic_Fire_Sprinkler_Systems,_Brisbane,_2021.jpg",
-  "size": [
-   1920,
-   1440
-  ]
- },
- "gas-fm200": {
-  "author": "Derrick Coetzee from Berkeley, CA, USA",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:FM-200_fire_suppression_system_at_NERSC.jpg",
-  "size": [
-   1920,
-   1275
-  ]
- },
- "gas-controls": {
-  "author": "Derrick Coetzee from Berkeley, CA, USA",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:Controls_for_FM-200_fire_suppression_system_at_NERSC.jpg",
-  "size": [
-   1920,
-   2323
-  ]
- },
- "smoke-detector": {
-  "author": "Georg Pik",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:Smoke_detector_on_the_stretch_ceiling_(01).jpg",
-  "size": [
-   1920,
-   1920
-  ]
- },
- "alarm-panel": {
-  "author": "Georg Pik",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:Fire_alarm_control_panel_VERS-PK_2.jpg",
-  "size": [
-   1920,
-   1080
-  ]
- },
- "alarm-panel-2": {
-  "author": "Connor C.",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:Gent_System_2400_Control_Panel_Model_2401_seen_with_a_repeater_panel.jpg",
-  "size": [
-   1920,
-   2560
-  ]
- },
- "electrical": {
-  "author": "Carl Lender from Sunrise, USA",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Electrical_Distribution_(22789278665).jpg",
-  "size": [
-   1920,
-   1280
-  ]
- },
- "turnstile": {
-  "author": "McGov1258",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Automatic_Systems_SlimLane_EPR_Optical_Turnstile_swing_glass_with_QR_reader_and_Elev_Dest_Dispatch.jpg",
-  "size": [
-   1920,
-   1041
-  ]
- },
- "hydrant-cabinet": {
-  "author": "Karbohut",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Umschrank_mit_Hydrant_und_Schlauch,_Feuerl%C3%B6scher_und_Handfeuermelder.jpg",
-  "size": [
-   1920,
-   1440
-  ]
- },
  "ug-building": {
   "author": "UMARBEKOV GROUP",
   "license": "материал заказчика",
@@ -148,6 +22,156 @@
  "ug-atrium": {
   "author": "UMARBEKOV GROUP",
   "license": "материал заказчика / Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-sprinkler": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-detector": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-exit": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-camera": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-access": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-lights": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-office": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-pump": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   1792,
+   2400
+  ],
+  "own": true
+ },
+ "g-detector-v": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   1792,
+   2400
+  ],
+  "own": true
+ },
+ "g-engineers": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-city": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-warehouse": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2400,
+   1792
+  ],
+  "own": true
+ },
+ "g-round": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2400,
+   1792
+  ],
+  "own": true
+ },
+ "g-gas": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-server": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
   "page": "",
   "size": [
    2752,
