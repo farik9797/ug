@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;600&subset=cyrillic&display=swap">
-<link rel="stylesheet" href="assets/css/site.css?v=1795494167">
+<link rel="stylesheet" href="assets/css/site.css?v=1795495057">
 <script>document.documentElement.classList.replace('no-js','js')</script>
 </head>
 <body data-page="about">
@@ -64,81 +64,153 @@
 </div>
 
 <main id="main">
-<section class="phero phero--photo dark" data-phero aria-labelledby="ph-h">
-  <div class="phero__stage"><div class="phero__media" data-slot="about-hero" data-alt="Офис или объект компании"><img src="assets/img/hero-building-1600.jpg" srcset="assets/img/hero-building-960.jpg 960w, assets/img/hero-building-1600.jpg 1600w, assets/img/hero-building-2400.jpg 2400w" sizes="100vw" width="3840" height="2560" alt="Офисное здание из стекла вечером" style="object-position: 60% 50%" fetchpriority="high" data-photo="hero-building"></div></div>
-  <div class="phero__scrim" aria-hidden="true"></div>
-  <div class="container phero__in">
-    <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><span aria-current="page">О компании</span></li></ol></nav>
-    <h1 id="ph-h">Инженерная основа для коммерческих, промышленных и социальных объектов</h1>
-    <p class="lead">Противопожарная защита, безопасность и инженерные сети. Ташкент и вся республика.</p>
+<section class="phero phero--split dark" aria-labelledby="ph-h">
+  <div class="phero__grid">
+    <div class="phero__text">
+      <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><span aria-current="page">О компании</span></li></ol></nav>
+      <span class="phero__rule" aria-hidden="true"></span>
+      <h1 id="ph-h">Инженерная основа современных объектов</h1>
+      <p class="lead">Противопожарная защита, безопасность и инженерные сети для коммерческих, промышленных и социальных зданий.</p>
+      <div class="phero__actions"><a class="btn btn--gold" href="#request">Обсудить проект<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a></div>
+    </div>
+    <figure class="phero__photo" data-slot="about-hero" data-alt="Здание или объект компании" data-parallax><img src="assets/img/ug-building-1600.jpg" srcset="assets/img/ug-building-960.jpg 960w, assets/img/ug-building-1600.jpg 1600w" sizes="(min-width: 60rem) 60vw, 100vw" width="2000" height="1116" alt="Здание с вывеской UMARBEKOV GROUP вечером" style="object-position: 45% 50%" fetchpriority="high" data-photo="ug-building"></figure>
   </div>
 </section>
 
-<section class="page-sec" aria-labelledby="pos-h">
-  <div class="container split">
-    <h2 id="pos-h">Кто мы</h2>
-    <div class="prose">
+<section class="about" aria-labelledby="who-h">
+  <div class="about__grid">
+    <div class="about__text">
+      <h2 id="who-h">Кто мы</h2>
       <p>ООО «UMARBEKOV GROUP» строит системы противопожарной защиты: автоматическое пожаротушение и пожарную сигнализацию. Это главное направление компании.</p>
-      <p>На тех же объектах ставим охранную сигнализацию, СКУД, электроосвещение, инженерные сети и выполняем общестроительные работы. Заказчику не нужно искать отдельного подрядчика на каждую систему и сводить их между собой.</p>
+      <p>На тех же объектах ставим охранную сигнализацию, СКУД, электроосвещение, инженерные сети и выполняем общестроительные работы.</p>
       <p><span class="fill" data-fill="history">Год основания и история компании</span></p>
     </div>
-  </div>
-</section>
-
-<section class="page-sec dark" aria-labelledby="mis-h">
-  <div class="container split split--rev">
-    <figure class="tall-photo tilt" data-slot="about-team" data-alt="Команда компании на объекте" data-tilt="left"><img src="assets/img/datacenter-tech-1600.jpg" srcset="assets/img/datacenter-tech-960.jpg 960w, assets/img/datacenter-tech-1600.jpg 1600w, assets/img/datacenter-tech-2400.jpg 2400w" sizes="(min-width: 60rem) 55vw, 100vw" width="3840" height="2556" alt="Инженеры работают со шкафами оборудования" style="object-position: 40% 50%" loading="lazy" decoding="async" data-photo="datacenter-tech"></figure>
-    <div class="stack">
-      <h2 id="mis-h">Миссия и ценности</h2>
-      <p class="lead muted">Создаём надёжные объекты с высокими стандартами качества и применяем передовые технологии.</p>
-      <ul class="rows">
-        <li><h3>Качество</h3><p>Стремимся к безупречному качеству на каждом этапе.</p></li>
-        <li><h3>Ответственность</h3><p>Отвечаем перед клиентами, партнёрами и обществом.</p></li>
-        <li><h3>Надёжность</h3><p>Выполняем обещания и строим долгие отношения.</p></li>
-      </ul>
+    <div class="about__visual">
+      <figure class="about__photo" data-slot="about-who" data-alt="Команда компании на объекте" data-parallax><img src="assets/img/datacenter-tech-1600.jpg" srcset="assets/img/datacenter-tech-960.jpg 960w, assets/img/datacenter-tech-1600.jpg 1600w, assets/img/datacenter-tech-2400.jpg 2400w" sizes="(min-width: 60rem) 60vw, 100vw" width="3840" height="2556" alt="Инженеры работают со шкафами оборудования" style="object-position: 40% 45%" loading="lazy" decoding="async" data-photo="datacenter-tech"></figure>
+      <div class="about__plate" data-pop><span class="about__plate-n">01</span><p>Один подрядчик на все системы объекта</p></div>
     </div>
   </div>
 </section>
 
-<section class="page-sec" aria-labelledby="appr-h">
-  <div class="container split">
-    <h2 id="appr-h">Как мы работаем с заказчиком</h2>
-    <dl class="rows">
-      <div><dt>Смета до начала работ</dt><dd>По каждому объекту готовим детальную смету и ресурсную ведомость. Видно, за что платите.</dd></div>
-      <div><dt>Документы</dt><dd>Работаем с юридическими лицами и государственными заказчиками. Плательщик НДС, полный пакет документов.</dd></div>
-      <div><dt>Сроки и технология</dt><dd>Соблюдаем график и технологию монтажа на объектах коммерческого, промышленного и социального назначения.</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section class="page-sec dark" aria-labelledby="cmp-h">
+<section class="values" aria-labelledby="values-h">
   <div class="container">
-    <div class="sec-head"><h2 id="cmp-h">Компетенции</h2><a class="link" href="services.html">Все услуги<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a></div>
-    <ul class="why__list">
-      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /> </svg><span>Автоматическое пожаротушение: спринклерное, газовое, порошковое</span></li>
-      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10.268 21a2 2 0 0 0 3.464 0" /> <path d="M22 8c0-2.3-.8-4.3-2-6" /> <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" /> <path d="M4 2C2.8 3.7 2 5.7 2 8" /> </svg><span>Пожарная сигнализация</span></li>
-      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m3 11 18-5v12L3 14v-3z" /> <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /> </svg><span>Оповещение и управление эвакуацией</span></li>
-      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 18v-6a5 5 0 1 1 10 0v6" /> <path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z" /> <path d="M21 12h1" /> <path d="M18.5 4.5 18 5" /> <path d="M2 12h1" /> <path d="M12 2v1" /> <path d="m4.929 4.929.707.707" /> <path d="M12 12v6" /> </svg><span>Охранная сигнализация</span></li>
-      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" /> <circle cx="16.5" cy="7.5" r=".5" fill="currentColor" /> </svg><span>Контроль и управление доступом</span></li>
-      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /> <path d="M9 18h6" /> <path d="M10 22h4" /> </svg><span>Электроосвещение и инженерные сети</span></li>
-      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5" /> <path d="M14 6a6 6 0 0 1 6 6v3" /> <path d="M4 15v-3a6 6 0 0 1 6-6" /> <rect x="2" y="15" width="20" height="4" rx="1" /> </svg><span>Общестроительные работы</span></li>
-    </ul>
+    <h2 id="values-h">Миссия и ценности</h2>
+    <p class="lead values__lead">Создаём надёжные объекты с высокими стандартами качества и применяем передовые технологии.</p>
+    <ol class="values__grid" data-flip>
+      <li><span class="values__n">01</span><h3>Качество</h3><p>Стремимся к безупречному качеству на каждом этапе.</p></li>
+      <li><span class="values__n">02</span><h3>Инновации</h3><p>Используем современные технологии и эффективные решения.</p></li>
+      <li><span class="values__n">03</span><h3>Ответственность</h3><p>Отвечаем перед клиентами, партнёрами и обществом.</p></li>
+      <li><span class="values__n">04</span><h3>Развитие</h3><p>Растём сами и расширяем возможности.</p></li>
+      <li><span class="values__n">05</span><h3>Надёжность</h3><p>Выполняем обещания и строим долгие отношения.</p></li>
+      <li><span class="values__n">06</span><h3>Устойчивость</h3><p>Думаем о будущем и окружающей среде.</p></li>
+    </ol>
   </div>
 </section>
 
-<section class="page-sec" aria-labelledby="doc-h">
-  <div class="container docs__grid">
-    <div class="docs__text">
-      <h2 id="doc-h">Реквизиты и документы</h2>
-      <p>Лицензии и сертификаты выложим в разделе документации.</p>
-      <a class="link" href="docs.html">Документация<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
+<section class="sys sys--3 dark" aria-labelledby="appr-h">
+  <h2 id="appr-h" class="visually-hidden">Как мы работаем с заказчиком</h2>
+  <div class="sys__grid">
+    <div class="sys__col">
+      <span class="sys__n">01</span>
+      <h3 class="sys__h">Смета до начала работ</h3>
+      <p>По каждому объекту готовим детальную смету и ресурсную ведомость.</p>
     </div>
-    <dl class="kv">
-      <div><dt>Наименование</dt><dd>Общество с ограниченной ответственностью «<span class="wordmark">Umarbekov Group</span>»</dd></div>
-      <div><dt>ИНН</dt><dd class="num">311802238</dd></div>
-      <div><dt>ОКЭД</dt><dd class="num">43299</dd></div>
-      <div><dt>Юридический адрес</dt><dd>г. Ташкент, Яккасарайский район, МСГ «Хамид Сулаймонов», ул. Кичик Мирабад 2-берк, дом 3</dd></div>
-    </dl>
+    <div class="sys__col">
+      <span class="sys__n">02</span>
+      <h3 class="sys__h">Полный пакет документов</h3>
+      <p>Работаем с юрлицами и госзаказчиками, мы плательщик НДС.</p>
+    </div>
+    <div class="sys__col">
+      <span class="sys__n">03</span>
+      <h3 class="sys__h">Сроки и технология</h3>
+      <p>Держим график и технологию монтажа на объектах любого назначения.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page-sec dirs" aria-labelledby="cmp-h">
+  <div class="container">
+    <div class="sec-head sec-head--row">
+      <h2 id="cmp-h">Компетенции</h2>
+      <a class="link" href="services.html">Все услуги<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
+    </div>
+    <ol class="tiles" data-deck>
+      <li class="tile" id="t-apt">
+        <a class="tile__link" href="service-apt.html">
+          <figure class="tile__media" data-slot="tile-apt" data-alt="Фото направления: Автоматическое пожаротушение"><img src="assets/img/sprinkler-pipes-1600.jpg" srcset="assets/img/sprinkler-pipes-960.jpg 960w, assets/img/sprinkler-pipes-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1440" alt="Красные стояки и узлы управления спринклерной системы" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="sprinkler-pipes"></figure>
+          <span class="tile__n">01</span>
+          <h3 class="tile__t">Автоматическое пожаротушение <span class="tile__abbr">(АПТ)</span></h3>
+          <span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
+        </a>
+      </li>
+      <li class="tile" id="t-ps">
+        <a class="tile__link" href="services.html#ps">
+          <figure class="tile__media" data-slot="tile-ps" data-alt="Фото направления: Пожарная сигнализация"><img src="assets/img/smoke-detector-1600.jpg" srcset="assets/img/smoke-detector-960.jpg 960w, assets/img/smoke-detector-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1920" alt="Дымовой извещатель на потолке" style="object-position: 50% 30%" loading="lazy" decoding="async" data-photo="smoke-detector"></figure>
+          <span class="tile__n">02</span>
+          <h3 class="tile__t">Пожарная сигнализация <span class="tile__abbr">(ПС)</span></h3>
+          <span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
+        </a>
+      </li>
+      <li class="tile" id="t-soue">
+        <a class="tile__link" href="services.html#soue">
+          <figure class="tile__media" data-slot="tile-soue" data-alt="Фото направления: Оповещение и управление эвакуацией"><img src="assets/img/alarm-panel-2-1600.jpg" srcset="assets/img/alarm-panel-2-960.jpg 960w, assets/img/alarm-panel-2-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="2560" alt="Прибор системы оповещения на стене" style="object-position: 50% 35%" loading="lazy" decoding="async" data-photo="alarm-panel-2"></figure>
+          <span class="tile__n">03</span>
+          <h3 class="tile__t">Оповещение и управление эвакуацией <span class="tile__abbr">(СОУЭ)</span></h3>
+          <span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
+        </a>
+      </li>
+      <li class="tile" id="t-os">
+        <a class="tile__link" href="services.html#os">
+          <figure class="tile__media" data-slot="tile-os" data-alt="Фото направления: Охранная сигнализация"><img src="assets/img/alarm-panel-1600.jpg" srcset="assets/img/alarm-panel-960.jpg 960w, assets/img/alarm-panel-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1080" alt="Прибор охранной сигнализации" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="alarm-panel"></figure>
+          <span class="tile__n">04</span>
+          <h3 class="tile__t">Охранная сигнализация <span class="tile__abbr">(ОС)</span></h3>
+          <span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
+        </a>
+      </li>
+      <li class="tile" id="t-skud">
+        <a class="tile__link" href="services.html#skud">
+          <figure class="tile__media" data-slot="tile-skud" data-alt="Фото направления: Контроль и управление доступом"><img src="assets/img/turnstile-1600.jpg" srcset="assets/img/turnstile-960.jpg 960w, assets/img/turnstile-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1041" alt="Турникеты на проходной" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="turnstile"></figure>
+          <span class="tile__n">05</span>
+          <h3 class="tile__t">Контроль и управление доступом <span class="tile__abbr">(СКУД)</span></h3>
+          <span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
+        </a>
+      </li>
+      <li class="tile" id="t-eo">
+        <a class="tile__link" href="services.html#eo">
+          <figure class="tile__media" data-slot="tile-eo" data-alt="Фото направления: Электроосвещение и инженерные сети"><img src="assets/img/electrical-1600.jpg" srcset="assets/img/electrical-960.jpg 960w, assets/img/electrical-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1280" alt="Шкафы электрощитовой" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="electrical"></figure>
+          <span class="tile__n">06</span>
+          <h3 class="tile__t">Электроосвещение и инженерные сети <span class="tile__abbr">(ЭО)</span></h3>
+          <span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span>
+        </a>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sys" aria-labelledby="doc-h">
+  <div class="sys__grid sys__grid--doc">
+    <figure class="sys__photo sys__photo--l" data-slot="about-doc" data-alt="Офис компании" data-parallax><img src="assets/img/facade-curve-1600.jpg" srcset="assets/img/facade-curve-960.jpg 960w, assets/img/facade-curve-1600.jpg 1600w, assets/img/facade-curve-2400.jpg 2400w" sizes="(min-width: 60rem) 25vw, 100vw" width="3840" height="2560" alt="Стеклянный фасад из ромбовидных панелей" style="object-position: 60% 50%" loading="lazy" decoding="async" data-photo="facade-curve"></figure>
+    <div class="sys__col sys__col--wide">
+      <h2 id="doc-h">Реквизиты</h2>
+      <dl class="kv">
+        <div><dt>Наименование</dt><dd>ООО «<span class="wordmark">Umarbekov Group</span>»</dd></div>
+        <div><dt>ИНН</dt><dd class="num">311802238</dd></div>
+        <div><dt>ОКЭД</dt><dd class="num">43299</dd></div>
+        <div><dt>Юридический адрес</dt><dd>г. Ташкент, Яккасарайский район, МСГ «Хамид Сулаймонов», ул. Кичик Мирабад 2-берк, дом 3</dd></div>
+      </dl>
+      <a class="btn btn--line-dark btn--sm" href="docs.html">Документация<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band dark" aria-labelledby="cta-h">
+  <div class="cta-band__bg" data-slot="cta" data-alt="Ташкент вечером" aria-hidden="true"><img src="assets/img/hero-building-1600.jpg" srcset="assets/img/hero-building-960.jpg 960w, assets/img/hero-building-1600.jpg 1600w, assets/img/hero-building-2400.jpg 2400w" sizes="100vw" width="3840" height="2560" alt="" style="object-position: 50% 60%" loading="lazy" decoding="async" data-photo="hero-building"></div>
+  <div class="container cta-band__in">
+    <div>
+      <h2 id="cta-h">Готовы обсудить ваш проект?</h2>
+      <p>Оставьте заявку, и мы свяжемся с вами.</p>
+    </div>
+    <a class="btn btn--gold" href="#request">Оставить заявку<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
   </div>
 </section>
 
@@ -266,6 +338,6 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/site.js?v=1795494167" defer></script>
+<script src="assets/js/site.js?v=1795495057" defer></script>
 </body>
 </html>

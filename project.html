@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;600&subset=cyrillic&display=swap">
-<link rel="stylesheet" href="assets/css/site.css?v=1795494167">
+<link rel="stylesheet" href="assets/css/site.css?v=1795495057">
 <script>document.documentElement.classList.replace('no-js','js')</script>
 </head>
 <body data-page="project">
@@ -64,64 +64,80 @@
 </div>
 
 <main id="main">
-<section class="phero phero--photo dark" data-phero aria-labelledby="ph-h">
-  <div class="phero__stage"><div class="phero__media" data-slot="obj-hero" data-alt="Обложка объекта: фасад или главное помещение"><img src="assets/img/atrium-1600.jpg" srcset="assets/img/atrium-960.jpg 960w, assets/img/atrium-1600.jpg 1600w" sizes="100vw" width="1920" height="3846" alt="Атриум офисного здания со стеклянной крышей" style="object-position: 50% 40%" fetchpriority="high" data-photo="atrium"></div></div>
-  <div class="phero__scrim" aria-hidden="true"></div>
-  <div class="container phero__in">
-    <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><a href="projects.html">Объекты</a></li><li><span aria-current="page">Объект</span></li></ol></nav>
-    <h1 id="ph-h"><span class="fill" data-fill="object-name">Название объекта</span></h1>
-    <p class="lead">Шаблон страницы объекта. Заполняется по материалам компании.</p>
+<section class="phero phero--split dark" aria-labelledby="ph-h">
+  <div class="phero__grid">
+    <div class="phero__text">
+      <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><a href="projects.html">Объекты</a></li><li><span aria-current="page">Объект</span></li></ol></nav>
+      <span class="phero__rule" aria-hidden="true"></span>
+      <h1 id="ph-h"><span class="fill" data-fill="object-name">Название объекта</span></h1>
+      <p class="lead">Шаблон страницы объекта. Заполняется по материалам компании.</p>
+    </div>
+    <figure class="phero__photo" data-slot="obj-hero" data-alt="Обложка объекта: фасад или главное помещение" data-parallax><img src="assets/img/atrium-1600.jpg" srcset="assets/img/atrium-960.jpg 960w, assets/img/atrium-1600.jpg 1600w" sizes="(min-width: 60rem) 60vw, 100vw" width="1920" height="3846" alt="Атриум офисного здания со стеклянной крышей" style="object-position: 50% 40%" fetchpriority="high" data-photo="atrium"></figure>
   </div>
 </section>
 
-<section class="page-sec" aria-labelledby="sum-h">
-  <div class="container split">
-    <h2 id="sum-h">Об объекте</h2>
-    <dl class="kv">
-      <div><dt>Тип объекта</dt><dd>Коммерческий, промышленный или социальный</dd></div>
-      <div><dt>Локация</dt><dd>Город и район</dd></div>
-      <div><dt>Выполненные работы</dt><dd>Например: проектирование и монтаж АПТ, пожарная сигнализация, СОУЭ</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section class="page-sec dark" aria-labelledby="task-h">
-  <div class="container split">
-    <h2 id="task-h">Задача</h2>
-    <div class="prose muted"><p>Что нужно было защитить, какие были ограничения по срокам и помещениям. Два-три предложения от инженера, который вёл объект.</p></div>
-  </div>
-</section>
-
-<section class="page-sec" aria-labelledby="sol-h">
-  <div class="container split">
-    <h2 id="sol-h">Инженерные решения</h2>
-    <dl class="rows">
-      <div><dt>Система</dt><dd>Какая установка и почему выбрана именно она.</dd></div>
-      <div><dt>Оборудование</dt><dd>Производители и модели, если компания готова их назвать.</dd></div>
-      <div><dt>Результат</dt><dd>Что сдано заказчику и в каком составе.</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section class="page-sec" aria-labelledby="gal-h">
+<section class="facts dark facts--plain" aria-label="Об объекте">
   <div class="container">
-    <div class="sec-head"><h2 id="gal-h">Галерея</h2></div>
-    <div class="gallery">
-      <figure class="tilt" data-slot="obj-g1" data-alt="Фото с объекта" data-tilt="left"><img src="assets/img/gas-controls-1600.jpg" srcset="assets/img/gas-controls-960.jpg 960w, assets/img/gas-controls-1600.jpg 1600w" sizes="(min-width: 60rem) 58vw, 100vw" width="1920" height="2323" alt="Щиты управления пожаротушением" style="object-position: 50% 30%" loading="lazy" decoding="async" data-photo="gas-controls"></figure>
-      <figure class="tilt" data-slot="obj-g2" data-alt="Фото с объекта" data-tilt="right"><img src="assets/img/smoke-detector-1600.jpg" srcset="assets/img/smoke-detector-960.jpg 960w, assets/img/smoke-detector-1600.jpg 1600w" sizes="(min-width: 60rem) 40vw, 100vw" width="1920" height="1920" alt="Извещатель на потолке" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="smoke-detector"></figure>
-      <figure data-slot="obj-g3" data-alt="Широкий кадр объекта"><img src="assets/img/sprinkler-pipes-1600.jpg" srcset="assets/img/sprinkler-pipes-960.jpg 960w, assets/img/sprinkler-pipes-1600.jpg 1600w" sizes="100vw" width="1920" height="1440" alt="Узлы управления спринклерной системы" style="object-position: 50% 60%" loading="lazy" decoding="async" data-photo="sprinkler-pipes"></figure>
+    <dl class="facts__list facts__list--text">
+      <div><dt>Тип</dt><dd>Коммерческий, промышленный или социальный</dd></div>
+      <div><dt>Город</dt><dd>Город и район</dd></div>
+      <div><dt>Работы</dt><dd>АПТ, пожарная сигнализация, СОУЭ</dd></div>
+      <div><dt>Срок</dt><dd><span class="fill" data-fill="term">Даты работ</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="task-h">
+  <div class="about__grid">
+    <div class="about__text">
+      <h2 id="task-h">Задача</h2>
+      <p>Что нужно было защитить, какие были ограничения по срокам и помещениям. Два-три предложения от инженера, который вёл объект.</p>
+    </div>
+    <div class="about__visual">
+      <figure class="about__photo" data-slot="obj-task" data-alt="Объект до начала работ" data-parallax><img src="assets/img/gas-controls-1600.jpg" srcset="assets/img/gas-controls-960.jpg 960w, assets/img/gas-controls-1600.jpg 1600w" sizes="(min-width: 60rem) 60vw, 100vw" width="1920" height="2323" alt="Щиты управления пожаротушением" style="object-position: 50% 30%" loading="lazy" decoding="async" data-photo="gas-controls"></figure>
     </div>
   </div>
 </section>
 
-<section class="page-sec dark" aria-labelledby="rel-h">
+<section class="sys sys--3 dark" aria-labelledby="sol-h">
+  <h2 id="sol-h" class="visually-hidden">Инженерные решения</h2>
+  <div class="sys__grid">
+    <div class="sys__col"><span class="sys__n">01</span><h3 class="sys__h">Система</h3><p>Какая установка выбрана и почему.</p></div>
+    <div class="sys__col"><span class="sys__n">02</span><h3 class="sys__h">Оборудование</h3><p>Производители и модели, если компания готова их назвать.</p></div>
+    <div class="sys__col"><span class="sys__n">03</span><h3 class="sys__h">Результат</h3><p>Что сдано заказчику и в каком составе.</p></div>
+  </div>
+</section>
+
+<section class="works" aria-labelledby="gal-h">
   <div class="container">
-    <div class="sec-head"><h2 id="rel-h">Похожие проекты</h2><a class="link" href="projects.html">Все объекты<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a></div>
-    <ul class="news__grid">
-      <li class="ncard"><a href="project.html"><figure class="ncard__media" data-slot="rel-1" data-alt="Фото объекта"><img src="assets/img/turnstile-1600.jpg" srcset="assets/img/turnstile-960.jpg 960w, assets/img/turnstile-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1041" alt="Проходная с турникетами" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="turnstile"></figure><h3 class="ncard__t">Объект из портфолио</h3></a></li>
-      <li class="ncard"><a href="project.html"><figure class="ncard__media" data-slot="rel-2" data-alt="Фото объекта"><img src="assets/img/electrical-1600.jpg" srcset="assets/img/electrical-960.jpg 960w, assets/img/electrical-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1280" alt="Электрощитовая" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="electrical"></figure><h3 class="ncard__t">Объект из портфолио</h3></a></li>
-      <li class="ncard"><a href="project.html"><figure class="ncard__media" data-slot="rel-3" data-alt="Фото объекта"><img src="assets/img/datacenter-tech-1600.jpg" srcset="assets/img/datacenter-tech-960.jpg 960w, assets/img/datacenter-tech-1600.jpg 1600w, assets/img/datacenter-tech-2400.jpg 2400w" sizes="(min-width: 60rem) 33vw, 100vw" width="3840" height="2556" alt="Инженеры в серверной" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="datacenter-tech"></figure><h3 class="ncard__t">Объект из портфолио</h3></a></li>
+    <div class="sec-head sec-head--row"><h2 id="gal-h">Галерея</h2></div>
+    <ul class="strip strip--3" data-gallery>
+      <li class="strip__item"><figure class="strip__media" data-slot="obj-g1" data-alt="Фото с объекта"><img src="assets/img/sprinkler-pipes-1600.jpg" srcset="assets/img/sprinkler-pipes-960.jpg 960w, assets/img/sprinkler-pipes-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1440" alt="Узлы управления спринклерной системы" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="sprinkler-pipes"></figure></li>
+      <li class="strip__item"><figure class="strip__media" data-slot="obj-g2" data-alt="Фото с объекта"><img src="assets/img/smoke-detector-1600.jpg" srcset="assets/img/smoke-detector-960.jpg 960w, assets/img/smoke-detector-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1920" alt="Извещатель на потолке" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="smoke-detector"></figure></li>
+      <li class="strip__item"><figure class="strip__media" data-slot="obj-g3" data-alt="Фото с объекта"><img src="assets/img/electrical-1600.jpg" srcset="assets/img/electrical-960.jpg 960w, assets/img/electrical-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1280" alt="Электрощитовая" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="electrical"></figure></li>
     </ul>
+  </div>
+</section>
+
+<section class="page-sec dirs" aria-labelledby="rel-h">
+  <div class="container">
+    <div class="sec-head sec-head--row"><h2 id="rel-h">Похожие проекты</h2><a class="link" href="projects.html">Все объекты<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a></div>
+    <ol class="tiles" data-deck>
+      <li class="tile"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="rel-1" data-alt="Фото объекта"><img src="assets/img/turnstile-1600.jpg" srcset="assets/img/turnstile-960.jpg 960w, assets/img/turnstile-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1041" alt="Проходная с турникетами" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="turnstile"></figure><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
+      <li class="tile"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="rel-2" data-alt="Фото объекта"><img src="assets/img/datacenter-tech-1600.jpg" srcset="assets/img/datacenter-tech-960.jpg 960w, assets/img/datacenter-tech-1600.jpg 1600w, assets/img/datacenter-tech-2400.jpg 2400w" sizes="(min-width: 60rem) 33vw, 100vw" width="3840" height="2556" alt="Инженеры в серверной" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="datacenter-tech"></figure><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
+      <li class="tile"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="rel-3" data-alt="Фото объекта"><img src="assets/img/gas-fm200-1600.jpg" srcset="assets/img/gas-fm200-960.jpg 960w, assets/img/gas-fm200-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1275" alt="Баллоны газового пожаротушения" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="gas-fm200"></figure><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="cta-band dark" aria-labelledby="cta-h">
+  <div class="cta-band__bg" data-slot="cta" data-alt="Ташкент вечером" aria-hidden="true"><img src="assets/img/hero-building-1600.jpg" srcset="assets/img/hero-building-960.jpg 960w, assets/img/hero-building-1600.jpg 1600w, assets/img/hero-building-2400.jpg 2400w" sizes="100vw" width="3840" height="2560" alt="" style="object-position: 50% 60%" loading="lazy" decoding="async" data-photo="hero-building"></div>
+  <div class="container cta-band__in">
+    <div>
+      <h2 id="cta-h">Готовы обсудить ваш проект?</h2>
+      <p>Оставьте заявку, и мы свяжемся с вами.</p>
+    </div>
+    <a class="btn btn--gold" href="#request">Оставить заявку<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
   </div>
 </section>
 
@@ -249,6 +265,6 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/site.js?v=1795494167" defer></script>
+<script src="assets/js/site.js?v=1795495057" defer></script>
 </body>
 </html>
