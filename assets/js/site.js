@@ -25,6 +25,35 @@
   drawer && drawer.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
   d.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
+  /* ---------- окно заявки ---------- */
+  const modal = d.querySelector('[data-modal]');
+  if (modal && typeof modal.showModal === 'function') {
+    let opener = null;
+    const pageService = { 'service-apt': 'Автоматическое пожаротушение' }[d.body.dataset.page] || '';
+    const open = (from) => {
+      opener = from;
+      setMenu(false);
+      const src = modal.querySelector('[data-lead-source]');
+      if (src) src.value = (from && from.textContent.trim()) + ' / ' + d.body.dataset.page;
+      const sel = modal.querySelector('[data-lead-service]');
+      if (sel && pageService && !sel.value) sel.value = pageService;
+      modal.showModal();
+      d.body.classList.add('modal-open');
+      const first = modal.querySelector('input:not([type=hidden])');
+      first && first.focus();
+    };
+    const close = () => { modal.close(); };
+    modal.addEventListener('close', () => { d.body.classList.remove('modal-open'); opener && opener.focus(); });
+    modal.querySelector('[data-modal-close]').addEventListener('click', close);
+    modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+    d.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href="#request"]');
+      if (!a) return;
+      e.preventDefault();
+      open(a);
+    });
+  }
+
   /* ---------- форма заявки ---------- */
   d.querySelectorAll('[data-form]').forEach((form) => {
     const file = form.querySelector('.file__input');
