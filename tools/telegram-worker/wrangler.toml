@@ -1,0 +1,12 @@
+name = "ug-leads"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+# откуда принимать заявки (превью на GitHub Pages и будущий домен)
+ALLOWED_ORIGINS = "https://farik9797.github.io,https://umgroup.uz,https://www.umgroup.uz,http://localhost:4180"
+# ID чатов через запятую: заполнить после получения от заказчика
+CHAT_IDS = ""
+
+# Токен бота — только секретом, не в этом файле:
+#   npx wrangler secret put BOT_TOKEN

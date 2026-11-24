@@ -15,6 +15,7 @@ SRC, OUT = ROOT / "src", ROOT / "site"
 IMG = OUT / "assets" / "img"
 import time
 VER = str(int(time.time()))
+CONFIG = json.loads((ROOT / "src" / "config.json").read_text()) if (ROOT / "src" / "config.json").exists() else {}
 CREDITS = json.loads((IMG / "credits.json").read_text())
 
 
@@ -104,6 +105,7 @@ def main():
                 seq_attr += f' data-seq-{key}="{mj["pattern"]}|{mj["count"]}"'
         out = out.replace("{{seq}}", seq_attr)
         out = render(out, meta)
+        out = out.replace('data-endpoint=""', f'data-endpoint="{html.escape(CONFIG.get("lead_endpoint", ""), quote=True)}"')
         used_all |= set(re.findall(r'data-photo="([\w-]+)"', out))
         (OUT / page.name).write_text(out)
         print("built", page.name, len(out) // 1024, "KB")
