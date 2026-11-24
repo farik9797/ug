@@ -1,0 +1,49 @@
+<dialog class="modal" id="lead" aria-labelledby="lead-h" data-modal>
+  <div class="modal__panel">
+    <button class="modal__close" type="button" aria-label="Закрыть окно" data-modal-close>{{icon:x}}</button>
+    <div class="modal__head">
+      <span class="phero__rule" aria-hidden="true"></span>
+      <h2 id="lead-h">Оставить заявку</h2>
+      <p>Перезвоним, уточним задачу и подготовим расчёт по вашему объекту.</p>
+    </div>
+    <form class="form form--modal" data-endpoint="" novalidate data-form>
+      <input type="hidden" name="source" value="" data-lead-source>
+      <div class="field">
+        <label for="m-name">Имя</label>
+        <input id="m-name" name="name" type="text" autocomplete="name" required>
+        <p class="field__msg" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label for="m-phone">Телефон</label>
+        <input id="m-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+998" required>
+        <p class="field__msg" aria-live="polite"></p>
+      </div>
+      <div class="field field--wide">
+        <label for="m-service">Что нужно</label>
+        <select id="m-service" name="service" data-lead-service>
+          <option value="">Выберите</option>
+          <option>Автоматическое пожаротушение</option>
+          <option>Пожарная сигнализация</option>
+          <option>Оповещение и эвакуация (СОУЭ)</option>
+          <option>Охранная сигнализация</option>
+          <option>СКУД</option>
+          <option>Электроосвещение и инженерные сети</option>
+          <option>Общестроительные работы</option>
+          <option>Несколько систем</option>
+        </select>
+        <p class="field__msg"></p>
+      </div>
+      <div class="field field--wide">
+        <label for="m-comment">Комментарий</label>
+        <textarea id="m-comment" name="comment" rows="3" placeholder="Тип объекта, площадь, сроки"></textarea>
+        <p class="field__msg"></p>
+      </div>
+      <div class="form__foot field--wide">
+        <button class="btn btn--gold" type="submit">Отправить заявку</button>
+        <a class="modal__call" href="tel:+998888000056">{{icon:phone}}+998 88 800-00-56</a>
+        <p class="form__note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a>.</p>
+        <p class="form__status" role="status" data-status></p>
+      </div>
+    </form>
+  </div>
+</dialog>
