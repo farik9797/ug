@@ -116,59 +116,23 @@
           prep(lines);
           const inside = intro.querySelector('[data-inside]');
           const media = intro.querySelector('[data-hero-media]');
-          const build = (seq) => ctx.add(() => {
-            const tl = gsap.timeline({ scrollTrigger: { trigger: intro, start: 'top top', end: '+=300%', scrub: 0.6, pin: true, anticipatePin: 1 } });
-            tl.to('[data-hero-copy]', { opacity: 0, y: -80, duration: 0.12, ease: 'power1.in' }, 0)
-              .to('[data-hero-scrim]', { opacity: 0, duration: 0.18 }, 0);
-            if (seq) {
-              /* Видео пролёта: кадр за кадром по прогрессу скролла */
-              const f = { i: 0 };
-              tl.fromTo(seq.canvas, { opacity: 0 }, { opacity: 1, duration: 0.03, ease: 'none' }, 0)
-                .to(f, { i: seq.count - 1, duration: 0.5, ease: 'none', onUpdate: () => seq.draw(Math.round(f.i)) }, 0);
-            } else {
-              /* Без видео: наезд на фото, увеличение ограничено, чтобы не терять резкость */
-              tl.fromTo(media, { scale: 1 }, { scale: 2.4, duration: 0.5, ease: 'power2.in' }, 0);
-            }
-            tl.to('[data-hero-veil]', { opacity: 1, duration: 0.1, ease: 'none' }, 0.42)
-              .set(inside, { visibility: 'visible' }, 0.48)
-              .fromTo(inside, { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.12, ease: 'power2.out' }, 0.48)
-              .to(lines, { strokeDashoffset: 0, duration: 0.2, stagger: 0.0013, ease: 'none' }, 0.56)
-              .from(marks, { opacity: 0, scale: 0, transformOrigin: '50% 50%', duration: 0.05, stagger: 0.001, ease: 'back.out(2)' }, 0.72)
-              .from(pins, { opacity: 0, y: 14, duration: 0.05, stagger: 0.015 }, 0.84)
-              .to({}, { duration: 0.06 });
-            ScrollTrigger.refresh();
-          });
-          (media.dataset.seq ? fetch(media.dataset.seq).then((r) => (r.ok ? r.json() : null)).catch(() => null) : Promise.resolve(null)).then((m) => {
-            if (!m || !m.count) return build(null);
-            const canvas = d.createElement('canvas');
-            canvas.className = 'hero__canvas'; canvas.setAttribute('data-keep', '');
-            media.appendChild(canvas);
-            const g = canvas.getContext('2d');
-            const frames = [];
-            const src = (i) => m.pattern.replace('%04d', String(i + 1).padStart(4, '0'));
-            let last = 0;
-            const fit = () => {
-              const dpr = Math.min(window.devicePixelRatio || 1, 2);
-              canvas.width = Math.round(media.clientWidth * dpr); canvas.height = Math.round(media.clientHeight * dpr);
-              draw(last);
-            };
-            const draw = (i) => {
-              let k = i; while (k > 0 && !(frames[k] && frames[k].complete && frames[k].naturalWidth)) k--;
-              const im = frames[k]; if (!im || !im.naturalWidth) return;
-              last = i;
-              const cw = canvas.width, ch = canvas.height, s = Math.max(cw / im.naturalWidth, ch / im.naturalHeight);
-              const w = im.naturalWidth * s, h = im.naturalHeight * s;
-              g.drawImage(im, (cw - w) / 2, (ch - h) / 2, w, h);
-            };
-            let want = 0;
-            const show = (i) => { want = i; draw(i); };
-            for (let i = 0; i < m.count; i++) { const im = new Image(); im.decoding = 'async'; im.onload = () => { if (Math.abs(i - want) <= 2) draw(want); }; im.src = src(i); frames[i] = im; }
-            window.__ugSeq = { frames, get want() { return want; } };
-            frames[0].onload = () => { media.classList.add('has-seq'); fit(); };
-            if (frames[0].complete) { media.classList.add('has-seq'); fit(); }
-            window.addEventListener('resize', fit);
-            build({ count: m.count, draw: show, canvas });
-          });
+          const innerL = intro.querySelector('[data-hero-inner]');
+          gsap.timeline({ scrollTrigger: { trigger: intro, start: 'top top', end: '+=300%', scrub: 0.6, pin: true, anticipatePin: 1 } })
+            .to('[data-hero-copy]', { opacity: 0, y: -80, duration: 0.12, ease: 'power1.in' }, 0)
+            .to('[data-hero-scrim]', { opacity: 0, duration: 0.18 }, 0)
+            /* Снаружи: камера едет к центральному входу */
+            .fromTo(media, { scale: 1 }, { scale: 2.1, duration: 0.4, ease: 'power2.in' }, 0)
+            /* Проходим двери: атриум проявляется из света и продолжает движение вперёд */
+            .fromTo(innerL, { opacity: 0, scale: 1.25, filter: 'blur(8px) brightness(1.6)' }, { opacity: 1, scale: 1.05, filter: 'blur(0px) brightness(1)', duration: 0.12, ease: 'power1.out' }, 0.32)
+            .to(media, { opacity: 0, duration: 0.08 }, 0.38)
+            .to(innerL, { scale: 1.32, duration: 0.18, ease: 'none' }, 0.44)
+            .to('[data-hero-veil]', { opacity: 1, duration: 0.08, ease: 'none' }, 0.56)
+            .set(inside, { visibility: 'visible' }, 0.6)
+            .fromTo(inside, { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.1, ease: 'power2.out' }, 0.6)
+            .to(lines, { strokeDashoffset: 0, duration: 0.18, stagger: 0.0012, ease: 'none' }, 0.66)
+            .from(marks, { opacity: 0, scale: 0, transformOrigin: '50% 50%', duration: 0.05, stagger: 0.001, ease: 'back.out(2)' }, 0.8)
+            .from(pins, { opacity: 0, y: 14, duration: 0.05, stagger: 0.012 }, 0.88)
+            .to({}, { duration: 0.04 });
           ctx.add(() => () => { intro.classList.remove('is-3d'); lines.forEach((p) => { p.style.strokeDasharray = ''; p.style.strokeDashoffset = ''; }); });
         } else {
           prep(lines);
