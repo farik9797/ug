@@ -751,7 +751,7 @@ figure { margin: 0; }
   .intro.is-3d .hero__media > img { object-position: 50% 50% !important; }
   .intro.is-3d .hero__media { transform-origin: 50% 62%; }
   .intro.is-3d .inside { padding: calc(var(--hdr-h) + var(--space-sm)) 0 calc(72px + var(--space-sm)); align-content: center; overflow: hidden; }
-  .intro.is-3d .inside__plan { width: calc(100% + var(--gutter) * 2 - 8px); max-width: none; margin-inline: calc(var(--gutter) * -1 + 4px); }
+  .intro.is-3d .inside__plan { width: calc(100% + var(--gutter) * 2 - var(--space-xs)); max-width: none; margin-inline: calc(var(--space-2xs) - var(--gutter)); }
   .intro.is-3d .inside__plan .pin__dot { width: 20px; height: 20px; font-size: 9px; }
   .intro.is-3d .inside__in { gap: var(--space-md); }
   .intro.is-3d .inside__head h2 { font-size: 1.9rem; }
