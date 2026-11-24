@@ -745,3 +745,18 @@ figure { margin: 0; }
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0.55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   mix-blend-mode: overlay; }
 .intro.is-3d .hero__inner { display: block; opacity: 0; }
+
+/* герой на телефоне в 3D-режиме: фасад по центру, схема и список в один экран */
+@media (max-width: 48rem) {
+  .intro.is-3d .hero__media > img { object-position: 50% 50% !important; }
+  .intro.is-3d .hero__media { transform-origin: 50% 62%; }
+  .intro.is-3d .inside { padding: calc(var(--hdr-h) + var(--space-sm)) 0 calc(72px + var(--space-sm)); align-content: center; overflow: hidden; }
+  .intro.is-3d .inside__plan { width: calc(100% + var(--gutter) * 2 - 8px); max-width: none; margin-inline: calc(var(--gutter) * -1 + 4px); }
+  .intro.is-3d .inside__plan .pin__dot { width: 20px; height: 20px; font-size: 9px; }
+  .intro.is-3d .inside__in { gap: var(--space-md); }
+  .intro.is-3d .inside__head h2 { font-size: 1.9rem; }
+  .intro.is-3d .inside__head p { display: none; }
+  .intro.is-3d .inside__body { gap: var(--space-md); }
+  .intro.is-3d .inside__list a { min-height: 40px; padding-block: 6px; font-size: var(--text-sm); }
+}
+@media (max-width: 48rem) and (max-height: 720px) { .intro.is-3d .inside__list { display: none; } .intro.is-3d .inside__head p { display: block; font-size: var(--text-sm); } }
