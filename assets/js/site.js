@@ -81,10 +81,15 @@
         return;
       }
       const submit = form.querySelector('[type="submit"]');
+      if (submit.getAttribute('aria-busy') === 'true') return;
       submit.setAttribute('aria-busy', 'true');
-      fetch(endpoint, { method: 'POST', body: new FormData(form) })
-        .then((r) => { if (!r.ok) throw new Error(r.status); status.textContent = 'Заявка отправлена. Мы свяжемся с вами.'; form.reset(); })
-        .catch(() => { status.textContent = 'Заявка не ушла из-за ошибки сети. Позвоните: +998 88 800-00-56.'; })
+      status.textContent = 'Отправляем…';
+      const fd = new FormData(form);
+      if (!fd.get('source')) fd.set('source', 'Форма внизу страницы / ' + d.body.dataset.page);
+      fetch(endpoint, { method: 'POST', body: fd })
+        .then((r) => r.json().catch(() => ({})).then((j) => { if (!r.ok || !j.ok) throw new Error(r.status); }))
+        .then(() => { status.textContent = 'Заявка отправлена. Мы свяжемся с вами.'; form.reset(); const fl = form.querySelector('[data-file-label]'); if (fl) fl.textContent = 'Прикрепить техническое задание'; })
+        .catch(() => { status.textContent = 'Заявка не ушла. Позвоните: +998 88 800-00-56 или напишите на umarbekov.group@mail.ru.'; })
         .finally(() => submit.removeAttribute('aria-busy'));
     });
   });
