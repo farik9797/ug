@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;600&subset=cyrillic&display=swap">
-<link rel="stylesheet" href="assets/css/site.css?v=1795494167">
+<link rel="stylesheet" href="assets/css/site.css?v=1795495057">
 <script>document.documentElement.classList.replace('no-js','js')</script>
 </head>
 <body data-page="news">
@@ -64,17 +64,21 @@
 </div>
 
 <main id="main">
-<section class="phero dark" aria-labelledby="ph-h">
-  <div class="container phero__in">
-    <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><span aria-current="page">Новости</span></li></ol></nav>
-    <h1 id="ph-h">Новости и статьи</h1>
-    <p class="lead">Новые объекты, события компании и разборы для заказчиков.</p>
+<section class="phero phero--split dark" aria-labelledby="ph-h">
+  <div class="phero__grid">
+    <div class="phero__text">
+      <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><span aria-current="page">Новости</span></li></ol></nav>
+      <span class="phero__rule" aria-hidden="true"></span>
+      <h1 id="ph-h">Новости и события</h1>
+      <p class="lead">Новые объекты, события компании и разборы для заказчиков.</p>
+    </div>
+    <figure class="phero__photo" data-slot="news-hero" data-alt="Обложка раздела новостей" data-parallax><img src="assets/img/datacenter-aisle-1600.jpg" srcset="assets/img/datacenter-aisle-960.jpg 960w, assets/img/datacenter-aisle-1600.jpg 1600w" sizes="(min-width: 60rem) 60vw, 100vw" width="1920" height="1440" alt="Проход между серверными стойками" style="object-position: 50% 50%" fetchpriority="high" data-photo="datacenter-aisle"></figure>
   </div>
 </section>
 
-<section class="page-sec" aria-labelledby="n-h">
+<section class="news" aria-labelledby="n-h">
   <div class="container">
-    <h2 id="n-h" class="visually-hidden">Публикации</h2>
+    <div class="sec-head sec-head--row"><h2 id="n-h">Все публикации</h2></div>
     <ul class="news__grid news__grid--page">
       <li class="ncard"><a href="news-item.html"><figure class="ncard__media" data-slot="n-1" data-alt="Обложка публикации"><img src="assets/img/sprinkler-pipes-1600.jpg" srcset="assets/img/sprinkler-pipes-960.jpg 960w, assets/img/sprinkler-pipes-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1440" alt="Узлы управления спринклерной системы" style="object-position: 50% 60%" loading="lazy" decoding="async" data-photo="sprinkler-pipes"></figure><time class="ncard__date"><span class="fill" data-fill="date">Дата публикации</span></time><h3 class="ncard__t">Спринклер, газ или порошок: что подходит вашему объекту</h3><p>Разбираем, где вода вредит сильнее огня.</p></a></li>
       <li class="ncard"><a href="news-item.html"><figure class="ncard__media" data-slot="n-2" data-alt="Обложка публикации"><img src="assets/img/smoke-detector-1600.jpg" srcset="assets/img/smoke-detector-960.jpg 960w, assets/img/smoke-detector-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1920" alt="Извещатель на потолке" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="smoke-detector"></figure><time class="ncard__date"><span class="fill" data-fill="date">Дата публикации</span></time><h3 class="ncard__t">Что входит в проект пожарной сигнализации</h3><p>Разделы проекта и что нужно от заказчика.</p></a></li>
@@ -83,6 +87,17 @@
       <li class="ncard"><a href="news-item.html"><figure class="ncard__media" data-slot="n-5" data-alt="Обложка публикации"><img src="assets/img/alarm-panel-2-1600.jpg" srcset="assets/img/alarm-panel-2-960.jpg 960w, assets/img/alarm-panel-2-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="2560" alt="Приёмно-контрольный прибор" style="object-position: 50% 35%" loading="lazy" decoding="async" data-photo="alarm-panel-2"></figure><time class="ncard__date"><span class="fill" data-fill="date">Дата публикации</span></time><h3 class="ncard__t">Зачем объекту система оповещения</h3><p>Как СОУЭ связана с пожарной сигнализацией.</p></a></li>
       <li class="ncard"><a href="news-item.html"><figure class="ncard__media" data-slot="n-6" data-alt="Обложка публикации"><img src="assets/img/hydrant-cabinet-1600.jpg" srcset="assets/img/hydrant-cabinet-960.jpg 960w, assets/img/hydrant-cabinet-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1440" alt="Пожарный шкаф" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="hydrant-cabinet"></figure><time class="ncard__date"><span class="fill" data-fill="date">Дата публикации</span></time><h3 class="ncard__t">Новый объект в портфолио</h3><p>Место для новости о сданном объекте.</p></a></li>
     </ul>
+  </div>
+</section>
+
+<section class="cta-band dark" aria-labelledby="cta-h">
+  <div class="cta-band__bg" data-slot="cta" data-alt="Ташкент вечером" aria-hidden="true"><img src="assets/img/hero-building-1600.jpg" srcset="assets/img/hero-building-960.jpg 960w, assets/img/hero-building-1600.jpg 1600w, assets/img/hero-building-2400.jpg 2400w" sizes="100vw" width="3840" height="2560" alt="" style="object-position: 50% 60%" loading="lazy" decoding="async" data-photo="hero-building"></div>
+  <div class="container cta-band__in">
+    <div>
+      <h2 id="cta-h">Готовы обсудить ваш проект?</h2>
+      <p>Оставьте заявку, и мы свяжемся с вами.</p>
+    </div>
+    <a class="btn btn--gold" href="#request">Оставить заявку<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
   </div>
 </section>
 
@@ -210,6 +225,6 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/site.js?v=1795494167" defer></script>
+<script src="assets/js/site.js?v=1795495057" defer></script>
 </body>
 </html>

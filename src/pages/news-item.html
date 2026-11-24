@@ -1,26 +1,38 @@
 <!--meta {"title":"Спринклер, газ или порошок: какое пожаротушение выбрать | UMARBEKOV GROUP","desc":"Чем отличаются спринклерное, газовое и порошковое пожаротушение и какое подходит офису, складу, серверной.","nav":"news","hdr":"over"}-->
-<section class="phero phero--photo dark" data-phero aria-labelledby="ph-h">
-  <div class="phero__stage"><div class="phero__media" data-slot="art-hero" data-alt="Обложка статьи">{{img:sprinkler-pipes|Стояки и узлы управления спринклерной системы|100vw|50% 40%|eager}}</div></div>
-  <div class="phero__scrim" aria-hidden="true"></div>
-  <div class="container phero__in">
-    <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><span aria-current="page">Статья</span></li></ol></nav>
-    <time class="ncard__date"><span class="fill" data-fill="date">Дата публикации</span></time>
-    <h1 id="ph-h">Спринклер, газ или порошок: что подходит вашему объекту</h1>
+<section class="phero phero--split dark" aria-labelledby="ph-h">
+  <div class="phero__grid">
+    <div class="phero__text">
+      <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><span aria-current="page">Статья</span></li></ol></nav>
+      <span class="phero__rule" aria-hidden="true"></span>
+      <time class="ncard__date"><span class="fill" data-fill="date">Дата публикации</span></time>
+      <h1 id="ph-h">Спринклер, газ или порошок: что подходит вашему объекту</h1>
+    </div>
+    <figure class="phero__photo" data-slot="art-hero" data-alt="Обложка статьи" data-parallax>{{img:sprinkler-pipes|Стояки и узлы управления спринклерной системы|(min-width: 60rem) 60vw, 100vw|50% 40%|eager}}</figure>
   </div>
 </section>
 
-<article class="page-sec">
-  <div class="container">
+<article class="page-sec article">
+  <div class="container article__grid">
+    <aside class="article__aside">
+      <p class="article__aside-h">В статье</p>
+      <ul class="checks">
+        <li>{{icon:check}}<a href="#a-spr">Спринклерное</a></li>
+        <li>{{icon:check}}<a href="#a-gas">Газовое</a></li>
+        <li>{{icon:check}}<a href="#a-pow">Порошковое</a></li>
+        <li>{{icon:check}}<a href="#a-how">Как выбрать</a></li>
+      </ul>
+      <a class="btn btn--gold btn--sm" href="#request">Заказать расчёт{{icon:arrow-up-right}}</a>
+    </aside>
     <div class="prose">
       <p class="lead">Тип автоматического пожаротушения выбирают по тому, что находится в помещении. Вода спасает здание, но может уничтожить серверную. Газ бережёт технику, но нужен герметичный объём.</p>
-      <h2>Спринклерное пожаротушение</h2>
+      <h2 id="a-spr">Спринклерное пожаротушение</h2>
       <p>Над потолком идёт сеть труб с водой, на ней стоят оросители. При нагреве срабатывает тот ороситель, что над очагом, и вода льётся только туда. Это самый частый вариант для офисов, торговых центров и складов.</p>
-      <h2>Газовое пожаротушение</h2>
+      <h2 id="a-gas">Газовое пожаротушение</h2>
       <p>Газ из баллонов заполняет помещение и останавливает горение. Вода не нужна, поэтому оборудование и бумаги остаются целыми. Ставят в серверных, архивах и электрощитовых.</p>
-      <figure class="wide-photo tilt" data-slot="art-1" data-alt="Иллюстрация к статье" data-tilt="left">{{img:gas-fm200|Баллоны газового пожаротушения в серверной|(min-width: 60rem) 60vw, 100vw|50% 50%}}</figure>
-      <h2>Порошковое пожаротушение</h2>
+      <figure class="wide-photo article__fig" data-slot="art-1" data-alt="Иллюстрация к статье" data-parallax>{{img:gas-fm200|Баллоны газового пожаротушения в серверной|(min-width: 60rem) 60vw, 100vw|50% 50%}}</figure>
+      <h2 id="a-pow">Порошковое пожаротушение</h2>
       <p>Порошок тушит без воды и подходит там, где газовую систему ставить нецелесообразно: склады, гаражи, технические помещения.</p>
-      <h2>Как выбрать</h2>
+      <h2 id="a-how">Как выбрать</h2>
       <ul>
         <li>Офис, магазин, склад общего назначения: обычно спринклерная система</li>
         <li>Серверная, архив, щитовая: газовая</li>
@@ -31,9 +43,9 @@
   </div>
 </article>
 
-<section class="page-sec dark" aria-labelledby="more-h">
+<section class="news" aria-labelledby="more-h">
   <div class="container">
-    <div class="sec-head"><h2 id="more-h">Другие публикации</h2><a class="link" href="news.html">Все публикации{{icon:arrow-up-right}}</a></div>
+    <div class="sec-head sec-head--row"><h2 id="more-h">Другие публикации</h2><a class="link" href="news.html">Все публикации{{icon:arrow-up-right}}</a></div>
     <ul class="news__grid">
       <li class="ncard"><a href="news-item.html"><figure class="ncard__media" data-slot="m-1" data-alt="Обложка">{{img:smoke-detector|Извещатель на потолке|(min-width: 60rem) 33vw, 100vw|50% 40%}}</figure><h3 class="ncard__t">Что входит в проект пожарной сигнализации</h3></a></li>
       <li class="ncard"><a href="news-item.html"><figure class="ncard__media" data-slot="m-2" data-alt="Обложка">{{img:gas-controls|Пульт управления|(min-width: 60rem) 33vw, 100vw|50% 40%}}</figure><h3 class="ncard__t">Как получить предварительную смету быстрее</h3></a></li>
@@ -42,4 +54,5 @@
   </div>
 </section>
 
+{{include:cta}}
 {{include:request}}

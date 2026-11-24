@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;600&subset=cyrillic&display=swap">
-<link rel="stylesheet" href="assets/css/site.css?v=1795494167">
+<link rel="stylesheet" href="assets/css/site.css?v=1795495057">
 <script>document.documentElement.classList.replace('no-js','js')</script>
 </head>
 <body data-page="news-item">
@@ -64,28 +64,40 @@
 </div>
 
 <main id="main">
-<section class="phero phero--photo dark" data-phero aria-labelledby="ph-h">
-  <div class="phero__stage"><div class="phero__media" data-slot="art-hero" data-alt="Обложка статьи"><img src="assets/img/sprinkler-pipes-1600.jpg" srcset="assets/img/sprinkler-pipes-960.jpg 960w, assets/img/sprinkler-pipes-1600.jpg 1600w" sizes="100vw" width="1920" height="1440" alt="Стояки и узлы управления спринклерной системы" style="object-position: 50% 40%" fetchpriority="high" data-photo="sprinkler-pipes"></div></div>
-  <div class="phero__scrim" aria-hidden="true"></div>
-  <div class="container phero__in">
-    <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><span aria-current="page">Статья</span></li></ol></nav>
-    <time class="ncard__date"><span class="fill" data-fill="date">Дата публикации</span></time>
-    <h1 id="ph-h">Спринклер, газ или порошок: что подходит вашему объекту</h1>
+<section class="phero phero--split dark" aria-labelledby="ph-h">
+  <div class="phero__grid">
+    <div class="phero__text">
+      <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><span aria-current="page">Статья</span></li></ol></nav>
+      <span class="phero__rule" aria-hidden="true"></span>
+      <time class="ncard__date"><span class="fill" data-fill="date">Дата публикации</span></time>
+      <h1 id="ph-h">Спринклер, газ или порошок: что подходит вашему объекту</h1>
+    </div>
+    <figure class="phero__photo" data-slot="art-hero" data-alt="Обложка статьи" data-parallax><img src="assets/img/sprinkler-pipes-1600.jpg" srcset="assets/img/sprinkler-pipes-960.jpg 960w, assets/img/sprinkler-pipes-1600.jpg 1600w" sizes="(min-width: 60rem) 60vw, 100vw" width="1920" height="1440" alt="Стояки и узлы управления спринклерной системы" style="object-position: 50% 40%" fetchpriority="high" data-photo="sprinkler-pipes"></figure>
   </div>
 </section>
 
-<article class="page-sec">
-  <div class="container">
+<article class="page-sec article">
+  <div class="container article__grid">
+    <aside class="article__aside">
+      <p class="article__aside-h">В статье</p>
+      <ul class="checks">
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><a href="#a-spr">Спринклерное</a></li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><a href="#a-gas">Газовое</a></li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><a href="#a-pow">Порошковое</a></li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><a href="#a-how">Как выбрать</a></li>
+      </ul>
+      <a class="btn btn--gold btn--sm" href="#request">Заказать расчёт<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
+    </aside>
     <div class="prose">
       <p class="lead">Тип автоматического пожаротушения выбирают по тому, что находится в помещении. Вода спасает здание, но может уничтожить серверную. Газ бережёт технику, но нужен герметичный объём.</p>
-      <h2>Спринклерное пожаротушение</h2>
+      <h2 id="a-spr">Спринклерное пожаротушение</h2>
       <p>Над потолком идёт сеть труб с водой, на ней стоят оросители. При нагреве срабатывает тот ороситель, что над очагом, и вода льётся только туда. Это самый частый вариант для офисов, торговых центров и складов.</p>
-      <h2>Газовое пожаротушение</h2>
+      <h2 id="a-gas">Газовое пожаротушение</h2>
       <p>Газ из баллонов заполняет помещение и останавливает горение. Вода не нужна, поэтому оборудование и бумаги остаются целыми. Ставят в серверных, архивах и электрощитовых.</p>
-      <figure class="wide-photo tilt" data-slot="art-1" data-alt="Иллюстрация к статье" data-tilt="left"><img src="assets/img/gas-fm200-1600.jpg" srcset="assets/img/gas-fm200-960.jpg 960w, assets/img/gas-fm200-1600.jpg 1600w" sizes="(min-width: 60rem) 60vw, 100vw" width="1920" height="1275" alt="Баллоны газового пожаротушения в серверной" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="gas-fm200"></figure>
-      <h2>Порошковое пожаротушение</h2>
+      <figure class="wide-photo article__fig" data-slot="art-1" data-alt="Иллюстрация к статье" data-parallax><img src="assets/img/gas-fm200-1600.jpg" srcset="assets/img/gas-fm200-960.jpg 960w, assets/img/gas-fm200-1600.jpg 1600w" sizes="(min-width: 60rem) 60vw, 100vw" width="1920" height="1275" alt="Баллоны газового пожаротушения в серверной" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="gas-fm200"></figure>
+      <h2 id="a-pow">Порошковое пожаротушение</h2>
       <p>Порошок тушит без воды и подходит там, где газовую систему ставить нецелесообразно: склады, гаражи, технические помещения.</p>
-      <h2>Как выбрать</h2>
+      <h2 id="a-how">Как выбрать</h2>
       <ul>
         <li>Офис, магазин, склад общего назначения: обычно спринклерная система</li>
         <li>Серверная, архив, щитовая: газовая</li>
@@ -96,14 +108,25 @@
   </div>
 </article>
 
-<section class="page-sec dark" aria-labelledby="more-h">
+<section class="news" aria-labelledby="more-h">
   <div class="container">
-    <div class="sec-head"><h2 id="more-h">Другие публикации</h2><a class="link" href="news.html">Все публикации<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a></div>
+    <div class="sec-head sec-head--row"><h2 id="more-h">Другие публикации</h2><a class="link" href="news.html">Все публикации<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a></div>
     <ul class="news__grid">
       <li class="ncard"><a href="news-item.html"><figure class="ncard__media" data-slot="m-1" data-alt="Обложка"><img src="assets/img/smoke-detector-1600.jpg" srcset="assets/img/smoke-detector-960.jpg 960w, assets/img/smoke-detector-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1920" alt="Извещатель на потолке" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="smoke-detector"></figure><h3 class="ncard__t">Что входит в проект пожарной сигнализации</h3></a></li>
       <li class="ncard"><a href="news-item.html"><figure class="ncard__media" data-slot="m-2" data-alt="Обложка"><img src="assets/img/gas-controls-1600.jpg" srcset="assets/img/gas-controls-960.jpg 960w, assets/img/gas-controls-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="2323" alt="Пульт управления" style="object-position: 50% 40%" loading="lazy" decoding="async" data-photo="gas-controls"></figure><h3 class="ncard__t">Как получить предварительную смету быстрее</h3></a></li>
       <li class="ncard"><a href="news-item.html"><figure class="ncard__media" data-slot="m-3" data-alt="Обложка"><img src="assets/img/turnstile-1600.jpg" srcset="assets/img/turnstile-960.jpg 960w, assets/img/turnstile-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="1920" height="1041" alt="Турникеты" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="turnstile"></figure><h3 class="ncard__t">СКУД для офиса: с чего начать</h3></a></li>
     </ul>
+  </div>
+</section>
+
+<section class="cta-band dark" aria-labelledby="cta-h">
+  <div class="cta-band__bg" data-slot="cta" data-alt="Ташкент вечером" aria-hidden="true"><img src="assets/img/hero-building-1600.jpg" srcset="assets/img/hero-building-960.jpg 960w, assets/img/hero-building-1600.jpg 1600w, assets/img/hero-building-2400.jpg 2400w" sizes="100vw" width="3840" height="2560" alt="" style="object-position: 50% 60%" loading="lazy" decoding="async" data-photo="hero-building"></div>
+  <div class="container cta-band__in">
+    <div>
+      <h2 id="cta-h">Готовы обсудить ваш проект?</h2>
+      <p>Оставьте заявку, и мы свяжемся с вами.</p>
+    </div>
+    <a class="btn btn--gold" href="#request">Оставить заявку<svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a>
   </div>
 </section>
 
@@ -231,6 +254,6 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/site.js?v=1795494167" defer></script>
+<script src="assets/js/site.js?v=1795495057" defer></script>
 </body>
 </html>

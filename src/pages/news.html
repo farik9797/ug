@@ -1,15 +1,19 @@
-<!--meta {"title":"Новости и статьи о пожарной безопасности | UMARBEKOV GROUP","desc":"Новости компании UMARBEKOV GROUP и статьи о системах пожаротушения, пожарной сигнализации и сметах.","nav":"news","hdr":"solid"}-->
-<section class="phero dark" aria-labelledby="ph-h">
-  <div class="container phero__in">
-    <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><span aria-current="page">Новости</span></li></ol></nav>
-    <h1 id="ph-h">Новости и статьи</h1>
-    <p class="lead">Новые объекты, события компании и разборы для заказчиков.</p>
+<!--meta {"title":"Новости и статьи о пожарной безопасности | UMARBEKOV GROUP","desc":"Новости компании UMARBEKOV GROUP и статьи о системах пожаротушения, пожарной сигнализации и сметах.","nav":"news","hdr":"over"}-->
+<section class="phero phero--split dark" aria-labelledby="ph-h">
+  <div class="phero__grid">
+    <div class="phero__text">
+      <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><span aria-current="page">Новости</span></li></ol></nav>
+      <span class="phero__rule" aria-hidden="true"></span>
+      <h1 id="ph-h">Новости и события</h1>
+      <p class="lead">Новые объекты, события компании и разборы для заказчиков.</p>
+    </div>
+    <figure class="phero__photo" data-slot="news-hero" data-alt="Обложка раздела новостей" data-parallax>{{img:datacenter-aisle|Проход между серверными стойками|(min-width: 60rem) 60vw, 100vw|50% 50%|eager}}</figure>
   </div>
 </section>
 
-<section class="page-sec" aria-labelledby="n-h">
+<section class="news" aria-labelledby="n-h">
   <div class="container">
-    <h2 id="n-h" class="visually-hidden">Публикации</h2>
+    <div class="sec-head sec-head--row"><h2 id="n-h">Все публикации</h2></div>
     <ul class="news__grid news__grid--page">
       <li class="ncard"><a href="news-item.html"><figure class="ncard__media" data-slot="n-1" data-alt="Обложка публикации">{{img:sprinkler-pipes|Узлы управления спринклерной системы|(min-width: 60rem) 33vw, 100vw|50% 60%}}</figure><time class="ncard__date"><span class="fill" data-fill="date">Дата публикации</span></time><h3 class="ncard__t">Спринклер, газ или порошок: что подходит вашему объекту</h3><p>Разбираем, где вода вредит сильнее огня.</p></a></li>
       <li class="ncard"><a href="news-item.html"><figure class="ncard__media" data-slot="n-2" data-alt="Обложка публикации">{{img:smoke-detector|Извещатель на потолке|(min-width: 60rem) 33vw, 100vw|50% 40%}}</figure><time class="ncard__date"><span class="fill" data-fill="date">Дата публикации</span></time><h3 class="ncard__t">Что входит в проект пожарной сигнализации</h3><p>Разделы проекта и что нужно от заказчика.</p></a></li>
@@ -21,4 +25,5 @@
   </div>
 </section>
 
+{{include:cta}}
 {{include:request}}

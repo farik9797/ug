@@ -1,63 +1,69 @@
 <!--meta {"title":"Объект: системы пожарной безопасности | UMARBEKOV GROUP","desc":"Как UMARBEKOV GROUP выполнила работы на объекте: задача, состав работ, инженерные решения и фотографии.","nav":"projects","hdr":"over"}-->
-<section class="phero phero--photo dark" data-phero aria-labelledby="ph-h">
-  <div class="phero__stage"><div class="phero__media" data-slot="obj-hero" data-alt="Обложка объекта: фасад или главное помещение">{{img:atrium|Атриум офисного здания со стеклянной крышей|100vw|50% 40%|eager}}</div></div>
-  <div class="phero__scrim" aria-hidden="true"></div>
-  <div class="container phero__in">
-    <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><a href="projects.html">Объекты</a></li><li><span aria-current="page">Объект</span></li></ol></nav>
-    <h1 id="ph-h"><span class="fill" data-fill="object-name">Название объекта</span></h1>
-    <p class="lead">Шаблон страницы объекта. Заполняется по материалам компании.</p>
+<section class="phero phero--split dark" aria-labelledby="ph-h">
+  <div class="phero__grid">
+    <div class="phero__text">
+      <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><a href="projects.html">Объекты</a></li><li><span aria-current="page">Объект</span></li></ol></nav>
+      <span class="phero__rule" aria-hidden="true"></span>
+      <h1 id="ph-h"><span class="fill" data-fill="object-name">Название объекта</span></h1>
+      <p class="lead">Шаблон страницы объекта. Заполняется по материалам компании.</p>
+    </div>
+    <figure class="phero__photo" data-slot="obj-hero" data-alt="Обложка объекта: фасад или главное помещение" data-parallax>{{img:atrium|Атриум офисного здания со стеклянной крышей|(min-width: 60rem) 60vw, 100vw|50% 40%|eager}}</figure>
   </div>
 </section>
 
-<section class="page-sec" aria-labelledby="sum-h">
-  <div class="container split">
-    <h2 id="sum-h">Об объекте</h2>
-    <dl class="kv">
-      <div><dt>Тип объекта</dt><dd>Коммерческий, промышленный или социальный</dd></div>
-      <div><dt>Локация</dt><dd>Город и район</dd></div>
-      <div><dt>Выполненные работы</dt><dd>Например: проектирование и монтаж АПТ, пожарная сигнализация, СОУЭ</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section class="page-sec dark" aria-labelledby="task-h">
-  <div class="container split">
-    <h2 id="task-h">Задача</h2>
-    <div class="prose muted"><p>Что нужно было защитить, какие были ограничения по срокам и помещениям. Два-три предложения от инженера, который вёл объект.</p></div>
-  </div>
-</section>
-
-<section class="page-sec" aria-labelledby="sol-h">
-  <div class="container split">
-    <h2 id="sol-h">Инженерные решения</h2>
-    <dl class="rows">
-      <div><dt>Система</dt><dd>Какая установка и почему выбрана именно она.</dd></div>
-      <div><dt>Оборудование</dt><dd>Производители и модели, если компания готова их назвать.</dd></div>
-      <div><dt>Результат</dt><dd>Что сдано заказчику и в каком составе.</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section class="page-sec" aria-labelledby="gal-h">
+<section class="facts dark facts--plain" aria-label="Об объекте">
   <div class="container">
-    <div class="sec-head"><h2 id="gal-h">Галерея</h2></div>
-    <div class="gallery">
-      <figure class="tilt" data-slot="obj-g1" data-alt="Фото с объекта" data-tilt="left">{{img:gas-controls|Щиты управления пожаротушением|(min-width: 60rem) 58vw, 100vw|50% 30%}}</figure>
-      <figure class="tilt" data-slot="obj-g2" data-alt="Фото с объекта" data-tilt="right">{{img:smoke-detector|Извещатель на потолке|(min-width: 60rem) 40vw, 100vw|50% 40%}}</figure>
-      <figure data-slot="obj-g3" data-alt="Широкий кадр объекта">{{img:sprinkler-pipes|Узлы управления спринклерной системы|100vw|50% 60%}}</figure>
+    <dl class="facts__list facts__list--text">
+      <div><dt>Тип</dt><dd>Коммерческий, промышленный или социальный</dd></div>
+      <div><dt>Город</dt><dd>Город и район</dd></div>
+      <div><dt>Работы</dt><dd>АПТ, пожарная сигнализация, СОУЭ</dd></div>
+      <div><dt>Срок</dt><dd><span class="fill" data-fill="term">Даты работ</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="task-h">
+  <div class="about__grid">
+    <div class="about__text">
+      <h2 id="task-h">Задача</h2>
+      <p>Что нужно было защитить, какие были ограничения по срокам и помещениям. Два-три предложения от инженера, который вёл объект.</p>
+    </div>
+    <div class="about__visual">
+      <figure class="about__photo" data-slot="obj-task" data-alt="Объект до начала работ" data-parallax>{{img:gas-controls|Щиты управления пожаротушением|(min-width: 60rem) 60vw, 100vw|50% 30%}}</figure>
     </div>
   </div>
 </section>
 
-<section class="page-sec dark" aria-labelledby="rel-h">
+<section class="sys sys--3 dark" aria-labelledby="sol-h">
+  <h2 id="sol-h" class="visually-hidden">Инженерные решения</h2>
+  <div class="sys__grid">
+    <div class="sys__col"><span class="sys__n">01</span><h3 class="sys__h">Система</h3><p>Какая установка выбрана и почему.</p></div>
+    <div class="sys__col"><span class="sys__n">02</span><h3 class="sys__h">Оборудование</h3><p>Производители и модели, если компания готова их назвать.</p></div>
+    <div class="sys__col"><span class="sys__n">03</span><h3 class="sys__h">Результат</h3><p>Что сдано заказчику и в каком составе.</p></div>
+  </div>
+</section>
+
+<section class="works" aria-labelledby="gal-h">
   <div class="container">
-    <div class="sec-head"><h2 id="rel-h">Похожие проекты</h2><a class="link" href="projects.html">Все объекты{{icon:arrow-up-right}}</a></div>
-    <ul class="news__grid">
-      <li class="ncard"><a href="project.html"><figure class="ncard__media" data-slot="rel-1" data-alt="Фото объекта">{{img:turnstile|Проходная с турникетами|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><h3 class="ncard__t">Объект из портфолио</h3></a></li>
-      <li class="ncard"><a href="project.html"><figure class="ncard__media" data-slot="rel-2" data-alt="Фото объекта">{{img:electrical|Электрощитовая|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><h3 class="ncard__t">Объект из портфолио</h3></a></li>
-      <li class="ncard"><a href="project.html"><figure class="ncard__media" data-slot="rel-3" data-alt="Фото объекта">{{img:datacenter-tech|Инженеры в серверной|(min-width: 60rem) 33vw, 100vw|50% 40%}}</figure><h3 class="ncard__t">Объект из портфолио</h3></a></li>
+    <div class="sec-head sec-head--row"><h2 id="gal-h">Галерея</h2></div>
+    <ul class="strip strip--3" data-gallery>
+      <li class="strip__item"><figure class="strip__media" data-slot="obj-g1" data-alt="Фото с объекта">{{img:sprinkler-pipes|Узлы управления спринклерной системы|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure></li>
+      <li class="strip__item"><figure class="strip__media" data-slot="obj-g2" data-alt="Фото с объекта">{{img:smoke-detector|Извещатель на потолке|(min-width: 60rem) 33vw, 100vw|50% 40%}}</figure></li>
+      <li class="strip__item"><figure class="strip__media" data-slot="obj-g3" data-alt="Фото с объекта">{{img:electrical|Электрощитовая|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure></li>
     </ul>
   </div>
 </section>
 
+<section class="page-sec dirs" aria-labelledby="rel-h">
+  <div class="container">
+    <div class="sec-head sec-head--row"><h2 id="rel-h">Похожие проекты</h2><a class="link" href="projects.html">Все объекты{{icon:arrow-up-right}}</a></div>
+    <ol class="tiles" data-deck>
+      <li class="tile"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="rel-1" data-alt="Фото объекта">{{img:turnstile|Проходная с турникетами|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
+      <li class="tile"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="rel-2" data-alt="Фото объекта">{{img:datacenter-tech|Инженеры в серверной|(min-width: 60rem) 33vw, 100vw|50% 40%}}</figure><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
+      <li class="tile"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="rel-3" data-alt="Фото объекта">{{img:gas-fm200|Баллоны газового пожаротушения|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
+    </ol>
+  </div>
+</section>
+
+{{include:cta}}
 {{include:request}}

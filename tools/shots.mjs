@@ -16,7 +16,7 @@ for (const s of list) {
   const [sel, off = '0'] = s.split('@');
   const ok = await p.evaluate((sel, off) => { const el = document.querySelector(sel); if (!el) return false; window.scrollTo(0, el.getBoundingClientRect().top + scrollY + (+off)); return true; }, sel, off);
   if (!ok) { console.log('нет', sel); continue; }
-  await new Promise(r => setTimeout(r, 2600));
+  await new Promise(r => setTimeout(r, 1700));
   await p.screenshot({ path: `${out}/${String(i++).padStart(2, '0')}-${sel.replace(/[^\w-]/g, '')}.jpg`, type: 'jpeg', quality: 60 });
 }
 const sw = await p.evaluate(() => [document.documentElement.scrollWidth, innerWidth]);
