@@ -96,8 +96,13 @@ def main():
         out = out.replace("{{desc}}", html.escape(meta["desc"], quote=True))
         out = out.replace("{{page}}", page.stem).replace("{{ver}}", VER)
         out = out.replace("{{hdr_mode}}", meta.get("hdr", "solid"))
-        seq = OUT / "assets" / "flythrough" / "manifest.json"
-        out = out.replace("{{seq}}", ' data-seq="assets/flythrough/manifest.json"' if seq.exists() else "")
+        seq_attr = ""
+        for key, d in (("d", "fly-1920"), ("m", "fly-960")):
+            mf = OUT / "assets" / d / "manifest.json"
+            if mf.exists():
+                mj = json.loads(mf.read_text())
+                seq_attr += f' data-seq-{key}="{mj["pattern"]}|{mj["count"]}"'
+        out = out.replace("{{seq}}", seq_attr)
         out = render(out, meta)
         used_all |= set(re.findall(r'data-photo="([\w-]+)"', out))
         (OUT / page.name).write_text(out)
