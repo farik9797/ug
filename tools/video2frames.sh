@@ -8,8 +8,8 @@ OUT="$(cd "$(dirname "$0")/.." && pwd)/site/assets/flythrough"
 rm -rf "$OUT"; mkdir -p "$OUT"
 DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$SRC")
 FPS=$(python3 -c "print(round($N/$DUR,4))")
-# 1600 по ширине, mjpeg q:v 6 (≈ 80–120 КБ кадр)
-ffmpeg -v error -i "$SRC" -vf "fps=$FPS,scale=1600:-2:flags=lanczos" -q:v 6 "$OUT/%04d.jpg"
+# ширина W (по умолчанию 1280, исходник Flow 720p), лёгкая резкость, mjpeg q:v 5
+ffmpeg -v error -i "$SRC" -vf "fps=$FPS,scale=${W:-1280}:-2:flags=lanczos,unsharp=5:5:0.6" -q:v ${Q:-8} "$OUT/%04d.jpg"
 COUNT=$(ls "$OUT"/*.jpg | wc -l | tr -d ' ')
 W=$(ffprobe -v error -select_streams v:0 -show_entries stream=width -of csv=p=0 "$OUT/0001.jpg")
 H=$(ffprobe -v error -select_streams v:0 -show_entries stream=height -of csv=p=0 "$OUT/0001.jpg")
