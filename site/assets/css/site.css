@@ -157,9 +157,18 @@ figure { margin: 0; }
 .plan__panel { stroke: var(--color-accent-2); stroke-width: 1.2; fill: none; }
 .plan__cable { stroke: var(--color-accent-2); stroke-width: 1.2; stroke-dasharray: 6 5; fill: none; }
 .plan__lamp { stroke: var(--color-accent-2); stroke-width: 2; }
+.plan__grille, .plan__outlet, .plan__touch { vector-effect: non-scaling-stroke; }
+.plan__ahu, .plan__duct { stroke: var(--color-on-night); stroke-width: 1.2; fill: none; }
+.plan__grille { fill: var(--color-on-night-2); }
+.plan__tray { stroke: var(--color-on-night); stroke-width: 1.2; stroke-dasharray: 2 4; fill: none; }
+.plan__outlet { fill: none; stroke: var(--color-on-night); stroke-width: 1.2; }
+.plan__touch { fill: var(--color-night); stroke: var(--color-accent); stroke-width: 1.5; }
+.plan__wave { stroke: var(--color-accent); stroke-width: 1; fill: none; opacity: 0.7; }
+.plan__trafo { stroke: var(--color-accent); stroke-width: 1.5; fill: none; }
+.plan__hv { stroke: var(--color-accent); stroke-width: 2.5; fill: none; }
 .plan__sys { transition: opacity var(--dur-short) var(--ease-out); }
 .inside__plan[data-active] .plan__sys { opacity: 0.22; }
-.inside__plan[data-active="apt"] .plan__sys[data-sys="apt"], .inside__plan[data-active="ps"] .plan__sys[data-sys="ps"], .inside__plan[data-active="soue"] .plan__sys[data-sys="soue"], .inside__plan[data-active="os"] .plan__sys[data-sys="os"], .inside__plan[data-active="skud"] .plan__sys[data-sys="skud"], .inside__plan[data-active="eo"] .plan__sys[data-sys="eo"] { opacity: 1; }
+.inside__plan[data-active="apt"] .plan__sys[data-sys="apt"], .inside__plan[data-active="ps"] .plan__sys[data-sys="ps"], .inside__plan[data-active="soue"] .plan__sys[data-sys="soue"], .inside__plan[data-active="os"] .plan__sys[data-sys="os"], .inside__plan[data-active="skud"] .plan__sys[data-sys="skud"], .inside__plan[data-active="eo"] .plan__sys[data-sys="eo"], .inside__plan[data-active="hvac"] .plan__sys[data-sys="hvac"], .inside__plan[data-active="sks"] .plan__sys[data-sys="sks"], .inside__plan[data-active="smart"] .plan__sys[data-sys="smart"], .inside__plan[data-active="vn"] .plan__sys[data-sys="vn"] { opacity: 1; }
 .pins { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; pointer-events: none; }
 .pin { position: absolute; left: var(--x); top: var(--y); pointer-events: auto; }
 .pin a { position: absolute; display: flex; align-items: center; gap: var(--space-xs); transform: translate(-14px, -50%); color: var(--color-on-night); text-decoration: none; white-space: nowrap; min-height: 44px; }
@@ -745,6 +754,9 @@ figure { margin: 0; }
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0.55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   mix-blend-mode: overlay; }
 .intro.is-3d .hero__inner { display: block; opacity: 0; }
+
+/* 10 систем в легенде: список плотнее, чтобы экран со схемой влезал по высоте */
+@media (min-width: 48.01rem) { .intro.is-3d .inside__list a { min-height: 40px; padding-block: 7px; } }
 
 /* герой на телефоне в 3D-режиме: фасад по центру, схема и список в один экран */
 @media (max-width: 48rem) {

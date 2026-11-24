@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;600&subset=cyrillic&display=swap">
-<link rel="stylesheet" href="assets/css/site.css?v=1795513183">
+<link rel="stylesheet" href="assets/css/site.css?v=1795513550">
 <script>document.documentElement.classList.replace('no-js','js')</script>
 </head>
 <body data-page="index">
@@ -94,7 +94,7 @@
     </div>
     <div class="inside__body" data-plan-scope>
     <div class="inside__plan" data-plan>
-      <svg class="plan" viewBox="100 225 1400 625" role="img" aria-label="Схема разреза здания: где стоят системы пожаротушения, сигнализации, оповещения, охраны, СКУД и электроосвещения" xmlns="http://www.w3.org/2000/svg">
+      <svg class="plan" viewBox="100 225 1400 625" role="img" aria-label="Схема разреза здания: где стоят системы пожаротушения, сигнализации, оповещения, охраны, СКУД, электроосвещения, вентиляции и кондиционирования, кабельных сетей, умного дома и высоковольтного ввода" xmlns="http://www.w3.org/2000/svg">
 <g class="plan__struct">
 <path class="d plan__ground" d="M 100 820 H 1500"/>
 <path class="d plan__wall" d="M 140 820 V 250 H 1460 V 820"/>
@@ -217,6 +217,36 @@
 <path class="plan__lamp" d="M 1000 338 h 40"/>
 <path class="plan__lamp" d="M 1080 338 h 40"/>
 </g>
+<g class="plan__sys" data-sys="hvac">
+<rect class="d plan__ahu" x="200" y="262" width="120" height="38"/>
+<path class="d plan__thin" d="M 222 262 V 300 M 244 262 V 300"/>
+<rect class="d plan__duct" x="320" y="272" width="380" height="18"/>
+<path class="d plan__duct" d="M 380 290 V 310 M 520 290 V 310 M 660 290 V 310"/>
+<rect class="plan__grille" x="366" y="312" width="28" height="6"/>
+<rect class="plan__grille" x="506" y="312" width="28" height="6"/>
+<rect class="plan__grille" x="646" y="312" width="28" height="6"/>
+</g>
+<g class="plan__sys" data-sys="sks">
+<path class="d plan__tray" d="M 1308 380 V 366 H 1166 V 790"/>
+<path class="d plan__tray" d="M 1166 450 H 960 M 1166 620 H 960 M 1166 790 H 960"/>
+<rect class="plan__outlet" x="952" y="442" width="12" height="16"/>
+<rect class="plan__outlet" x="952" y="612" width="12" height="16"/>
+<rect class="plan__outlet" x="952" y="782" width="12" height="16"/>
+</g>
+<g class="plan__sys" data-sys="smart">
+<rect class="plan__touch" x="446" y="412" width="16" height="24" rx="3"/>
+<rect class="plan__touch" x="446" y="582" width="16" height="24" rx="3"/>
+<rect class="plan__touch" x="1100" y="412" width="16" height="24" rx="3"/>
+<rect class="plan__touch" x="1100" y="582" width="16" height="24" rx="3"/>
+<path class="d plan__wave" d="M 430 410 a 26 26 0 0 0 0 28 M 420 402 a 38 38 0 0 0 0 44"/>
+<path class="d plan__wave" d="M 430 580 a 26 26 0 0 0 0 28 M 420 572 a 38 38 0 0 0 0 44"/>
+</g>
+<g class="plan__sys" data-sys="vn">
+<circle class="d plan__trafo" cx="1425" cy="742" r="14"/>
+<circle class="d plan__trafo" cx="1425" cy="764" r="14"/>
+<path class="d plan__hv" d="M 1425 778 V 836 H 100"/>
+<path class="d plan__hv" d="M 1425 728 V 712 H 1390"/>
+</g>
 </svg>
       <ol class="pins">
           <li class="pin pin--r" style="--x: 20.0%; --y: 44.64%" data-sys="apt"><a href="service-apt.html" aria-label="Спринклерное пожаротушение"><span class="pin__dot" aria-hidden="true">01</span><span class="pin__lab" aria-hidden="true">Спринклерное пожаротушение</span></a></li>
@@ -226,6 +256,10 @@
           <li class="pin pin--r" style="--x: 4.5%; --y: 72.16%" data-sys="os"><a href="services.html#os" aria-label="Охранная сигнализация"><span class="pin__dot" aria-hidden="true">04</span><span class="pin__lab" aria-hidden="true">Охранная сигнализация</span></a></li>
           <li class="pin pin--r" style="--x: 33.93%; --y: 85.92%" data-sys="skud"><a href="services.html#skud" aria-label="Контроль доступа"><span class="pin__dot" aria-hidden="true">05</span><span class="pin__lab" aria-hidden="true">Контроль доступа</span></a></li>
           <li class="pin pin--l" style="--x: 83.57%; --y: 74.4%" data-sys="eo"><a href="services.html#eo" aria-label="Электроосвещение и щитовые"><span class="pin__dot" aria-hidden="true">06</span><span class="pin__lab" aria-hidden="true">Электроосвещение и щитовые</span></a></li>
+          <li class="pin pin--r" style="--x: 11.43%; --y: 8.96%" data-sys="hvac"><a href="services.html#hvac" aria-label="Вентиляция и кондиционирование"><span class="pin__dot" aria-hidden="true">07</span><span class="pin__lab" aria-hidden="true">Вентиляция и кондиционирование</span></a></li>
+          <li class="pin pin--l" style="--x: 76.14%; --y: 60%" data-sys="sks"><a href="services.html#sks" aria-label="Кабельные сети СКС"><span class="pin__dot" aria-hidden="true">08</span><span class="pin__lab" aria-hidden="true">Кабельные сети СКС</span></a></li>
+          <li class="pin pin--r" style="--x: 25.5%; --y: 32.8%" data-sys="smart"><a href="services.html#smart" aria-label="Умный дом"><span class="pin__dot" aria-hidden="true">09</span><span class="pin__lab" aria-hidden="true">Умный дом</span></a></li>
+          <li class="pin pin--l" style="--x: 94.64%; --y: 85.12%" data-sys="vn"><a href="services.html#vn" aria-label="Высоковольтный ввод"><span class="pin__dot" aria-hidden="true">10</span><span class="pin__lab" aria-hidden="true">Высоковольтный ввод</span></a></li>
       </ol>
     </div>
     <ul class="inside__list" data-legend>
@@ -235,6 +269,10 @@
       <li data-sys="os"><a href="services.html#os"><span>04</span>Охранная сигнализация</a></li>
       <li data-sys="skud"><a href="services.html#skud"><span>05</span>Контроль доступа</a></li>
       <li data-sys="eo"><a href="services.html#eo"><span>06</span>Электроосвещение и щитовые</a></li>
+      <li data-sys="hvac"><a href="services.html#hvac"><span>07</span>Вентиляция и кондиционирование</a></li>
+      <li data-sys="sks"><a href="services.html#sks"><span>08</span>Кабельные сети СКС</a></li>
+      <li data-sys="smart"><a href="services.html#smart"><span>09</span>Умный дом</a></li>
+      <li data-sys="vn"><a href="services.html#vn"><span>10</span>Высоковольтные сети</a></li>
     </ul>
     </div>
   </div>
@@ -353,7 +391,7 @@
 </section>
 
 <section class="steps dark" aria-labelledby="steps-h" data-steps>
-  <div class="steps__bg" aria-hidden="true"><svg class="plan" viewBox="100 225 1400 625" role="img" aria-label="Схема разреза здания: где стоят системы пожаротушения, сигнализации, оповещения, охраны, СКУД и электроосвещения" xmlns="http://www.w3.org/2000/svg">
+  <div class="steps__bg" aria-hidden="true"><svg class="plan" viewBox="100 225 1400 625" role="img" aria-label="Схема разреза здания: где стоят системы пожаротушения, сигнализации, оповещения, охраны, СКУД, электроосвещения, вентиляции и кондиционирования, кабельных сетей, умного дома и высоковольтного ввода" xmlns="http://www.w3.org/2000/svg">
 <g class="plan__struct">
 <path class="d plan__ground" d="M 100 820 H 1500"/>
 <path class="d plan__wall" d="M 140 820 V 250 H 1460 V 820"/>
@@ -475,6 +513,36 @@
 <path class="plan__lamp" d="M 560 338 h 40"/>
 <path class="plan__lamp" d="M 1000 338 h 40"/>
 <path class="plan__lamp" d="M 1080 338 h 40"/>
+</g>
+<g class="plan__sys" data-sys="hvac">
+<rect class="d plan__ahu" x="200" y="262" width="120" height="38"/>
+<path class="d plan__thin" d="M 222 262 V 300 M 244 262 V 300"/>
+<rect class="d plan__duct" x="320" y="272" width="380" height="18"/>
+<path class="d plan__duct" d="M 380 290 V 310 M 520 290 V 310 M 660 290 V 310"/>
+<rect class="plan__grille" x="366" y="312" width="28" height="6"/>
+<rect class="plan__grille" x="506" y="312" width="28" height="6"/>
+<rect class="plan__grille" x="646" y="312" width="28" height="6"/>
+</g>
+<g class="plan__sys" data-sys="sks">
+<path class="d plan__tray" d="M 1308 380 V 366 H 1166 V 790"/>
+<path class="d plan__tray" d="M 1166 450 H 960 M 1166 620 H 960 M 1166 790 H 960"/>
+<rect class="plan__outlet" x="952" y="442" width="12" height="16"/>
+<rect class="plan__outlet" x="952" y="612" width="12" height="16"/>
+<rect class="plan__outlet" x="952" y="782" width="12" height="16"/>
+</g>
+<g class="plan__sys" data-sys="smart">
+<rect class="plan__touch" x="446" y="412" width="16" height="24" rx="3"/>
+<rect class="plan__touch" x="446" y="582" width="16" height="24" rx="3"/>
+<rect class="plan__touch" x="1100" y="412" width="16" height="24" rx="3"/>
+<rect class="plan__touch" x="1100" y="582" width="16" height="24" rx="3"/>
+<path class="d plan__wave" d="M 430 410 a 26 26 0 0 0 0 28 M 420 402 a 38 38 0 0 0 0 44"/>
+<path class="d plan__wave" d="M 430 580 a 26 26 0 0 0 0 28 M 420 572 a 38 38 0 0 0 0 44"/>
+</g>
+<g class="plan__sys" data-sys="vn">
+<circle class="d plan__trafo" cx="1425" cy="742" r="14"/>
+<circle class="d plan__trafo" cx="1425" cy="764" r="14"/>
+<path class="d plan__hv" d="M 1425 778 V 836 H 100"/>
+<path class="d plan__hv" d="M 1425 728 V 712 H 1390"/>
 </g>
 </svg></div>
   <div class="container steps__grid">
@@ -963,6 +1031,6 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/site.js?v=1795513183" defer></script>
+<script src="assets/js/site.js?v=1795513550" defer></script>
 </body>
 </html>
