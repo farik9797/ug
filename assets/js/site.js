@@ -123,7 +123,8 @@
             if (seq) {
               /* Видео пролёта: кадр за кадром по прогрессу скролла */
               const f = { i: 0 };
-              tl.to(f, { i: seq.count - 1, duration: 0.5, ease: 'none', onUpdate: () => seq.draw(Math.round(f.i)) }, 0);
+              tl.fromTo(seq.canvas, { opacity: 0 }, { opacity: 1, duration: 0.03, ease: 'none' }, 0)
+                .to(f, { i: seq.count - 1, duration: 0.5, ease: 'none', onUpdate: () => seq.draw(Math.round(f.i)) }, 0);
             } else {
               /* Без видео: наезд на фото, увеличение ограничено, чтобы не терять резкость */
               tl.fromTo(media, { scale: 1 }, { scale: 2.4, duration: 0.5, ease: 'power2.in' }, 0);
@@ -140,7 +141,7 @@
           (media.dataset.seq ? fetch(media.dataset.seq).then((r) => (r.ok ? r.json() : null)).catch(() => null) : Promise.resolve(null)).then((m) => {
             if (!m || !m.count) return build(null);
             const canvas = d.createElement('canvas');
-            canvas.className = 'hero__canvas';
+            canvas.className = 'hero__canvas'; canvas.setAttribute('data-keep', '');
             media.appendChild(canvas);
             const g = canvas.getContext('2d');
             const frames = [];
@@ -159,10 +160,14 @@
               const w = im.naturalWidth * s, h = im.naturalHeight * s;
               g.drawImage(im, (cw - w) / 2, (ch - h) / 2, w, h);
             };
-            for (let i = 0; i < m.count; i++) { const im = new Image(); im.decoding = 'async'; im.src = src(i); frames[i] = im; }
+            let want = 0;
+            const show = (i) => { want = i; draw(i); };
+            for (let i = 0; i < m.count; i++) { const im = new Image(); im.decoding = 'async'; im.onload = () => { if (Math.abs(i - want) <= 2) draw(want); }; im.src = src(i); frames[i] = im; }
+            window.__ugSeq = { frames, get want() { return want; } };
             frames[0].onload = () => { media.classList.add('has-seq'); fit(); };
+            if (frames[0].complete) { media.classList.add('has-seq'); fit(); }
             window.addEventListener('resize', fit);
-            build({ count: m.count, draw });
+            build({ count: m.count, draw: show, canvas });
           });
           ctx.add(() => () => { intro.classList.remove('is-3d'); lines.forEach((p) => { p.style.strokeDasharray = ''; p.style.strokeDashoffset = ''; }); });
         } else {
