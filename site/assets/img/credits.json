@@ -218,5 +218,315 @@
    1536
   ],
   "own": true
+ },
+ "g-apt-head": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-build-ceiling": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-build-wall": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-eo-out": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-eo-panel": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-eo-tray": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-hv-cells": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-hv-ktp": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-hv-trench": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-hvac-cassette": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-hvac-heat": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-hvac-roof": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-net-pipes": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-net-riser": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-net-well": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-os-door": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-os-keypad": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-os-pir": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-ps-call": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-ps-panel": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-sks-socket": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-sks-test": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-skud-card": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-skud-lock": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-skud-turn": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-smart-blind": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-smart-cab": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-smart-light": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-soue-rack": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-soue-spk": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
+ },
+ "g-soue-stair": {
+  "author": "UMARBEKOV GROUP",
+  "license": "сгенерировано в Google Flow",
+  "page": "",
+  "size": [
+   2752,
+   1536
+  ],
+  "own": true
  }
 }

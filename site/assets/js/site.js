@@ -29,7 +29,8 @@
   const modal = d.querySelector('[data-modal]');
   if (modal && typeof modal.showModal === 'function') {
     let opener = null;
-    const pageService = { 'service-apt': 'Автоматическое пожаротушение' }[d.body.dataset.page] || '';
+    const svcEl = d.querySelector('[data-service]');
+    const pageService = svcEl ? svcEl.dataset.service : '';
     const open = (from) => {
       opener = from;
       setMenu(false);
