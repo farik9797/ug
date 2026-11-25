@@ -42,17 +42,18 @@ DIRS = {
     "soue": ("service-soue.html", "g-exit", "Прибор системы оповещения на стене", "50% 35%", "03", "Оповещение и управление эвакуацией", "СОУЭ"),
     "os": ("service-os.html", "g-camera", "Прибор охранной сигнализации", "50% 50%", "04", "Охранная сигнализация", "ОС"),
     "skud": ("service-skud.html", "g-access", "Турникеты на проходной", "50% 50%", "05", "Контроль и управление доступом", "СКУД"),
-    "eo": ("service-eo.html", "g-lights", "Шкафы электрощитовой", "50% 50%", "06", "Электроосвещение и инженерные сети", "ЭО"),
+    "eo": ("service-eo.html", "g-lights", "Шкафы электрощитовой", "50% 50%", "06", "Электроснабжение и электроосвещение", "ЭО"),
     "hvac": ("service-hvac.html", "g-hvac", "Воздуховоды и приточная установка в техническом помещении", "50% 50%", "07", "Отопление, вентиляция и кондиционирование", "ОВиК"),
     "sks": ("service-sks.html", "g-sks", "Патч-корды в коммутационной стойке серверной", "50% 50%", "08", "Структурированные кабельные сети", "СКС"),
-    "smart": ("service-smart.html", "g-smart", "Сенсорная панель умного дома на стене гостиной", "22% 50%", "09", "Умный дом и автоматизация здания", ""),
-    "vn": ("service-vn.html", "g-hv", "Трансформаторная подстанция на закате", "50% 50%", "10", "Высоковольтные сети", "ВН"),
+    "smart": ("service-smart.html", "g-smart", "Сенсорная панель умного дома на стене гостиной", "22% 50%", "09", "Умный дом KNX", ""),
+    "vn": ("service-vn.html", "g-camera", "Купольная камера видеонаблюдения на потолке", "50% 50%", "10", "Видеонаблюдение", "ВН"),
     "net": ("service-net.html", "g-server", "Кабельные линии между стойками", "50% 50%", "11", "Инженерные сети", ""),
+    "to": ("service-to.html", "g-ps-panel", "Приёмно-контрольный прибор пожарной сигнализации", "50% 50%", "13", "Техническое обслуживание", ""),
     "build": ("service-build.html", "g-engineers", "Атриум здания с перекрытиями", "50% 45%", "12", "Общестроительные работы", ""),
 }
 
 
-def tiles(keys):
+def tiles(keys, mod=""):
     out = []
     for k in keys.split(","):
         href, im, alt, pos, n, t, ab = DIRS[k.strip()]
@@ -65,7 +66,8 @@ def tiles(keys):
           <span class="tile__go" aria-hidden="true">{{{{icon:arrow-up-right}}}}</span>
         </a>
       </li>''')
-    return '<ol class="tiles" data-deck>\n      ' + "\n      ".join(out) + "\n    </ol>"
+    cls = f"tiles tiles--{mod}" if mod else "tiles"
+    return f'<ol class="{cls}" data-deck>\n      ' + "\n      ".join(out) + "\n    </ol>"
 
 
 def svc_img(spec, sizes, slot, eager=""):
@@ -77,8 +79,30 @@ def svc_img(spec, sizes, slot, eager=""):
 
 FALLBACK = "g-engineers"
 CHECK = lambda items: "".join(f"<li>{{{{icon:check}}}}{html.escape(x)}</li>" for x in items)
-GET = ["Проект, поставку и монтаж у одного подрядчика", "Смету и ресурсную ведомость до начала работ",
-       "Полный пакет документов при сдаче", "Работу с НДС для юрлиц и госзаказчиков"]
+PRICE = ("Цена зависит от площади, состава системы и оборудования. Пришлите проект или техническое задание: "
+         "посчитаем смету с ресурсной ведомостью. Проекта нет — инженер приедет на объект.")
+# документы компании (файлы в site/assets/docs)
+LICENSES = {
+    "mchs": ("Подтверждение МЧС Республики Узбекистан", "№ 1662197 от 22.06.2026",
+             "Монтаж, наладка, ремонт и обслуживание систем автоматического пожаротушения и пожарной сигнализации",
+             "assets/docs/ug-mchs.pdf", "assets/docs/ug-mchs.jpg"),
+    "ng": ("Подтверждение Национальной гвардии Республики Узбекистан", "№ 1666746 от 24.06.2026",
+           "Монтаж, наладка, ремонт и обслуживание технических средств и систем охраны",
+           "assets/docs/ug-ng.pdf", "assets/docs/ug-ng.jpg"),
+    "certs": ("Сертификаты специалистов", "4 инженера, 26.05.2026, действуют 3 года",
+              "Повышение квалификации по монтажу, наладке, ремонту и обслуживанию АПТ и пожарной сигнализации, 48 часов",
+              "docs.html#certs", "assets/docs/cert-001342.jpg"),
+}
+
+
+def lic_cards(keys):
+    out = []
+    for k in keys:
+        t, n, what, href, thumb = LICENSES[k]
+        out.append(f'''<li class="lic"><a href="{href}"{' target="_blank" rel="noopener"' if href.endswith('.pdf') else ''}>
+        <span class="lic__img"><img src="{thumb}" alt="{html.escape(t)}" loading="lazy" decoding="async"></span>
+        <span class="lic__t">{html.escape(t)}</span><span class="lic__n">{html.escape(n)}</span><span class="lic__d">{html.escape(what)}</span></a></li>''')
+    return "".join(out)
 
 
 def service_page(s):
@@ -92,13 +116,19 @@ def service_page(s):
              if ab.get("plate") else "")
     wl = svc_img(s["wl"], "(min-width: 60rem) 25vw, 100vw", f"{k}-w1").replace("{cls}", "sys__photo sys__photo--l")
     wr = svc_img(s["wr"], "(min-width: 60rem) 25vw, 100vw", f"{k}-w2").replace("{cls}", "sys__photo sys__photo--r")
-    types = "".join(f'''
-    <div class="sys__col">
-      <span class="sys__n">{i:02d}</span>
-      <h3 class="sys__h">{e(t["h"])}</h3>
-      <p>{e(t["p"])}</p>
-      <ul class="checks">{CHECK(t["li"])}</ul>
-    </div>''' for i, t in enumerate(s["types"]["items"], 1))
+    parts = "".join(f'<li class="part"><span class="part__ic">{{{{icon:{i}}}}}</span><h3 class="part__h">{e(h)}</h3><p>{e(p)}</p></li>'
+                    for i, h, p in s["parts"]["items"])
+    objs = "".join(f'<li>{{{{icon:{i}}}}}{e(t)}</li>' for i, t in s["objects"])
+    steps = "".join(f'<li><span class="steps__dot">{n:02d}</span><span class="steps__t">{e(t)}</span></li>'
+                    for n, t in enumerate(s["steps"], 1))
+    lic = s.get("licenses", [])
+    lic_sec = f'''
+<section class="page-sec lics" aria-labelledby="lic-h">
+  <div class="container">
+    <div class="sec-head sec-head--row"><div><h2 id="lic-h">Лицензии и допуски</h2><p class="sec-head__sub">Документы открываются в полном размере.</p></div><a class="link" href="docs.html">Все документы{{{{icon:arrow-up-right}}}}</a></div>
+    <ul class="lics__list">{lic_cards(lic)}</ul>
+  </div>
+</section>''' if lic else ""
     # вопросы без подтверждённого ответа не выводим (список — в PROGRESS.md)
     faq = "".join(f'<details><summary>{e(q)}{{{{icon:plus}}}}</summary><p>{e(a)}</p></details>'
                   for q, a in s["faq"] if not a.startswith("["))
@@ -118,11 +148,18 @@ def service_page(s):
       <h1 id="ph-h">{e(s["h1"])}</h1>
       <p class="lead">{e(s["lead"])}</p>
       <div class="phero__actions">
-        <a class="btn btn--gold" href="#request">Заказать расчёт{{{{icon:arrow-up-right}}}}</a>
-        <a class="btn btn--line" href="#types">{e(s["types"]["h"])}</a>
+        <a class="btn btn--gold" href="#request">Рассчитать стоимость{{{{icon:arrow-up-right}}}}</a>
+        <a class="btn btn--line" href="#f-file">Загрузить проект или ТЗ</a>
       </div>
     </div>
     {hero}
+  </div>
+</section>
+
+<section class="page-sec parts" id="types" aria-labelledby="t-h">
+  <div class="container">
+    <div class="sec-head"><h2 id="t-h">{e(s["parts"]["h"])}</h2></div>
+    <ul class="parts__list">{parts}</ul>
   </div>
 </section>
 
@@ -131,6 +168,8 @@ def service_page(s):
     <div class="about__text">
       <h2 id="d-h">{e(ab["h"])}</h2>
       {"".join(f"<p>{e(p)}</p>" for p in ab["p"])}
+      <h3 class="objs__h">Для каких объектов</h3>
+      <ul class="objs">{objs}</ul>
     </div>
     <div class="about__visual">
       {about}
@@ -139,9 +178,18 @@ def service_page(s):
   </div>
 </section>
 
-<section class="sys sys--3 dark" id="types" aria-labelledby="t-h">
-  <h2 id="t-h" class="visually-hidden">{e(s["types"]["h"])}</h2>
-  <div class="sys__grid">{types}
+<section class="steps dark" aria-labelledby="steps-h" data-steps>
+  <div class="steps__bg" aria-hidden="true">{{{{include:plan}}}}</div>
+  <div class="container steps__grid">
+    <div class="steps__text">
+      <h2 id="steps-h">Как работаем</h2>
+      <p>Срок каждого этапа зависит от объекта, его называем вместе со сметой.</p>
+      <a class="btn btn--gold btn--sm" href="#request">Вызвать инженера{{{{icon:arrow-up-right}}}}</a>
+    </div>
+    <div class="steps__rail">
+      <div class="steps__line" aria-hidden="true"><span data-steps-line></span></div>
+      <ol class="steps__list" style="--n: {len(s["steps"])}">{steps}</ol>
+    </div>
   </div>
 </section>
 
@@ -149,22 +197,26 @@ def service_page(s):
   <div class="sys__grid">
     {wl}
     <div class="sys__col">
-      <h2 id="w-h">Состав работ</h2>
-      <ul class="checks">{CHECK(s["work"])}</ul>
+      <h2 id="w-h">Почему с нами</h2>
+      <ul class="checks">{CHECK(s["args"])}</ul>
     </div>
-    <div class="sys__col">
-      <h2>Что вы получаете</h2>
-      <ul class="checks">{CHECK(s.get("get", GET))}</ul>
-      <a class="btn btn--gold btn--sm" href="#request">Заказать расчёт{{{{icon:arrow-up-right}}}}</a>
+    <div class="sys__col" id="price">
+      <h2>Стоимость</h2>
+      <p>{e(s.get("price", PRICE))}</p>
+      <div class="sys__acts">
+        <a class="btn btn--gold btn--sm" href="#request">Рассчитать стоимость{{{{icon:arrow-up-right}}}}</a>
+        <a class="link" href="#f-file">{{{{icon:paperclip}}}}Загрузить проект или ТЗ</a>
+      </div>
     </div>
     {wr}
   </div>
 </section>
+{lic_sec}
 {faq_sec}
 
 <section class="page-sec dirs" aria-labelledby="rel-h">
   <div class="container">
-    <div class="sec-head sec-head--row"><h2 id="rel-h">Похожие услуги</h2><a class="link" href="services.html">Все услуги{{{{icon:arrow-up-right}}}}</a></div>
+    <div class="sec-head sec-head--row"><h2 id="rel-h">Связанные услуги</h2><a class="link" href="services.html">Все услуги{{{{icon:arrow-up-right}}}}</a></div>
     {{{{tiles:{s["related"]}}}}}
   </div>
 </section>
@@ -176,7 +228,7 @@ def service_page(s):
 
 
 def render(text, meta):
-    text = re.sub(r"\{\{tiles:([\w,]+)\}\}", lambda m: tiles(m[1]), text)
+    text = re.sub(r"\{\{tiles(\d?):([\w,]+)\}\}", lambda m: tiles(m[2], m[1]), text)
     for _ in range(3):
         text = re.sub(r"\{\{include:([\w-]+)\}\}",
                       lambda m: (SRC / "partials" / (m[1] if "." in m[1] else m[1] + ".html")).read_text()
