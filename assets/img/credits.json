@@ -209,16 +209,6 @@
   ],
   "own": true
  },
- "g-hv": {
-  "author": "UMARBEKOV GROUP",
-  "license": "сгенерировано в Google Flow",
-  "page": "",
-  "size": [
-   2752,
-   1536
-  ],
-  "own": true
- },
  "g-apt-head": {
   "author": "UMARBEKOV GROUP",
   "license": "сгенерировано в Google Flow",
@@ -270,36 +260,6 @@
   "own": true
  },
  "g-eo-tray": {
-  "author": "UMARBEKOV GROUP",
-  "license": "сгенерировано в Google Flow",
-  "page": "",
-  "size": [
-   2752,
-   1536
-  ],
-  "own": true
- },
- "g-hv-cells": {
-  "author": "UMARBEKOV GROUP",
-  "license": "сгенерировано в Google Flow",
-  "page": "",
-  "size": [
-   2752,
-   1536
-  ],
-  "own": true
- },
- "g-hv-ktp": {
-  "author": "UMARBEKOV GROUP",
-  "license": "сгенерировано в Google Flow",
-  "page": "",
-  "size": [
-   2752,
-   1536
-  ],
-  "own": true
- },
- "g-hv-trench": {
   "author": "UMARBEKOV GROUP",
   "license": "сгенерировано в Google Flow",
   "page": "",
