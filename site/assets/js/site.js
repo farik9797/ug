@@ -96,14 +96,26 @@
   });
 
   /* ---------- фильтр объектов ---------- */
+  // фильтры: несколько рядов чипов (data-key) на один список работают вместе
   d.querySelectorAll('[data-filter]').forEach((bar) => {
-    const items = d.querySelectorAll(bar.dataset.filter);
     bar.addEventListener('click', (e) => {
       const chip = e.target.closest('.chip');
       if (!chip) return;
       bar.querySelectorAll('.chip').forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
-      const v = chip.dataset.value;
-      items.forEach((it) => { it.hidden = v !== 'all' && !(it.dataset.type || '').split(' ').includes(v); });
+      const sel = bar.dataset.filter;
+      const bars = [...d.querySelectorAll('[data-filter]')].filter((b) => b.dataset.filter === sel);
+      const items = d.querySelectorAll(sel);
+      let shown = 0;
+      items.forEach((it) => {
+        const ok = bars.every((b) => {
+          const v = (b.querySelector('.chip[aria-pressed="true"]') || {}).dataset?.value || 'all';
+          const tags = (it.dataset[b.dataset.key || 'type'] || '').split(' ');
+          return v === 'all' || tags.includes(v);
+        });
+        it.hidden = !ok; if (ok) shown++;
+      });
+      const empty = bar.parentElement.querySelector('[data-filter-empty]');
+      if (empty) empty.hidden = shown > 0;
       window.ScrollTrigger && window.ScrollTrigger.refresh();
     });
   });

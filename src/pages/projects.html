@@ -16,22 +16,37 @@
     <div class="sec-head sec-head--row">
       <h2 id="list-h">Все объекты</h2>
     </div>
-    <div class="chips" role="group" aria-label="Фильтр по типу объекта" data-filter="[data-projects] > li">
-      <button class="chip" type="button" data-value="all" aria-pressed="true">Все объекты</button>
+    <div class="chips chips--f" role="group" aria-label="Фильтр: Тип объекта" data-filter="[data-projects] > li" data-key="type">
+      <span class="chips__label">Тип объекта</span>
+      <button class="chip" type="button" data-value="all" aria-pressed="true">Все</button>
       <button class="chip" type="button" data-value="commercial" aria-pressed="false">Коммерческие</button>
       <button class="chip" type="button" data-value="industrial" aria-pressed="false">Промышленные</button>
       <button class="chip" type="button" data-value="social" aria-pressed="false">Социальные</button>
-      <button class="chip" type="button" data-value="apt" aria-pressed="false">Пожаротушение</button>
-      <button class="chip" type="button" data-value="ps" aria-pressed="false">Сигнализация</button>
+      <button class="chip" type="button" data-value="residential" aria-pressed="false">Жилые</button>
+    </div>
+    <div class="chips chips--f" role="group" aria-label="Фильтр: Система" data-filter="[data-projects] > li" data-key="sys">
+      <span class="chips__label">Система</span>
+      <button class="chip" type="button" data-value="all" aria-pressed="true">Все системы</button>
+      <button class="chip" type="button" data-value="apt" aria-pressed="false">АПТ</button>
+      <button class="chip" type="button" data-value="ps" aria-pressed="false">ПС</button>
+      <button class="chip" type="button" data-value="soue" aria-pressed="false">СОУЭ</button>
+      <button class="chip" type="button" data-value="os" aria-pressed="false">ОС</button>
+      <button class="chip" type="button" data-value="vn" aria-pressed="false">ВН</button>
+      <button class="chip" type="button" data-value="skud" aria-pressed="false">СКУД</button>
+      <button class="chip" type="button" data-value="sks" aria-pressed="false">СКС</button>
+      <button class="chip" type="button" data-value="eo" aria-pressed="false">ЭО</button>
+      <button class="chip" type="button" data-value="hvac" aria-pressed="false">ОВиК</button>
+      <button class="chip" type="button" data-value="smart" aria-pressed="false">KNX</button>
     </div>
     <ol class="tiles" data-deck data-projects>
-      <li class="tile" data-type="commercial apt"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-1" data-alt="Фото объекта">{{img:g-round|Круглое стеклянное здание с навесом вечером|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><span class="tile__meta">Коммерческий объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
-      <li class="tile" data-type="commercial ps"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-2" data-alt="Фото объекта">{{img:g-warehouse|Современный складской комплекс|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><span class="tile__meta">Коммерческий объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
-      <li class="tile" data-type="industrial apt"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-3" data-alt="Фото объекта">{{img:g-office|Офисное здание из камня и стекла вечером|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><span class="tile__meta">Промышленный объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
-      <li class="tile" data-type="social ps"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-4" data-alt="Фото объекта">{{img:ug-exterior||(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><span class="tile__meta">Социальный объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
-      <li class="tile" data-type="industrial"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-5" data-alt="Фото объекта">{{img:ug-building||(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><span class="tile__meta">Промышленный объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
-      <li class="tile" data-type="commercial apt ps"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-6" data-alt="Фото объекта">{{img:g-gas|Модули газового пожаротушения в серверной|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><span class="tile__meta">Коммерческий объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
+      <li class="tile" data-type="commercial" data-sys="apt"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-1" data-alt="Фото объекта">{{img:g-round|Круглое стеклянное здание с навесом вечером|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><span class="tile__meta">Коммерческий объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
+      <li class="tile" data-type="commercial" data-sys="ps"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-2" data-alt="Фото объекта">{{img:g-warehouse|Современный складской комплекс|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><span class="tile__meta">Коммерческий объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
+      <li class="tile" data-type="industrial" data-sys="apt"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-3" data-alt="Фото объекта">{{img:g-office|Офисное здание из камня и стекла вечером|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><span class="tile__meta">Промышленный объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
+      <li class="tile" data-type="social" data-sys="ps"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-4" data-alt="Фото объекта">{{img:ug-exterior||(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><span class="tile__meta">Социальный объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
+      <li class="tile" data-type="industrial" data-sys=""><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-5" data-alt="Фото объекта">{{img:ug-building||(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><span class="tile__meta">Промышленный объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
+      <li class="tile" data-type="commercial" data-sys="apt ps"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-6" data-alt="Фото объекта">{{img:g-gas|Модули газового пожаротушения в серверной|(min-width: 60rem) 33vw, 100vw|50% 50%}}</figure><span class="tile__meta">Коммерческий объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true">{{icon:arrow-up-right}}</span></a></li>
     </ol>
+    <p class="filter-empty" data-filter-empty hidden>По этому сочетанию объектов пока нет. <a class="link" href="#request">Спросите о похожем объекте</a></p>
   </div>
 </section>
 
@@ -39,9 +54,9 @@
   <div class="facts__bg" data-slot="facts" data-alt="Инженерные коммуникации" aria-hidden="true">{{img:g-server||100vw|50% 50%}}</div>
   <div class="container">
     <dl class="facts__list" data-rise>
-      <div><dt>6</dt><dd>инженерных систем</dd></div>
-      <div><dt>3</dt><dd>вида пожаротушения</dd></div>
-      <div><dt>4</dt><dd>этапа работ под ключ</dd></div>
+      <div><dt>10</dt><dd>инженерных систем</dd></div>
+      <div><dt>6</dt><dd>видов пожаротушения</dd></div>
+      <div><dt>6</dt><dd>этапов: от выезда до сервиса</dd></div>
       <div><dt>1</dt><dd>подрядчик на весь объект</dd></div>
     </dl>
   </div>

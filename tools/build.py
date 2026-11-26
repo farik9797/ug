@@ -247,6 +247,71 @@ def render(text, meta):
     return text
 
 
+# ---------- SEO: canonical, Open Graph, JSON-LD, sitemap, robots ----------
+SITE = CONFIG.get("site_url", "").rstrip("/") + "/"
+ORG_ID = SITE + "#org"
+ORG = {
+    "@type": "LocalBusiness", "@id": ORG_ID, "name": "UMARBEKOV GROUP",
+    "legalName": "ООО «UMARBEKOV GROUP»", "url": SITE,
+    "logo": SITE + "assets/logo/ug-04_minimal_eastern-gold.png",
+    "image": SITE + "assets/img/ug-exterior-1600.jpg",
+    "telephone": "+998888000056", "email": "umarbekov.group@mail.ru",
+    "taxID": "311802238", "vatID": "326040261596",
+    "address": {"@type": "PostalAddress", "streetAddress": "ул. Кичик Мирабад 2-берк, дом 3, МСГ «Хамид Сулаймонов»",
+                "addressLocality": "Ташкент", "addressRegion": "Яккасарайский район", "addressCountry": "UZ"},
+    "areaServed": {"@type": "Country", "name": "Узбекистан"},
+}
+strip = lambda h: re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", h))).strip()
+
+
+def page_url(name):
+    return SITE if name == "index.html" else SITE + name
+
+
+def seo_head(name, meta, body):
+    url = page_url(name)
+    m = re.search(r'data-photo="([\w-]+)"', body)
+    img = f"{SITE}assets/img/{m[1]}-1600.jpg" if m and (IMG / f"{m[1]}-1600.jpg").exists() else ORG["image"]
+    graph = []
+    if name in ("index.html", "contacts.html", "about.html", "docs.html"):
+        graph.append(ORG)
+    crumbs = re.search(r'<nav class="crumbs".*?</nav>', body, flags=re.S)
+    if crumbs:
+        items = re.findall(r'<li>(?:<a href="([^"]+)">(.*?)</a>|<span[^>]*>(.*?)</span>)</li>', crumbs[0])
+        graph.append({"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": i, "name": strip(a_t or s_t), "item": page_url(href) if href else url}
+            for i, (href, a_t, s_t) in enumerate(items, 1)]})
+    if name.startswith("service-") or name == "complex.html":
+        h1 = re.search(r"<h1[^>]*>(.*?)</h1>", body, flags=re.S)
+        svc = re.search(r'data-service="([^"]+)"', body)
+        graph.append({"@type": "Service", "name": strip(h1[1]) if h1 else meta["title"],
+                      "serviceType": html.unescape(svc[1]) if svc else "", "description": meta["desc"], "url": url,
+                      "provider": {"@id": ORG_ID}, "areaServed": {"@type": "City", "name": "Ташкент"}})
+    faq = re.findall(r"<details>\s*<summary>(.*?)</summary>\s*<p>(.*?)</p>\s*</details>", body, flags=re.S)
+    if faq:
+        graph.append({"@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": strip(q), "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in faq]})
+    head = [f'<link rel="canonical" href="{url}">',
+            '<meta property="og:type" content="website">', '<meta property="og:locale" content="ru_RU">',
+            '<meta property="og:site_name" content="UMARBEKOV GROUP">',
+            f'<meta property="og:title" content="{html.escape(meta["title"], quote=True)}">',
+            f'<meta property="og:description" content="{html.escape(meta["desc"], quote=True)}">',
+            f'<meta property="og:url" content="{url}">', f'<meta property="og:image" content="{img}">']
+    if CONFIG.get("preview", True):
+        head.insert(0, '<meta name="robots" content="noindex">')
+    if graph:
+        ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False).replace("</", "<\\/")
+        head.append(f'<script type="application/ld+json">{ld}</script>')
+    return "\n".join(head)
+
+
+def write_sitemap(names):
+    urls = "".join(f"<url><loc>{page_url(n)}</loc></url>" for n in names if n not in ("privacy.html",))
+    (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
+    rule = "Disallow: /" if CONFIG.get("preview", True) else "Disallow:"
+    (OUT / "robots.txt").write_text(f"User-agent: *\n{rule}\n\nSitemap: {SITE}sitemap.xml\n")
+
+
 def main():
     layout = (SRC / "partials" / "layout.html").read_text()
     used_all = set()
@@ -272,10 +337,12 @@ def main():
                 seq_attr += f' data-seq-{key}="{mj["pattern"]}|{mj["count"]}"'
         out = out.replace("{{seq}}", seq_attr)
         out = render(out, meta)
+        out = out.replace("{{seo_head}}", seo_head(name, meta, out))
         out = out.replace('data-endpoint=""', f'data-endpoint="{html.escape(CONFIG.get("lead_endpoint", ""), quote=True)}"')
         used_all |= set(re.findall(r'data-photo="([\w-]+)"', out))
         (OUT / page.name).write_text(out)
         print("built", page.name, len(out) // 1024, "KB")
+    write_sitemap([n for n, _, _ in pages])
     unused = set(CREDITS) - used_all
     if unused:
         print("не используются:", ", ".join(sorted(unused)))
