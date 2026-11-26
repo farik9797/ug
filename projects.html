@@ -7,11 +7,20 @@
 <meta name="description" content="Объекты UMARBEKOV GROUP в Ташкенте и Узбекистане: системы пожаротушения, пожарной сигнализации, СКУД и инженерные сети.">
 <meta name="theme-color" content="#0d0d0d">
 <meta name="robots" content="noindex">
+<link rel="canonical" href="https://farik9797.github.io/ug/projects.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="UMARBEKOV GROUP">
+<meta property="og:title" content="Реализованные объекты: пожаротушение и сигнализация | UMARBEKOV GROUP">
+<meta property="og:description" content="Объекты UMARBEKOV GROUP в Ташкенте и Узбекистане: системы пожаротушения, пожарной сигнализации, СКУД и инженерные сети.">
+<meta property="og:url" content="https://farik9797.github.io/ug/projects.html">
+<meta property="og:image" content="https://farik9797.github.io/ug/assets/img/g-office-1600.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://farik9797.github.io/ug/"}, {"@type": "ListItem", "position": 2, "name": "Объекты", "item": "https://farik9797.github.io/ug/projects.html"}]}]}</script>
 <link rel="icon" href="assets/logo/ug-04_minimal_eastern-gold.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;600&subset=cyrillic&display=swap">
-<link rel="stylesheet" href="assets/css/site.css?v=1795670406">
+<link rel="stylesheet" href="assets/css/site.css?v=1795680987">
 <script>document.documentElement.classList.replace('no-js','js')</script>
 </head>
 <body data-page="projects">
@@ -81,22 +90,37 @@
     <div class="sec-head sec-head--row">
       <h2 id="list-h">Все объекты</h2>
     </div>
-    <div class="chips" role="group" aria-label="Фильтр по типу объекта" data-filter="[data-projects] > li">
-      <button class="chip" type="button" data-value="all" aria-pressed="true">Все объекты</button>
+    <div class="chips chips--f" role="group" aria-label="Фильтр: Тип объекта" data-filter="[data-projects] > li" data-key="type">
+      <span class="chips__label">Тип объекта</span>
+      <button class="chip" type="button" data-value="all" aria-pressed="true">Все</button>
       <button class="chip" type="button" data-value="commercial" aria-pressed="false">Коммерческие</button>
       <button class="chip" type="button" data-value="industrial" aria-pressed="false">Промышленные</button>
       <button class="chip" type="button" data-value="social" aria-pressed="false">Социальные</button>
-      <button class="chip" type="button" data-value="apt" aria-pressed="false">Пожаротушение</button>
-      <button class="chip" type="button" data-value="ps" aria-pressed="false">Сигнализация</button>
+      <button class="chip" type="button" data-value="residential" aria-pressed="false">Жилые</button>
+    </div>
+    <div class="chips chips--f" role="group" aria-label="Фильтр: Система" data-filter="[data-projects] > li" data-key="sys">
+      <span class="chips__label">Система</span>
+      <button class="chip" type="button" data-value="all" aria-pressed="true">Все системы</button>
+      <button class="chip" type="button" data-value="apt" aria-pressed="false">АПТ</button>
+      <button class="chip" type="button" data-value="ps" aria-pressed="false">ПС</button>
+      <button class="chip" type="button" data-value="soue" aria-pressed="false">СОУЭ</button>
+      <button class="chip" type="button" data-value="os" aria-pressed="false">ОС</button>
+      <button class="chip" type="button" data-value="vn" aria-pressed="false">ВН</button>
+      <button class="chip" type="button" data-value="skud" aria-pressed="false">СКУД</button>
+      <button class="chip" type="button" data-value="sks" aria-pressed="false">СКС</button>
+      <button class="chip" type="button" data-value="eo" aria-pressed="false">ЭО</button>
+      <button class="chip" type="button" data-value="hvac" aria-pressed="false">ОВиК</button>
+      <button class="chip" type="button" data-value="smart" aria-pressed="false">KNX</button>
     </div>
     <ol class="tiles" data-deck data-projects>
-      <li class="tile" data-type="commercial apt"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-1" data-alt="Фото объекта"><img src="assets/img/g-round-1600.jpg" srcset="assets/img/g-round-960.jpg 960w, assets/img/g-round-1600.jpg 1600w, assets/img/g-round-2400.jpg 2400w" sizes="(min-width: 60rem) 33vw, 100vw" width="2400" height="1792" alt="Круглое стеклянное здание с навесом вечером" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="g-round"></figure><span class="tile__meta">Коммерческий объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
-      <li class="tile" data-type="commercial ps"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-2" data-alt="Фото объекта"><img src="assets/img/g-warehouse-1600.jpg" srcset="assets/img/g-warehouse-960.jpg 960w, assets/img/g-warehouse-1600.jpg 1600w, assets/img/g-warehouse-2400.jpg 2400w" sizes="(min-width: 60rem) 33vw, 100vw" width="2400" height="1792" alt="Современный складской комплекс" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="g-warehouse"></figure><span class="tile__meta">Коммерческий объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
-      <li class="tile" data-type="industrial apt"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-3" data-alt="Фото объекта"><img src="assets/img/g-office-1600.jpg" srcset="assets/img/g-office-960.jpg 960w, assets/img/g-office-1600.jpg 1600w, assets/img/g-office-2400.jpg 2400w" sizes="(min-width: 60rem) 33vw, 100vw" width="2752" height="1536" alt="Офисное здание из камня и стекла вечером" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="g-office"></figure><span class="tile__meta">Промышленный объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
-      <li class="tile" data-type="social ps"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-4" data-alt="Фото объекта"><img src="assets/img/ug-exterior-1600.jpg" srcset="assets/img/ug-exterior-960.jpg 960w, assets/img/ug-exterior-1600.jpg 1600w, assets/img/ug-exterior-2400.jpg 2400w" sizes="(min-width: 60rem) 33vw, 100vw" width="2752" height="1536" alt="" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="ug-exterior"></figure><span class="tile__meta">Социальный объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
-      <li class="tile" data-type="industrial"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-5" data-alt="Фото объекта"><img src="assets/img/ug-building-1600.jpg" srcset="assets/img/ug-building-960.jpg 960w, assets/img/ug-building-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="2000" height="1116" alt="" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="ug-building"></figure><span class="tile__meta">Промышленный объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
-      <li class="tile" data-type="commercial apt ps"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-6" data-alt="Фото объекта"><img src="assets/img/g-gas-1600.jpg" srcset="assets/img/g-gas-960.jpg 960w, assets/img/g-gas-1600.jpg 1600w, assets/img/g-gas-2400.jpg 2400w" sizes="(min-width: 60rem) 33vw, 100vw" width="2752" height="1536" alt="Модули газового пожаротушения в серверной" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="g-gas"></figure><span class="tile__meta">Коммерческий объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
+      <li class="tile" data-type="commercial" data-sys="apt"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-1" data-alt="Фото объекта"><img src="assets/img/g-round-1600.jpg" srcset="assets/img/g-round-960.jpg 960w, assets/img/g-round-1600.jpg 1600w, assets/img/g-round-2400.jpg 2400w" sizes="(min-width: 60rem) 33vw, 100vw" width="2400" height="1792" alt="Круглое стеклянное здание с навесом вечером" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="g-round"></figure><span class="tile__meta">Коммерческий объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
+      <li class="tile" data-type="commercial" data-sys="ps"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-2" data-alt="Фото объекта"><img src="assets/img/g-warehouse-1600.jpg" srcset="assets/img/g-warehouse-960.jpg 960w, assets/img/g-warehouse-1600.jpg 1600w, assets/img/g-warehouse-2400.jpg 2400w" sizes="(min-width: 60rem) 33vw, 100vw" width="2400" height="1792" alt="Современный складской комплекс" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="g-warehouse"></figure><span class="tile__meta">Коммерческий объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
+      <li class="tile" data-type="industrial" data-sys="apt"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-3" data-alt="Фото объекта"><img src="assets/img/g-office-1600.jpg" srcset="assets/img/g-office-960.jpg 960w, assets/img/g-office-1600.jpg 1600w, assets/img/g-office-2400.jpg 2400w" sizes="(min-width: 60rem) 33vw, 100vw" width="2752" height="1536" alt="Офисное здание из камня и стекла вечером" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="g-office"></figure><span class="tile__meta">Промышленный объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
+      <li class="tile" data-type="social" data-sys="ps"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-4" data-alt="Фото объекта"><img src="assets/img/ug-exterior-1600.jpg" srcset="assets/img/ug-exterior-960.jpg 960w, assets/img/ug-exterior-1600.jpg 1600w, assets/img/ug-exterior-2400.jpg 2400w" sizes="(min-width: 60rem) 33vw, 100vw" width="2752" height="1536" alt="" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="ug-exterior"></figure><span class="tile__meta">Социальный объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
+      <li class="tile" data-type="industrial" data-sys=""><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-5" data-alt="Фото объекта"><img src="assets/img/ug-building-1600.jpg" srcset="assets/img/ug-building-960.jpg 960w, assets/img/ug-building-1600.jpg 1600w" sizes="(min-width: 60rem) 33vw, 100vw" width="2000" height="1116" alt="" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="ug-building"></figure><span class="tile__meta">Промышленный объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
+      <li class="tile" data-type="commercial" data-sys="apt ps"><a class="tile__link" href="project.html"><figure class="tile__media" data-slot="p-6" data-alt="Фото объекта"><img src="assets/img/g-gas-1600.jpg" srcset="assets/img/g-gas-960.jpg 960w, assets/img/g-gas-1600.jpg 1600w, assets/img/g-gas-2400.jpg 2400w" sizes="(min-width: 60rem) 33vw, 100vw" width="2752" height="1536" alt="Модули газового пожаротушения в серверной" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="g-gas"></figure><span class="tile__meta">Коммерческий объект</span><h3 class="tile__t">Объект из портфолио</h3><span class="tile__go" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></span></a></li>
     </ol>
+    <p class="filter-empty" data-filter-empty hidden>По этому сочетанию объектов пока нет. <a class="link" href="#request">Спросите о похожем объекте</a></p>
   </div>
 </section>
 
@@ -104,9 +128,9 @@
   <div class="facts__bg" data-slot="facts" data-alt="Инженерные коммуникации" aria-hidden="true"><img src="assets/img/g-server-1600.jpg" srcset="assets/img/g-server-960.jpg 960w, assets/img/g-server-1600.jpg 1600w, assets/img/g-server-2400.jpg 2400w" sizes="100vw" width="2752" height="1536" alt="" style="object-position: 50% 50%" loading="lazy" decoding="async" data-photo="g-server"></div>
   <div class="container">
     <dl class="facts__list" data-rise>
-      <div><dt>6</dt><dd>инженерных систем</dd></div>
-      <div><dt>3</dt><dd>вида пожаротушения</dd></div>
-      <div><dt>4</dt><dd>этапа работ под ключ</dd></div>
+      <div><dt>10</dt><dd>инженерных систем</dd></div>
+      <div><dt>6</dt><dd>видов пожаротушения</dd></div>
+      <div><dt>6</dt><dd>этапов: от выезда до сервиса</dd></div>
       <div><dt>1</dt><dd>подрядчик на весь объект</dd></div>
     </dl>
   </div>
@@ -321,6 +345,6 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/site.js?v=1795670406" defer></script>
+<script src="assets/js/site.js?v=1795680987" defer></script>
 </body>
 </html>

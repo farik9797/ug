@@ -947,3 +947,12 @@ body.modal-open { overflow: hidden; }
   .part__ic .i { width: 20px; height: 20px; }
   .part__h { font-size: var(--text-md); }
 }
+.chips--f { align-items: center; margin-bottom: var(--space-md); }
+.chips--f + .tiles, .chips--f + .chips--f + .tiles { margin-top: var(--space-lg); }
+.chips__label { min-width: 7.5rem; font-size: var(--text-sm); font-weight: 600; color: var(--color-accent-ink); }
+.filter-empty { margin-top: var(--space-lg); color: var(--color-muted); }
+@media (max-width: 40rem) { .chips__label { flex-basis: 100%; } }
+.sheet--img { padding: 0; position: relative; overflow: hidden; background: var(--color-paper); }
+.sheet--img a { position: absolute; inset: 0; display: block; color: inherit; text-decoration: none; }
+.sheet--img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
+.sheet--img .sheet__k { position: absolute; left: 0; right: 0; bottom: 0; padding: var(--space-xs) var(--space-sm); background: var(--color-night); color: var(--color-accent); font-weight: 600; }
