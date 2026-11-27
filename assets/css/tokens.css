@@ -19,3 +19,17 @@
   --radius-card: 2px; --radius-pill: 999px; --rule-hair: 1px; --shadow-card: none;
   --tracking-display: -0.015em; --display-weight: 500; --hdr-h: 84px;
 }
+
+/* Варианты цвета тёмных блоков (шапка, подвал, тёмные секции). Золото и светлый фон общие. */
+:root[data-palette="navy"] {
+  --color-night: oklch(20% 0.045 258); --color-night-2: oklch(24.5% 0.05 258); --color-night-3: oklch(29% 0.052 258);
+  --color-on-night-2: oklch(80% 0.022 250); --color-rule-night: oklch(37% 0.045 258); --color-region: oklch(33% 0.045 258);
+}
+:root[data-palette="emerald"] {
+  --color-night: oklch(21% 0.038 168); --color-night-2: oklch(25.5% 0.042 168); --color-night-3: oklch(30% 0.045 168);
+  --color-on-night-2: oklch(80% 0.022 160); --color-rule-night: oklch(38% 0.04 168); --color-region: oklch(34% 0.04 168);
+}
+:root[data-palette="bronze"] {
+  --color-night: oklch(20.5% 0.022 55); --color-night-2: oklch(25% 0.026 55); --color-night-3: oklch(29.5% 0.03 55);
+  --color-on-night-2: oklch(80% 0.02 70); --color-rule-night: oklch(37% 0.028 55); --color-region: oklch(33% 0.028 55);
+}
