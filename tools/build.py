@@ -268,6 +268,15 @@ def page_url(name):
     return SITE if name == "index.html" else SITE + name
 
 
+# Переключатель палитры тёмных блоков: только на превью, пока клиент выбирает.
+PALETTES = [("graphite", "Графит", "oklch(16% 0.004 85)"), ("navy", "Синий", "oklch(20% 0.045 258)"),
+            ("emerald", "Изумруд", "oklch(21% 0.038 168)"), ("bronze", "Бронза", "oklch(20.5% 0.022 55)")]
+PALETTE_HEAD = """<script>(function(){var k='ug-palette',p=new URLSearchParams(location.search).get('palette');try{if(p)localStorage.setItem(k,p);p=p||localStorage.getItem(k)}catch(e){}if(p&&p!=='graphite')document.documentElement.dataset.palette=p})()</script>"""
+PALETTE_UI = ('<div class="pal" role="group" aria-label="Вариант цвета"><span class="pal__t">Цвет блоков:</span>'
+    + "".join(f'<button class="pal__b" type="button" data-pal="{k}" style="--sw: {c}" title="{n}" aria-label="{n}" aria-pressed="false"></button>' for k, n, c in PALETTES)
+    + """</div><script>(function(){var r=document.documentElement,bs=document.querySelectorAll('[data-pal]');function sync(){var c=r.dataset.palette||'graphite';bs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.pal===c)})}bs.forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.pal;if(k==='graphite')delete r.dataset.palette;else r.dataset.palette=k;try{localStorage.setItem('ug-palette',k)}catch(e){}sync()})});sync()})()</script>""")
+
+
 def seo_head(name, meta, body):
     url = page_url(name)
     m = re.search(r'data-photo="([\w-]+)"', body)
@@ -338,6 +347,8 @@ def main():
         out = out.replace("{{seq}}", seq_attr)
         out = render(out, meta)
         out = out.replace("{{seo_head}}", seo_head(name, meta, out))
+        out = out.replace("{{palette_head}}", PALETTE_HEAD if CONFIG.get("preview", True) else "")
+        out = out.replace("{{palette_ui}}", PALETTE_UI if CONFIG.get("preview", True) else "")
         out = out.replace('data-endpoint=""', f'data-endpoint="{html.escape(CONFIG.get("lead_endpoint", ""), quote=True)}"')
         used_all |= set(re.findall(r'data-photo="([\w-]+)"', out))
         (OUT / page.name).write_text(out)
